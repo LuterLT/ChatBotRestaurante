@@ -1,0 +1,42 @@
+{
+  "name": "chatbotTelegramRestaurante",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "e5752dcd-a625-48ef-818b-cd69eae46124",
+      "name": "Telegram Trigger",
+      "webhookId": "1026be42-cb67-4038-948b-93b450cda22e",
+      "credentials": {
+        "telegramApi": {
+          "id": "q9qa34nSzbHvMEfm",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "145a420f-7d69-4caf-af05-f8163416a807",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"
+  },
+  "id": "IZueyy6sP8y5PuE0",
+  "tags": []
+}
