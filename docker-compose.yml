@@ -5,6 +5,8 @@ services:
       - "5678:5678"
     env_file:
       - .env
+    environment:
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
     volumes:
       - n8n_data:/home/node/.n8n
     restart: unless-stopped

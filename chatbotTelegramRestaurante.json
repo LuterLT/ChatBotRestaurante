@@ -19,20 +19,26 @@
       "webhookId": "1026be42-cb67-4038-948b-93b450cda22e",
       "credentials": {
         "telegramApi": {
-          "id": "q9qa34nSzbHvMEfm",
-          "name": "Telegram account"
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
         }
       }
     }
   ],
   "pinData": {},
-  "connections": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        []
+      ]
+    }
+  },
   "active": false,
   "settings": {
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "145a420f-7d69-4caf-af05-f8163416a807",
+  "versionId": "b97e10e3-c500-42bb-98d5-56aa08a0ac66",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"
