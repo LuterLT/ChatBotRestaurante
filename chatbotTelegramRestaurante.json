@@ -23,13 +23,368 @@
           "name": "Telegram account 2"
         }
       }
+    },
+    {
+      "parameters": {
+        "jsCode": "\nconst hora = new Date(new Date().toLocaleString(\"en-US\", { timeZone: \"America/Sao_Paulo\" })).getHours();\n\nreturn [{ json: { hora } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        176,
+        0
+      ],
+      "id": "f215360d-f8ee-4ffb-ad7a-871387089784",
+      "name": "ColetarHoras"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ (() => {   if ($json.hora >= 7 && $json.hora < 13)     return \"☀️ Bom dia!\\n\\n🍽️ Bem-vindo ao Restaurante Árabe do Jorjão!\\n\\nEscolha uma opção abaixo:\";    if ($json.hora >= 13 && $json.hora < 18)     return \"🌤️ Boa tarde!\\n\\n🍽️ Bem-vindo ao Restaurante Árabe do Jorjão!\\n\\nEscolha uma opção abaixo:\";    if ($json.hora >= 18 && $json.hora < 23)     return \"🌙 Boa noite!\\n\\n🍽️ Bem-vindo ao Restaurante Árabe do Jorjão!\\n\\nEscolha uma opção abaixo:\";    return \"🍽️ Bem-vindo ao Restaurante Árabe do Jorjão!\\n\\nEscolha uma opção abaixo:\"; })() }}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🥙 Categorias Árabes",
+                    "additionalFields": {
+                      "callback_data": "categorias",
+                      "switch_inline_query": "teste"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🛒 Fazer Pedido",
+                    "additionalFields": {
+                      "callback_data": "pedido"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🚚 Acompanhar Entrega",
+                    "additionalFields": {
+                      "callback_data": "acompanhar"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "📍 Sobre a Unidade",
+                    "additionalFields": {
+                      "callback_data": "unidade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🍽️ Reservar uma Mesa",
+                    "additionalFields": {
+                      "callback_data": "mesa"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🆘 Suporte e Ajuda",
+                    "additionalFields": {
+                      "callback_data": "suporte"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        368,
+        0
+      ],
+      "id": "60a9cbc6-bd3c-4bf6-a081-65c5e075e36c",
+      "name": "Send a text message",
+      "webhookId": "c32d41a1-dcf0-495b-b7cb-56b8f1224c93",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "updates": [
+          "callback_query"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        672,
+        0
+      ],
+      "id": "5f67eb25-69ca-4548-b31f-9fc6934ff9be",
+      "name": "Telegram Trigger1",
+      "webhookId": "e7e657ed-19db-416b-a979-e35001cd1555",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "categorias",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "8e2345f5-64f4-4250-96a4-1ade5ac3603f"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "0a4ce8fb-5e78-4296-a359-0df631d9e051",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "pedido",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "aba72b2f-b2c5-49bc-9ba5-68cbb777de0a",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "acompanhar",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "cf69c64c-d39a-4183-8dff-4223e020b6c7",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "unidade",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "8c1e7eb7-45cd-4026-a86c-6fe87b5297ba",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "mesa",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "cab2aef2-3b07-4bfb-9db0-b11109aa6306",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "suporte",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        928,
+        -64
+      ],
+      "id": "5e7e6703-a197-44ba-97f9-4f60ae64f0cc",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "content": "## INICIO\n\nMessagem de saudação e primeiro menu de opções com:\n1- Categorias Árabes\n2- Fazer Pedido\n3- Acompanhar Entrega\n4- Sobre a Unidade\n5- Reserva uma Mese\n6 Suporte e Ajuda",
+        "height": 464,
+        "width": 656
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -96,
+        -208
+      ],
+      "id": "a62bf3df-2a00-40c7-bff4-c7260b4b5124",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## CALLBACK DA SELEÇÃO INICIAL\nVai separar o fluxo conforme a decisão inicial do usuário em relações as opções do menu principal.",
+        "height": 496,
+        "width": 560
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        608,
+        -208
+      ],
+      "id": "9d2ce96f-87db-47dc-a261-647864876158",
+      "name": "Sticky Note1"
     }
   ],
   "pinData": {},
   "connections": {
     "Telegram Trigger": {
       "main": [
+        [
+          {
+            "node": "ColetarHoras",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ColetarHoras": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a text message": {
+      "main": [
         []
+      ]
+    },
+    "Telegram Trigger1": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     }
   },
@@ -38,7 +393,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "b97e10e3-c500-42bb-98d5-56aa08a0ac66",
+  "versionId": "21a5115b-0372-4a0c-a77f-7a2ec616e2fa",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"
