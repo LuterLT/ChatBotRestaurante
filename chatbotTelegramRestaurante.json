@@ -4,14 +4,15 @@
     {
       "parameters": {
         "updates": [
-          "message"
+          "message",
+          "callback_query"
         ],
         "additionalFields": {}
       },
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.3,
       "position": [
-        -112,
+        -368,
         0
       ],
       "id": "e5752dcd-a625-48ef-818b-cd69eae46124",
@@ -31,7 +32,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        96,
+        208,
         -32
       ],
       "id": "f215360d-f8ee-4ffb-ad7a-871387089784",
@@ -39,27 +40,761 @@
     },
     {
       "parameters": {
-        "updates": [
-          "callback_query"
-        ],
-        "additionalFields": {}
+        "content": "## INICIO\n\nMessagem de saudação e primeiro menu de opções com:\n1- Categorias Árabes\n2- Fazer Pedido\n3- Acompanhar Entrega\n4- Sobre a Unidade\n5- Reserva uma Mese\n6 Suporte e Ajuda",
+        "height": 464,
+        "width": 560
       },
-      "type": "n8n-nodes-base.telegramTrigger",
-      "typeVersion": 1.3,
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
       "position": [
-        672,
-        0
+        16,
+        -256
       ],
-      "id": "5f67eb25-69ca-4548-b31f-9fc6934ff9be",
-      "name": "Telegram Trigger1",
-      "webhookId": "e7e657ed-19db-416b-a979-e35001cd1555",
+      "id": "a62bf3df-2a00-40c7-bff4-c7260b4b5124",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## CALLBACK DA SELEÇÃO INICIAL\nVai separar o fluxo conforme a decisão inicial do usuário em relações as opções do menu principal. Há uma opção de voltar para o início em ultímo.\n**Trabalha com os seguintes callbacks:**\n--categorias\n--pedido\n--acompanhar\n--unidade\n--mesa\n--suporte\n--voltarInicio",
+        "height": 512,
+        "width": 560
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        16,
+        256
+      ],
+      "id": "9d2ce96f-87db-47dc-a261-647864876158",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "cardapioEntrada",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "26477957-43fb-461c-9114-28055d9bf34d"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "fdb1cb3b-ac35-403f-a153-9b185e68605e",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "cardapioSalgados",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "9bff533f-fb9d-4018-aa7d-eb3559febd8d",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "cardapioPratos",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "4e3fc231-4f5c-450d-a197-d595e71f13d7",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "cardapioPromocoes",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "9a7266c8-a6d9-4f6b-b9ab-9528d86d8c62",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "voltarCardapio",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        496,
+        1408
+      ],
+      "id": "835270d5-edab-43b9-b029-07b05d1efcec",
+      "name": "Switch1"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.callback_query.message.chat.id }}",
+        "text": "={{\n`🥟 Excelente escolha! Nossos salgados assados são preparados seguindo receitas tradicionais da culinária árabe, combinando massa leve, recheios bem temperados e muito sabor em cada detalhe.\n\n🔥 Confira algumas das opções disponíveis:\n\n• 🥙 Esfihas Assadas — Massa macia e dourada com recheios tradicionais preparados com ingredientes frescos e selecionados.\n• 🧆 Quibes Assados — Receita clássica com trigo especial, carne temperada e textura crocante por fora e macia por dentro.\n\n🍽️ Gostaria de realizar um pedido agora ou deseja conhecer outras opções do nosso cardápio?`\n}}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "SIM, desejo realizar um pedido",
+                    "additionalFields": {
+                      "callback_data": "pedido"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "NÃO, não desejo realizar um pedido",
+                    "additionalFields": {
+                      "callback_data": "voltarCardapio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        992,
+        1456
+      ],
+      "id": "c186667a-6301-418d-8718-ff6fcaa493c1",
+      "name": "Opcoes Salgados",
+      "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
         "telegramApi": {
           "id": "XvOSLZ20R4qjCpEW",
           "name": "Telegram account 2"
         }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.callback_query.message.chat.id }}",
+        "text": "={{\n`🥙 Perfeita escolha! Nossas entradas são preparadas com sabores tradicionais da culinária árabe, trazendo combinações leves, frescas e marcantes para começar sua experiência da melhor forma.\n\n✨ Confira algumas das nossas opções disponíveis:\n\n• 🧆 Homus — Pasta cremosa de grão-de-bico temperada com tahine, alho e especiarias árabes.\n• 🥩 Quibe Cru — Receita tradicional preparada com carne selecionada, trigo especial e temperos frescos.\n• 🥗 Tabule — Salada refrescante com trigo para quibe, tomate, cebola, salsa e hortelã.\n\n🍽️ Gostaria de pedir alguma entrada agora ou deseja conhecer outras opções do nosso cardápio?`\n}}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "SIM, desejo realizar um pedido",
+                    "additionalFields": {
+                      "callback_data": "pedido"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "NÃO, não desejo realizar um pedido",
+                    "additionalFields": {
+                      "callback_data": "voltarCardapio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
       },
-      "disabled": true
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        992,
+        1296
+      ],
+      "id": "18bf18ff-2039-4ddb-b9e2-165d99e85811",
+      "name": "Opcoes Entrada",
+      "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.callback_query.message.chat.id }}",
+        "text": "={{\n`🍽️ Ótima escolha! Nossos pratos principais trazem sabores autênticos da culinária árabe, preparados com ingredientes selecionados, temperos tradicionais e muito cuidado em cada receita.\n\n✨ Confira algumas das especialidades disponíveis:\n\n• 🥩 Kafta — Espetinhos de carne temperada com ervas e especiarias árabes, grelhados no ponto ideal.\n• 🌿 Charuto — Folhas recheadas com uma combinação saborosa de arroz e temperos tradicionais.\n• 🍖 Cordeiro — Prato preparado com carne macia e suculenta, acompanhada pelos sabores marcantes da culinária árabe.\n\n🍴 Gostaria de realizar um pedido agora ou deseja conhecer outras opções do nosso cardápio?`\n}}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "SIM, desejo realizar um pedido",
+                    "additionalFields": {
+                      "callback_data": "pedido"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "NÃO, não desejo realizar um pedido",
+                    "additionalFields": {
+                      "callback_data": "voltarCardapio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        992,
+        1616
+      ],
+      "id": "20c40cb9-2aff-458d-b730-18545c5f86da",
+      "name": "Opcoes Pratos",
+      "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.callback_query.message.chat.id }}",
+        "text": "={{\n`É preciso colocar algo`\n}}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "SIM, desejo realizar um pedido",
+                    "additionalFields": {
+                      "callback_data": "selecionarItens"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "NÃO, não desejo realizar um pedido",
+                    "additionalFields": {
+                      "callback_data": "voltarCardapio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1008,
+        1872
+      ],
+      "id": "aeb5bc33-0e94-4141-bf93-c28dd540a6a2",
+      "name": "Opcoes Promocoes",
+      "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## CALLBACK CATEGORIAS ÁRABES\nVai separar o fluxo conforme o interesse do usuário entre as opões Entradas, Salgados, Pratos, Promoções ou Voltar para o inicio. \n**Trabalha com o os seguintes callbacks:**\n--cardapioEntrada\n--cardapioSalgados\n--cardapioPratos\n--cardapioPromocoes\n--voltarCardapio",
+        "height": 544,
+        "width": 624,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        240,
+        1216
+      ],
+      "id": "c240bd62-2904-4f21-86e1-71572f8ed671",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "## OPÇÕES DE COMIDAS\nSe o cliente aceitar fazer um pedido vai voltar pra a primeira parte do fluxo e redirecionar para a parte Pedido.\n**Trabalha com os callbacks:**\n--pedido\n--voltarCardapio",
+        "height": 944,
+        "width": 608,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        864,
+        1120
+      ],
+      "id": "607c9b5a-64d0-46bf-9999-c5198d7f7b14",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "## FALTANDO\n**PARTE FALTANDO. NECESSÁRIO FINALIZAR**)",
+        "height": 256,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        944,
+        1760
+      ],
+      "id": "4f5052ac-46d2-49b3-a02f-c215257cf3da",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.callback_query.message.chat.id }}",
+        "text": "={{ \"Qual das Opções Gostaria de Conhecer Melhor?\\n\\n\" }}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Entrada",
+                    "additionalFields": {
+                      "callback_data": "cardapioEntrada"
+                    }
+                  },
+                  {
+                    "text": "Salgados",
+                    "additionalFields": {
+                      "callback_data": "cardapioSalgados"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Pratos",
+                    "additionalFields": {
+                      "callback_data": "cardapioPratos"
+                    }
+                  },
+                  {
+                    "text": "Promoções Especiais",
+                    "additionalFields": {
+                      "callback_data": "cardapioPromocoes"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Voltar",
+                    "additionalFields": {
+                      "callback_data": "voltarInicio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        640,
+        176
+      ],
+      "id": "d9806340-c1da-4fd5-9738-cef0e45d4e84",
+      "name": "Menu Categorias Mensagem",
+      "webhookId": "39527d29-ffc9-44df-a6b7-feff5417418a",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ (() => {   if ($json.hora >= 7 && $json.hora < 13)     return \"☀️ Bom dia!\\n\\n🍽️ Bem-vindo ao Restaurante Árabe Maṭʿam!\\n\\nEscolha uma opção abaixo:\";    if ($json.hora >= 13 && $json.hora < 18)     return \"🌤️ Boa tarde!\\n\\n🍽️ Bem-vindo ao Restaurante Árabe Maṭʿam!\\n\\nEscolha uma opção abaixo:\";    if ($json.hora >= 18 && $json.hora < 23)     return \"🌙 Boa noite!\\n\\n🍽️ Bem-vindo ao Restaurante Árabe Maṭʿam!\\n\\nEscolha uma opção abaixo:\";    return \"🍽️ Bem-vindo ao Restaurante Árabe Maṭʿam!\\n\\nEscolha uma opção abaixo:\"; })() }}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🥙 Categorias Árabes",
+                    "additionalFields": {
+                      "callback_data": "categorias",
+                      "switch_inline_query": "teste"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🛒 Fazer Pedido",
+                    "additionalFields": {
+                      "callback_data": "pedido"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🚚 Acompanhar Entrega",
+                    "additionalFields": {
+                      "callback_data": "acompanhar"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "📍 Sobre a Unidade",
+                    "additionalFields": {
+                      "callback_data": "unidade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🍽️ Reservar uma Mesa",
+                    "additionalFields": {
+                      "callback_data": "mesa"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🆘 Suporte e Ajuda",
+                    "additionalFields": {
+                      "callback_data": "suporte"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        368,
+        -32
+      ],
+      "id": "60a9cbc6-bd3c-4bf6-a081-65c5e075e36c",
+      "name": "Menu Principal Mensagem",
+      "webhookId": "c32d41a1-dcf0-495b-b7cb-56b8f1224c93",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nbancoDados.numeroPedidos = 0;\n\nreturn items;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        48,
+        -32
+      ],
+      "id": "af3db792-1c84-4397-8693-ca55fc579913",
+      "name": "Contador Global"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "chatId": "={{ $json.callback_query.message.chat.id }}",
+        "message": "🥙 Escolha os itens desejados para o seu pedido entrando no formulário através do botão abaixo:",
+        "responseType": "customForm",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Entrada",
+              "fieldType": "checkbox",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Homus"
+                  },
+                  {
+                    "option": "Quibe Cru"
+                  },
+                  {
+                    "option": "Tabule"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "Gostaria de quantas Esfihas?",
+              "fieldType": "number",
+              "placeholder": "0",
+              "defaultValue": "0"
+            },
+            {
+              "fieldLabel": "Gostaria de quantos Quibes Assados?",
+              "fieldType": "number",
+              "placeholder": "0",
+              "defaultValue": "0"
+            },
+            {
+              "fieldLabel": "Pratos (selecione ao menos 1)",
+              "fieldType": "checkbox",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Kafta"
+                  },
+                  {
+                    "option": "Charuto"
+                  },
+                  {
+                    "option": "Cordeiro"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Gostaria de Talheres de Plástico ?",
+              "fieldType": "radio",
+              "defaultValue": "Não",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Sim"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              },
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "messageButtonLabel": "Selecionar Itens",
+          "responseFormTitle": "Itens de Pedido",
+          "responseFormDescription": "Selecione os itens que deseja pedir ",
+          "responseFormButtonLabel": "Enviar",
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1056,
+        448
+      ],
+      "id": "8df75da5-3fd2-40a1-b049-2ffd08a8b3b6",
+      "name": "Formulario Pedido",
+      "webhookId": "497b0a6f-b4be-473e-9e52-da3f684a56cc",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nbancoDados[bancoDados.numeroPedidos] = $input.first().json.data;\n\nbancoDados.numeroPedidos++;\n\nreturn bancoDados;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1264,
+        448
+      ],
+      "id": "bb14f894-ceec-47ed-be1c-1e64b37a2c52",
+      "name": "Armazenar Globalmente"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "a2c625e6-c547-45c5-88d4-02fda73aa9fe",
+              "leftValue": "={{ $json.message }}",
+              "rightValue": "",
+              "operator": {
+                "type": "object",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -192,
+        64
+      ],
+      "id": "9495461c-cacc-43e8-9cc7-969ab933fce0",
+      "name": "Eh Mensagem"
     },
     {
       "parameters": {
@@ -227,806 +962,48 @@
             }
           ]
         },
-        "options": {}
+        "options": {
+          "fallbackOutput": "extra"
+        }
       },
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        928,
-        -64
+        224,
+        432
       ],
       "id": "5e7e6703-a197-44ba-97f9-4f60ae64f0cc",
-      "name": "Switch"
+      "name": "Switch Inicial"
     },
     {
       "parameters": {
-        "content": "## INICIO\n\nMessagem de saudação e primeiro menu de opções com:\n1- Categorias Árabes\n2- Fazer Pedido\n3- Acompanhar Entrega\n4- Sobre a Unidade\n5- Reserva uma Mese\n6 Suporte e Ajuda",
-        "height": 464,
-        "width": 704
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        -144,
-        -208
-      ],
-      "id": "a62bf3df-2a00-40c7-bff4-c7260b4b5124",
-      "name": "Sticky Note"
-    },
-    {
-      "parameters": {
-        "content": "## CALLBACK DA SELEÇÃO INICIAL\nVai separar o fluxo conforme a decisão inicial do usuário em relações as opções do menu principal. Há uma opção de voltar para o início em ultímo.\n**Trabalha com os seguintes callbacks:**\n--categorias\n--pedido\n--acompanhar\n--unidade\n--mesa\n--suporte\n--voltarInicio",
-        "height": 512,
-        "width": 560
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        608,
-        -256
-      ],
-      "id": "9d2ce96f-87db-47dc-a261-647864876158",
-      "name": "Sticky Note1"
-    },
-    {
-      "parameters": {
-        "updates": [
-          "callback_query"
-        ],
-        "additionalFields": {}
-      },
-      "type": "n8n-nodes-base.telegramTrigger",
-      "typeVersion": 1.3,
-      "position": [
-        1472,
-        -1008
-      ],
-      "id": "73a85635-2a6b-4a28-b413-95fd2b9220df",
-      "name": "Telegram Trigger2",
-      "webhookId": "814fab87-33ce-438e-98a8-f4ff64c7234d",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      },
-      "disabled": true
-    },
-    {
-      "parameters": {
-        "rules": {
-          "values": [
-            {
-              "conditions": {
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 3
-                },
-                "conditions": [
-                  {
-                    "leftValue": "={{ $json.callback_query.data }}",
-                    "rightValue": "cardapioEntrada",
-                    "operator": {
-                      "type": "string",
-                      "operation": "equals"
-                    },
-                    "id": "26477957-43fb-461c-9114-28055d9bf34d"
-                  }
-                ],
-                "combinator": "and"
-              }
-            },
-            {
-              "conditions": {
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 3
-                },
-                "conditions": [
-                  {
-                    "id": "fdb1cb3b-ac35-403f-a153-9b185e68605e",
-                    "leftValue": "={{ $json.callback_query.data }}",
-                    "rightValue": "cardapioSalgados",
-                    "operator": {
-                      "type": "string",
-                      "operation": "equals",
-                      "name": "filter.operator.equals"
-                    }
-                  }
-                ],
-                "combinator": "and"
-              }
-            },
-            {
-              "conditions": {
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 3
-                },
-                "conditions": [
-                  {
-                    "id": "9bff533f-fb9d-4018-aa7d-eb3559febd8d",
-                    "leftValue": "={{ $json.callback_query.data }}",
-                    "rightValue": "cardapioPratos",
-                    "operator": {
-                      "type": "string",
-                      "operation": "equals",
-                      "name": "filter.operator.equals"
-                    }
-                  }
-                ],
-                "combinator": "and"
-              }
-            },
-            {
-              "conditions": {
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 3
-                },
-                "conditions": [
-                  {
-                    "id": "4e3fc231-4f5c-450d-a197-d595e71f13d7",
-                    "leftValue": "={{ $json.callback_query.data }}",
-                    "rightValue": "cardapioPromocoes",
-                    "operator": {
-                      "type": "string",
-                      "operation": "equals",
-                      "name": "filter.operator.equals"
-                    }
-                  }
-                ],
-                "combinator": "and"
-              }
-            },
-            {
-              "conditions": {
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 3
-                },
-                "conditions": [
-                  {
-                    "id": "9a7266c8-a6d9-4f6b-b9ab-9528d86d8c62",
-                    "leftValue": "={{ $json.callback_query.data }}",
-                    "rightValue": "voltarCardapio",
-                    "operator": {
-                      "type": "string",
-                      "operation": "equals",
-                      "name": "filter.operator.equals"
-                    }
-                  }
-                ],
-                "combinator": "and"
-              }
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 3.4,
-      "position": [
-        1648,
-        -1056
-      ],
-      "id": "835270d5-edab-43b9-b029-07b05d1efcec",
-      "name": "Switch1"
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $json.callback_query.message.chat.id }}",
-        "text": "={{\n`🥟 Excelente escolha! Nossos salgados assados são preparados seguindo receitas tradicionais da culinária árabe, combinando massa leve, recheios bem temperados e muito sabor em cada detalhe.\n\n🔥 Confira algumas das opções disponíveis:\n\n• 🥙 Esfihas Assadas — Massa macia e dourada com recheios tradicionais preparados com ingredientes frescos e selecionados.\n• 🧆 Quibes Assados — Receita clássica com trigo especial, carne temperada e textura crocante por fora e macia por dentro.\n\n🍽️ Gostaria de realizar um pedido agora ou deseja conhecer outras opções do nosso cardápio?`\n}}",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "SIM, desejo realizar um pedido",
-                    "additionalFields": {
-                      "callback_data": "pedido"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "NÃO, não desejo realizar um pedido",
-                    "additionalFields": {
-                      "callback_data": "voltarCardapio"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "additionalFields": {
-          "appendAttribution": false
-        }
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        1920,
-        -1104
-      ],
-      "id": "c186667a-6301-418d-8718-ff6fcaa493c1",
-      "name": "Opcoes Salgados",
-      "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $json.callback_query.message.chat.id }}",
-        "text": "={{\n`🥙 Perfeita escolha! Nossas entradas são preparadas com sabores tradicionais da culinária árabe, trazendo combinações leves, frescas e marcantes para começar sua experiência da melhor forma.\n\n✨ Confira algumas das nossas opções disponíveis:\n\n• 🧆 Homus — Pasta cremosa de grão-de-bico temperada com tahine, alho e especiarias árabes.\n• 🥩 Quibe Cru — Receita tradicional preparada com carne selecionada, trigo especial e temperos frescos.\n• 🥗 Tabule — Salada refrescante com trigo para quibe, tomate, cebola, salsa e hortelã.\n\n🍽️ Gostaria de pedir alguma entrada agora ou deseja conhecer outras opções do nosso cardápio?`\n}}",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "SIM, desejo realizar um pedido",
-                    "additionalFields": {
-                      "callback_data": "pedido"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "NÃO, não desejo realizar um pedido",
-                    "additionalFields": {
-                      "callback_data": "voltarCardapio"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "additionalFields": {
-          "appendAttribution": false
-        }
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        1920,
-        -1264
-      ],
-      "id": "18bf18ff-2039-4ddb-b9e2-165d99e85811",
-      "name": "Opcoes Entrada",
-      "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $json.callback_query.message.chat.id }}",
-        "text": "={{\n`🍽️ Ótima escolha! Nossos pratos principais trazem sabores autênticos da culinária árabe, preparados com ingredientes selecionados, temperos tradicionais e muito cuidado em cada receita.\n\n✨ Confira algumas das especialidades disponíveis:\n\n• 🥩 Kafta — Espetinhos de carne temperada com ervas e especiarias árabes, grelhados no ponto ideal.\n• 🌿 Charuto — Folhas recheadas com uma combinação saborosa de arroz e temperos tradicionais.\n• 🍖 Cordeiro — Prato preparado com carne macia e suculenta, acompanhada pelos sabores marcantes da culinária árabe.\n\n🍴 Gostaria de realizar um pedido agora ou deseja conhecer outras opções do nosso cardápio?`\n}}",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "SIM, desejo realizar um pedido",
-                    "additionalFields": {
-                      "callback_data": "pedido"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "NÃO, não desejo realizar um pedido",
-                    "additionalFields": {
-                      "callback_data": "voltarCardapio"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "additionalFields": {
-          "appendAttribution": false
-        }
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        1920,
-        -944
-      ],
-      "id": "20c40cb9-2aff-458d-b730-18545c5f86da",
-      "name": "Opcoes Pratos",
-      "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $json.callback_query.message.chat.id }}",
-        "text": "={{\n`É preciso colocar algo`\n}}",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "SIM, desejo realizar um pedido",
-                    "additionalFields": {
-                      "callback_data": "selecionarItens"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "NÃO, não desejo realizar um pedido",
-                    "additionalFields": {
-                      "callback_data": "voltarCardapio"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "additionalFields": {
-          "appendAttribution": false
-        }
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        1936,
-        -672
-      ],
-      "id": "aeb5bc33-0e94-4141-bf93-c28dd540a6a2",
-      "name": "Opcoes Promocoes",
-      "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "content": "## CATEGORIAS ÁRABES\nvai abrir um menu de opções para o usuário conhecer sobre as Entradas, Salgados, Pratos, Promoções ou Voltar para o inicio. \n**Trabalha com o os seguintes callbacks:**\n--cardapioEntrada\n--cardapioSalgados\n--cardapioPratos\n--cardapioPromocoes\n--voltarCardapio",
-        "height": 656,
-        "width": 768,
+        "content": "## MENU CATEGORIAS ÁRABES\nVai apresentar para o cliente a opção de saber mais sobre algumas das opções a seguir: Entradas, Salgados, Pratos, Promoções ou Voltar para o inicio. \n**Trabalha com o os seguintes callbacks:**\n--cardapioEntrada\n--cardapioSalgados\n--cardapioPratos\n--cardapioPromocoes\n--voltarCardapio",
+        "height": 416,
+        "width": 432,
         "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        592,
+        -64
+      ],
+      "id": "ddb1235f-4913-4712-b9d9-e75119c4f041",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "## FALTANDO\nNecessário fazer um node code para verificar os dados do formulário antes de registrar",
+        "height": 368,
+        "color": 6
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
         1088,
-        -1280
+        288
       ],
-      "id": "c240bd62-2904-4f21-86e1-71572f8ed671",
-      "name": "Sticky Note2"
-    },
-    {
-      "parameters": {
-        "content": "## OPÇÕES DE COMIDAS\nSe o cliente aceitar fazer um pedido vai voltar pra a primeira parte do fluxo e redirecionar para a parte Pedido.\n**Trabalha com os callbacks:**\n--pedido\n--voltarCardapio",
-        "height": 640,
-        "width": 608,
-        "color": 3
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        1872,
-        -1424
-      ],
-      "id": "607c9b5a-64d0-46bf-9999-c5198d7f7b14",
-      "name": "Sticky Note3"
-    },
-    {
-      "parameters": {
-        "content": "## FALTANDO\n**PARTE FALTANDO. NECESSÁRIO FINALIZAR**)",
-        "height": 256,
-        "color": 6
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        1872,
-        -784
-      ],
-      "id": "4f5052ac-46d2-49b3-a02f-c215257cf3da",
-      "name": "Sticky Note4"
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $json.callback_query.message.chat.id }}",
-        "text": "={{ \"Qual das Opções Gostaria de Conhecer Melhor?\\n\\n\" }}",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "Entrada",
-                    "additionalFields": {
-                      "callback_data": "cardapioEntrada"
-                    }
-                  },
-                  {
-                    "text": "Salgados",
-                    "additionalFields": {
-                      "callback_data": "cardapioSalgados"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "Pratos",
-                    "additionalFields": {
-                      "callback_data": "cardapioPratos"
-                    }
-                  },
-                  {
-                    "text": "Promoções Especiais",
-                    "additionalFields": {
-                      "callback_data": "cardapioPromocoes"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "Voltar",
-                    "additionalFields": {
-                      "callback_data": "voltarInicio"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "additionalFields": {
-          "appendAttribution": false
-        }
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        1280,
-        -1008
-      ],
-      "id": "d9806340-c1da-4fd5-9738-cef0e45d4e84",
-      "name": "Menu Categorias Mensagem",
-      "webhookId": "39527d29-ffc9-44df-a6b7-feff5417418a",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "={{ (() => {   if ($json.hora >= 7 && $json.hora < 13)     return \"☀️ Bom dia!\\n\\n🍽️ Bem-vindo ao Restaurante Árabe Maṭʿam!\\n\\nEscolha uma opção abaixo:\";    if ($json.hora >= 13 && $json.hora < 18)     return \"🌤️ Boa tarde!\\n\\n🍽️ Bem-vindo ao Restaurante Árabe Maṭʿam!\\n\\nEscolha uma opção abaixo:\";    if ($json.hora >= 18 && $json.hora < 23)     return \"🌙 Boa noite!\\n\\n🍽️ Bem-vindo ao Restaurante Árabe Maṭʿam!\\n\\nEscolha uma opção abaixo:\";    return \"🍽️ Bem-vindo ao Restaurante Árabe Maṭʿam!\\n\\nEscolha uma opção abaixo:\"; })() }}",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "🥙 Categorias Árabes",
-                    "additionalFields": {
-                      "callback_data": "categorias",
-                      "switch_inline_query": "teste"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "🛒 Fazer Pedido",
-                    "additionalFields": {
-                      "callback_data": "pedido"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "🚚 Acompanhar Entrega",
-                    "additionalFields": {
-                      "callback_data": "acompanhar"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "📍 Sobre a Unidade",
-                    "additionalFields": {
-                      "callback_data": "unidade"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "🍽️ Reservar uma Mesa",
-                    "additionalFields": {
-                      "callback_data": "mesa"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "🆘 Suporte e Ajuda",
-                    "additionalFields": {
-                      "callback_data": "suporte"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "additionalFields": {
-          "appendAttribution": false
-        }
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        368,
-        0
-      ],
-      "id": "60a9cbc6-bd3c-4bf6-a081-65c5e075e36c",
-      "name": "Menu Principal Mensagem",
-      "webhookId": "c32d41a1-dcf0-495b-b7cb-56b8f1224c93",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nbancoDados.numeroPedidos = 0;\n\nreturn items;\n"
-      },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        96,
-        112
-      ],
-      "id": "af3db792-1c84-4397-8693-ca55fc579913",
-      "name": "Contador Global"
-    },
-    {
-      "parameters": {
-        "operation": "sendAndWait",
-        "chatId": "={{ $json.callback_query.message.chat.id }}",
-        "message": "🥙 Escolha os itens desejados para o seu pedido entrando no formulário através do botão abaixo:",
-        "responseType": "customForm",
-        "formFields": {
-          "values": [
-            {
-              "fieldLabel": "Entrada",
-              "fieldType": "checkbox",
-              "fieldOptions": {
-                "values": [
-                  {
-                    "option": "Homus"
-                  },
-                  {
-                    "option": "Quibe Cru"
-                  },
-                  {
-                    "option": "Tabule"
-                  }
-                ]
-              }
-            },
-            {
-              "fieldLabel": "Gostaria de quantas Esfihas?",
-              "fieldType": "number",
-              "placeholder": "0",
-              "defaultValue": "0"
-            },
-            {
-              "fieldLabel": "Gostaria de quantos Quibes Assados?",
-              "fieldType": "number",
-              "placeholder": "0",
-              "defaultValue": "0"
-            },
-            {
-              "fieldLabel": "Pratos (selecione ao menos 1)",
-              "fieldType": "checkbox",
-              "fieldOptions": {
-                "values": [
-                  {
-                    "option": "Kafta"
-                  },
-                  {
-                    "option": "Charuto"
-                  },
-                  {
-                    "option": "Cordeiro"
-                  }
-                ]
-              },
-              "requiredField": true
-            },
-            {
-              "fieldLabel": "Gostaria de Talheres de Plástico ?",
-              "fieldType": "radio",
-              "defaultValue": "Não",
-              "fieldOptions": {
-                "values": [
-                  {
-                    "option": "Sim"
-                  },
-                  {
-                    "option": "Não"
-                  }
-                ]
-              },
-              "requiredField": true
-            }
-          ]
-        },
-        "options": {
-          "messageButtonLabel": "Selecionar Itens",
-          "responseFormTitle": "Itens de Pedido",
-          "responseFormDescription": "Selecione os itens que deseja pedir ",
-          "responseFormButtonLabel": "Enviar",
-          "appendAttribution": false
-        }
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        1296,
-        -368
-      ],
-      "id": "8df75da5-3fd2-40a1-b049-2ffd08a8b3b6",
-      "name": "Formulario Pedido",
-      "webhookId": "497b0a6f-b4be-473e-9e52-da3f684a56cc",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nbancoDados[bancoDados.numeroPedidos] = $input.first().json.data;\n\nbancoDados.numeroPedidos++;\n\nreturn bancoDados;"
-      },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        1488,
-        -368
-      ],
-      "id": "bb14f894-ceec-47ed-be1c-1e64b37a2c52",
-      "name": "Armazenar Globalmente"
-    },
-    {
-      "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nreturn bancoDados;"
-      },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        1696,
-        -368
-      ],
-      "id": "3f072dee-0b12-4d4d-9393-1693bacc1be2",
-      "name": "Code in JavaScript"
-    },
-    {
-      "parameters": {
-        "content": "# ERRO SÓ DEVERIA TER UMA TRIGGER, O FLUXO DEVERÁ SER AJUSTADO USANDO APENAS UMA TRIGGER E SE SEPARANDO ATRAVÉZ DE VERIFICAÇÕES POR MEIO DE IFS E SWITCHS",
-        "height": 400,
-        "width": 704,
-        "color": 6
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        64,
-        -688
-      ],
-      "id": "694eae11-bc62-4bb2-9886-15531b4f35a6",
-      "name": "Sticky Note5"
-    },
-    {
-      "parameters": {
-        "content": "# ERRO SÓ DEVERIA TER UMA TRIGGER, O FLUXO DEVERÁ SER AJUSTADO USANDO APENAS UMA TRIGGER E SE SEPARANDO ATRAVÉZ DE VERIFICAÇÕES POR MEIO DE IFS E SWITCHS",
-        "height": 400,
-        "width": 704,
-        "color": 6
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        1248,
-        -160
-      ],
-      "id": "08cd6628-b63f-4bcc-8427-f2502315c4fe",
+      "id": "00212b01-2925-4812-b9f0-6b97fb76bc6d",
       "name": "Sticky Note6"
     }
   ],
@@ -1036,12 +1013,7 @@
       "main": [
         [
           {
-            "node": "ColetarHoras",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Contador Global",
+            "node": "Eh Mensagem",
             "type": "main",
             "index": 0
           }
@@ -1053,57 +1025,6 @@
         [
           {
             "node": "Menu Principal Mensagem",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Telegram Trigger1": {
-      "main": [
-        [
-          {
-            "node": "Switch",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Switch": {
-      "main": [
-        [
-          {
-            "node": "Menu Categorias Mensagem",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Formulario Pedido",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [],
-        [],
-        [],
-        [],
-        [
-          {
-            "node": "Menu Principal Mensagem",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Telegram Trigger2": {
-      "main": [
-        [
-          {
-            "node": "Switch1",
             "type": "main",
             "index": 0
           }
@@ -1167,9 +1088,68 @@
     },
     "Armazenar Globalmente": {
       "main": [
+        []
+      ]
+    },
+    "Eh Mensagem": {
+      "main": [
         [
           {
-            "node": "Code in JavaScript",
+            "node": "Contador Global",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch Inicial",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch Inicial": {
+      "main": [
+        [
+          {
+            "node": "Menu Categorias Mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Formulario Pedido",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [],
+        [],
+        [],
+        [
+          {
+            "node": "Menu Principal Mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Contador Global": {
+      "main": [
+        [
+          {
+            "node": "ColetarHoras",
             "type": "main",
             "index": 0
           }
@@ -1182,7 +1162,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "52643276-4147-4cf5-8532-a5b0e0b0f38f",
+  "versionId": "60553d39-b738-44ce-8519-99f018ba0073",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"

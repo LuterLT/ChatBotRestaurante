@@ -302,7 +302,6 @@ Ela é mapeada pelo volume no `docker-compose.yml`. Isso significa que, mesmo qu
 
 ## ⚠️ Observações Importantes
 
-- **O domínio gratuito do Ngrok muda toda vez que você reinicia o túnel.** Sempre que isso acontecer, atualize o `WEBHOOK_URL` no `.env` e reinicie os containers.
 - **O Docker Desktop precisa estar aberto e em execução** para que os containers funcionem.
 - **Nunca compartilhe o arquivo `.env`** — ele contém senhas e tokens sensíveis. Ele já está no `.gitignore` por padrão.
 - **Apenas um integrante edita por vez.** Confirme no grupo do WhatsApp antes de começar.
