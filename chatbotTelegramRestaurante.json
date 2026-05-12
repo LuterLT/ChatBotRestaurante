@@ -40,7 +40,7 @@
     },
     {
       "parameters": {
-        "content": "## INICIO\n\nMessagem de saudação e primeiro menu de opções com:\n1- Categorias Árabes\n2- Fazer Pedido\n3- Acompanhar Entrega\n4- Sobre a Unidade\n5- Reserva uma Mese\n6 Suporte e Ajuda",
+        "content": "## INICIO\n\nMessagem de saudação e primeiro menu de opções com:\n1- Categorias Árabes\n2- Fazer Pedido\n3- Acompanhar Entrega\n4- Sobre a Unidade\n5- Reserva uma Mese\n6- Suporte e Ajuda",
         "height": 464,
         "width": 560
       },
@@ -406,7 +406,7 @@
     },
     {
       "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "chatId": "={{ \n$('Telegram Trigger').first().json.message?.chat?.id\n??\n$('Telegram Trigger').first().json.callback_query?.message?.chat?.id\n}}",
         "text": "={{ (() => {   if ($json.hora >= 7 && $json.hora < 13)     return \"☀️ Bom dia!\\n\\n🍽️ Bem-vindo ao Restaurante Árabe Maṭʿam!\\n\\nEscolha uma opção abaixo:\";    if ($json.hora >= 13 && $json.hora < 18)     return \"🌤️ Boa tarde!\\n\\n🍽️ Bem-vindo ao Restaurante Árabe Maṭʿam!\\n\\nEscolha uma opção abaixo:\";    if ($json.hora >= 18 && $json.hora < 23)     return \"🌙 Boa noite!\\n\\n🍽️ Bem-vindo ao Restaurante Árabe Maṭʿam!\\n\\nEscolha uma opção abaixo:\";    return \"🍽️ Bem-vindo ao Restaurante Árabe Maṭʿam!\\n\\nEscolha uma opção abaixo:\"; })() }}",
         "replyMarkup": "inlineKeyboard",
         "inlineKeyboard": {
@@ -508,7 +508,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.message.chat.id;\n\nif (!bancoDados.usuario) {\n  bancoDados.usuario = {};\n}\n\nbancoDados.usuario[clientId] = {\n  endereco: 'Rua X',\n  numeroPedidos: 0,\n  pedidos: []\n};\n\nreturn bancoDados;\n"
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.message.chat.id;\n\nif (!bancoDados.usuario) {\n  bancoDados.usuario = {};\n}\n\nbancoDados.usuario[clientId] = {\n  endereco: 'Rua X',\n  numeroPedidos: 0,\n  pedidos: [],\n  pagamento: 'nenhum'\n  //**Para o pagamento usar cartaoOnline; cartaoPresencial; dinheiro; pix.\n};\n\nreturn bancoDados;\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -859,7 +859,7 @@
     },
     {
       "parameters": {
-        "content": "## MENU CATEGORIAS ÁRABES\nVai apresentar para o cliente a opção de saber mais sobre algumas das opções a seguir: Entradas, Salgados, Pratos, Promoções ou Voltar para o inicio. \n**Trabalha com o os seguintes callbacks:**\n--cardapioEntrada\n--cardapioSalgados\n--cardapioPratos\n--cardapioPromocoes\n--voltarCardapio",
+        "content": "## MENU CATEGORIAS ÁRABES\nVai apresentar para o cliente a opção de saber mais sobre algumas das opções a seguir: Entradas, Salgados, Pratos, Promoções ou Voltar para o inicio. \n**Trabalha com o os seguintes callbacks:**\n--cardapioEntrada\n--cardapioSalgados\n--cardapioPratos\n--cardapioPromocoes\n--voltarInicio",
         "height": 416,
         "width": 432,
         "color": 3
@@ -1171,6 +1171,56 @@
               },
               "renameOutput": true,
               "outputKey": "Online"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "77459de9-844e-4761-b970-c6c7358a5f66",
+                    "leftValue": "={{ $('Telegram Trigger').item.json.callback_query.data }}",
+                    "rightValue": "cartaoPresencial",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Cartao Fisico"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "60f8c213-6455-4a6d-ab22-9f1b2d9fc243",
+                    "leftValue": "={{ $('Telegram Trigger').item.json.callback_query.data }}",
+                    "rightValue": "dinheiro",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Dinheiro"
             }
           ]
         },
@@ -1187,7 +1237,7 @@
     },
     {
       "parameters": {
-        "content": "## CALLBACK PEDIDOS\nVai separar o fluxo conforme a necessidade de Informar Endereço, Pagar Online, Confirmar Pedido com PagOnline, Confirmar Pedido com PagRetirada\n**Trabalha com os seguintes callbacks:**\n--naoAlgoMais\n--pagaOnline\n--pagaRetirada",
+        "content": "## CALLBACK PEDIDOS\nVai separar o fluxo conforme a necessidade de Informar Endereço, Pagar Online, Confirmar Pedido com PagOnline, Perguntar a forma de pagamento física com PagRetirada\n**Trabalha com os seguintes callbacks:**\n--naoAlgoMais\n--pagaOnline\n--pagaRetirada\n--cartaoPresencial\n--dinheiro",
         "height": 576,
         "width": 608,
         "color": 4
@@ -1352,7 +1402,7 @@
     },
     {
       "parameters": {
-        "content": "## Isso está servindo para testes\n\n",
+        "content": "## Isso está servindo para testes\né uma forma de limpar os dados salvos localmente",
         "height": 256,
         "color": 6
       },
@@ -1360,7 +1410,7 @@
       "typeVersion": 1,
       "position": [
         -640,
-        -384
+        -400
       ],
       "id": "94da7b09-4858-471d-b94d-f2965a9e2f6b",
       "name": "Sticky Note10"
@@ -1380,6 +1430,69 @@
       ],
       "id": "afeddd00-e12c-45e9-a908-3a2529bbff3a",
       "name": "Sticky Note11"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "De qual forma irá pagar ?",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Cartão/Pix",
+                    "additionalFields": {
+                      "callback_data": "cartaoPresencial"
+                    }
+                  },
+                  {
+                    "text": "Dinheiro",
+                    "additionalFields": {
+                      "callback_data": "dinheiro"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1424,
+        2480
+      ],
+      "id": "94907221-5f7b-4950-89cf-862a9d26172f",
+      "name": "Forma Pagamento Presencial",
+      "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Forma Pagamento Retirada\nVai dar a opção do usuário pagar usando dinheiro ou cartão/pix presencialmente",
+        "height": 256,
+        "width": 592,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1184,
+        2400
+      ],
+      "id": "929f3782-23d9-4b13-85ab-94d55f6d1972",
+      "name": "Sticky Note12"
     }
   ],
   "pinData": {},
@@ -1558,6 +1671,14 @@
             "index": 0
           }
         ],
+        [
+          {
+            "node": "Forma Pagamento Presencial",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
         [],
         []
       ]
@@ -1594,6 +1715,11 @@
           }
         ]
       ]
+    },
+    "Forma Pagamento Presencial": {
+      "main": [
+        []
+      ]
     }
   },
   "active": false,
@@ -1601,7 +1727,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "5aa40abc-8c51-4517-90de-fdb3e80ea1f9",
+  "versionId": "463b95ce-f0a0-4a48-99db-8a89ec9a0b55",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"
