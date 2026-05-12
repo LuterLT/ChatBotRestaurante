@@ -12,7 +12,7 @@
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.3,
       "position": [
-        -400,
+        -384,
         64
       ],
       "id": "e5752dcd-a625-48ef-818b-cd69eae46124",
@@ -508,7 +508,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nbancoDados.numeroPedidos = 0;\n\nreturn items;\n"
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.message.chat.id;\n\nif (!bancoDados.usuario) {\n  bancoDados.usuario = {};\n}\n\nbancoDados.usuario[clientId] = {\n  endereco: 'Rua X',\n  numeroPedidos: 0,\n  pedidos: []\n};\n\nreturn bancoDados;\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -619,7 +619,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nbancoDados[bancoDados.numeroPedidos] = $input.first().json.data;\n\nbancoDados.numeroPedidos++;\n\nreturn bancoDados;"
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nconst clientId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nconst numeroPedidos = bancoDados.usuario[clientId].numeroPedidos;\n\nbancoDados.usuario[clientId].pedidos[numeroPedidos]=$input.first().json.data;\n\nbancoDados.usuario[clientId].numeroPedidos++;\n\nreturn bancoDados;"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -642,7 +642,7 @@
           "conditions": [
             {
               "id": "a2c625e6-c547-45c5-88d4-02fda73aa9fe",
-              "leftValue": "={{ $json.message }}",
+              "leftValue": "={{ $('Telegram Trigger').item.json.message }}",
               "rightValue": "",
               "operator": {
                 "type": "object",
@@ -1121,6 +1121,56 @@
               },
               "renameOutput": true,
               "outputKey": "Endereço"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "60bcc6f4-6938-40b6-a63b-d785de7f47f5",
+                    "leftValue": "={{ $('Telegram Trigger').item.json.callback_query.data }}",
+                    "rightValue": "pagaRetirada",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Retirada"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "e70f4bfd-d0f8-43ab-85f4-3ae56b9c6ce1",
+                    "leftValue": "={{ $('Telegram Trigger').item.json.callback_query.data }}",
+                    "rightValue": "pagaOnline",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Online"
             }
           ]
         },
@@ -1137,7 +1187,7 @@
     },
     {
       "parameters": {
-        "content": "## CALLBACK PEDIDOS\nVai apresentar um link para um formulário para o usuário fazer seu pedido e então vai registrar nas variáveis globais. Depois vai perguntar se ele deseja algo mais, caso sim ele será redirecionado para um novo pedido, caso não ele irá para a confirmação de endereço.\n**Trabalha com os seguintes callbacks:**\n--pedido\n--naoAlgoMais",
+        "content": "## CALLBACK PEDIDOS\nVai separar o fluxo conforme a necessidade de Informar Endereço, Pagar Online, Confirmar Pedido com PagOnline, Confirmar Pedido com PagRetirada\n**Trabalha com os seguintes callbacks:**\n--naoAlgoMais\n--pagaOnline\n--pagaRetirada",
         "height": 576,
         "width": 608,
         "color": 4
@@ -1198,8 +1248,8 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1248,
-        2176
+        1232,
+        2240
       ],
       "id": "89acc45e-68c8-4353-995c-04ac273cebca",
       "name": "Pedir Endereço",
@@ -1210,6 +1260,126 @@
           "name": "Telegram account 2"
         }
       }
+    },
+    {
+      "parameters": {
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nbancoDados.usuario[clientId].endereco = $input.first().json.data;\n\nreturn bancoDados;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1392,
+        2240
+      ],
+      "id": "7fa66a1f-4ac3-47dd-a361-109a09d727d0",
+      "name": "Salvar Endereço"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "Deseja efetuar o pagamento online ou na retirada do pedido ?",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Online",
+                    "additionalFields": {
+                      "callback_data": "pagaOnline"
+                    }
+                  },
+                  {
+                    "text": "Na retirada",
+                    "additionalFields": {
+                      "callback_data": "pagaRetirada"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1568,
+        2240
+      ],
+      "id": "0a9bc2bc-d01e-4031-a0dc-b8cb24f3969e",
+      "name": "Deseja Pagar",
+      "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $getWorkflowStaticData('global');\n\nfor (const key of Object.keys(data)) {\n  delete data[key];\n}\n\nreturn [{ json: {} }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -560,
+        -272
+      ],
+      "id": "565b82dc-b1f4-4d87-9834-858dae3f4454",
+      "name": "LIMPAR"
+    },
+    {
+      "parameters": {
+        "content": "## SALVAR ENDEREÇO\nPedi para que o usuário preencha um formulário contendo dados para a entrega e salva com um Json. Depois pergunta se o pagamento será Online ou na Retirada.",
+        "height": 288,
+        "width": 592,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1184,
+        2112
+      ],
+      "id": "2f0c5d9b-d923-4990-8c13-59a6e110a8d1",
+      "name": "Sticky Note9"
+    },
+    {
+      "parameters": {
+        "content": "## Isso está servindo para testes\n\n",
+        "height": 256,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        -384
+      ],
+      "id": "94da7b09-4858-471d-b94d-f2965a9e2f6b",
+      "name": "Sticky Note10"
+    },
+    {
+      "parameters": {
+        "content": "# PARA TESTAR DE UM PUBLISH, POIS A FORMA COMO OS DADOS DO USUÁRIO ESTÃO SENDO SALVAS É PERDIDA ENTRE AS EXECUÇÕES DO WORKFLOW EM TESTE!!!\nALÉM DISSO, EVITE RUN NODE, POIS TBM AFETA A FORMA DE SALVAMENTO E PORTANTO VOCÊ VAI EXPERENCIAR ERROS DEVIDO AO FUNCIONAMENTO DO N8N EM AMBIENTES DE TESTE",
+        "height": 272,
+        "width": 928,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        688,
+        576
+      ],
+      "id": "afeddd00-e12c-45e9-a908-3a2529bbff3a",
+      "name": "Sticky Note11"
     }
   ],
   "pinData": {},
@@ -1267,7 +1437,7 @@
       "main": [
         [
           {
-            "node": "Contador Global",
+            "node": "LIMPAR",
             "type": "main",
             "index": 0
           }
@@ -1387,6 +1557,41 @@
             "type": "main",
             "index": 0
           }
+        ],
+        [],
+        []
+      ]
+    },
+    "Pedir Endereço": {
+      "main": [
+        [
+          {
+            "node": "Salvar Endereço",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar Endereço": {
+      "main": [
+        [
+          {
+            "node": "Deseja Pagar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LIMPAR": {
+      "main": [
+        [
+          {
+            "node": "Contador Global",
+            "type": "main",
+            "index": 0
+          }
         ]
       ]
     }
@@ -1396,7 +1601,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "366bb685-7472-416b-9fcc-2dc796ab0763",
+  "versionId": "5aa40abc-8c51-4517-90de-fdb3e80ea1f9",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"
