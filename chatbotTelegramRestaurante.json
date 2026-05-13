@@ -374,7 +374,7 @@
               "row": {
                 "buttons": [
                   {
-                    "text": "Voltar",
+                    "text": "← Voltar",
                     "additionalFields": {
                       "callback_data": "voltarInicio"
                     }
@@ -1284,8 +1284,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1328,
-        976
+        1872,
+        1056
       ],
       "id": "3643dd49-5d18-4c09-9a9e-edcf1360029f",
       "name": "Sticky Note11"
@@ -1730,6 +1730,419 @@
       ],
       "id": "d42de27b-d83c-44a5-aad7-e990444a4088",
       "name": "Sticky Note14"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "<b>Ficamos felizes</b> que queira conhecer mais sobre nosso estabelecimento.\n\nQual das seguintes informações gostaria de saber sobre nossa unidade?",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Localização",
+                    "additionalFields": {
+                      "callback_data": "saberLocalizacao"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Horários",
+                    "additionalFields": {
+                      "callback_data": "saberHorarios"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Estrutura",
+                    "additionalFields": {
+                      "callback_data": "saberEstrutura"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "← Voltar",
+                    "additionalFields": {
+                      "callback_data": "voltarInicio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1568,
+        928
+      ],
+      "id": "663d5a5c-fc70-4112-bdb4-44f445384dc8",
+      "name": "Opcoes Sobre Unidade",
+      "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## MENU SOBRE UNIDADE\nVai apresentar as opções de informações que o cliente pode obter sobre a unidade.\n**Trabalha com os seguintes callbacks:**\n--saberLocalizacao\n--saberHorarios\n--saberEstrutura\n--voltarInicio",
+        "height": 304,
+        "width": 416,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1408,
+        784
+      ],
+      "id": "42af8f19-25e0-45b0-b1f2-db3a2878879e",
+      "name": "Sticky Note15"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Telegram Trigger').item.json.callback_query.data }}",
+                    "rightValue": "saberLocalizacao",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "89a73e59-f611-4db0-a3f1-e022a4effc88"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Localização"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "5601e579-17b9-4036-933b-63a3af66a47e",
+                    "leftValue": "={{ $('Telegram Trigger').item.json.callback_query.data }}",
+                    "rightValue": "saberHorarios",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Horário"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "aa6f0945-d264-4b8c-96b1-aef21ca7e0ac",
+                    "leftValue": "={{ $('Telegram Trigger').item.json.callback_query.data }}",
+                    "rightValue": "saberEstrutura",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Estrutura"
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        1536,
+        3424
+      ],
+      "id": "a2b3d464-e532-4540-a512-dd246b79265d",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "content": "## MENU SOBRE UNIDADE\nVai separar o fluxo entre as opções de conhecer mais sobre a unidade, Localização, Horários e Estrutura\n**Trabalha com os seguintes callbacks:**\n--saberLocalizacao\n--saberHorarios\n--saberEstrutura\n",
+        "height": 480,
+        "width": 416,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1392,
+        3200
+      ],
+      "id": "2380abc7-42f5-4551-8621-3f671a0e2bb9",
+      "name": "Sticky Note16"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "<b>📍 Como chegar ao Maṭʿam</b>\n\nEstamos localizados na:\n\n📌 Rua das Esfihas, 123 - Centro\n\n🗺️ <a href=\"https://maps.google.com\">Abrir no Google Maps</a>\n\nSerá um prazer receber você! 🧆✨",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "← Voltar",
+                    "additionalFields": {
+                      "callback_data": "unidade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Início",
+                    "additionalFields": {
+                      "callback_data": "voltarInicio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2016,
+        3344
+      ],
+      "id": "e0f0c02e-d977-4e3f-a5b5-66a36d2cfaf4",
+      "name": "Sobre Localizacao",
+      "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## MENU SOBRE LOCALIZAÇÃO\nInforma a localização do estabelecimento e fornece link e botão de voltar e ir ao início\n**Trabalha com os seguintes callbacks:**\n--unidade\n--voltarInicio\n",
+        "height": 272,
+        "width": 416,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1872,
+        3216
+      ],
+      "id": "eb578931-24c9-400b-ab59-64dbcd87c302",
+      "name": "Sticky Note17"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "<b>🕒 Horários de Funcionamento — Maṭʿam</b>\n\n📅 Seg a Sáb: 11h às 23h\n📅 Dom: 12h às 18h\n\nEsperamos por você! 🧆✨",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "← Voltar",
+                    "additionalFields": {
+                      "callback_data": "unidade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Início",
+                    "additionalFields": {
+                      "callback_data": "voltarInicio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2464,
+        3424
+      ],
+      "id": "d1fae4e1-9962-4ab7-a373-441fde768943",
+      "name": "Sobre Horário",
+      "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "<b>✨ Estrutura do Maṭʿam</b>\n\n👧 Espaço Kids\n\n🅿️ Estacionamento Grátis\n\n♿ Acessibilidade\n\nTudo pensado para o seu conforto e da sua família 🧆",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "← Voltar",
+                    "additionalFields": {
+                      "callback_data": "unidade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Início",
+                    "additionalFields": {
+                      "callback_data": "voltarInicio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2048,
+        3632
+      ],
+      "id": "96c97135-92e1-4589-acb3-3f26ffad0e90",
+      "name": "Sobre Estrutura",
+      "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## MENU SOBRE HORÁRIO\nInforma sobre os horários do estabelecimento. Tem um botão para voltar e para ir para o início\n**Trabalha com os seguintes callbacks:**\n--unidade\n--voltarInicio\n",
+        "height": 272,
+        "width": 416,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        3312
+      ],
+      "id": "0c05330a-d812-4fde-bd43-2eaaf6d2bc7c",
+      "name": "Sticky Note18"
+    },
+    {
+      "parameters": {
+        "content": "## MENU SOBRE ESTRUTURA\nInforma sobre a estrutura do estabelecimento. Tem um botão voltar e para ir ao início\n**Trabalha com os seguintes callbacks:**\n--unidade\n--voltarInicio\n",
+        "height": 272,
+        "width": 416,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1872,
+        3504
+      ],
+      "id": "3618551f-42a2-40e4-b9aa-572ebb0081e7",
+      "name": "Sticky Note19"
     }
   ],
   "pinData": {
@@ -1865,7 +2278,13 @@
           }
         ],
         [],
-        [],
+        [
+          {
+            "node": "Opcoes Sobre Unidade",
+            "type": "main",
+            "index": 0
+          }
+        ],
         [],
         [],
         [
@@ -1996,6 +2415,13 @@
             "type": "main",
             "index": 0
           }
+        ],
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
         ]
       ]
     },
@@ -2119,6 +2545,31 @@
           }
         ]
       ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Sobre Localizacao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Sobre Horário",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Sobre Estrutura",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
@@ -2126,7 +2577,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "657afd7b-ad63-491b-90e9-ba0011d41a90",
+  "versionId": "5c2df677-ebb1-4a73-8efd-35e5f1fde88e",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"
