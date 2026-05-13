@@ -12,10 +12,10 @@
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.3,
       "position": [
-        -384,
-        64
+        256,
+        464
       ],
-      "id": "e5752dcd-a625-48ef-818b-cd69eae46124",
+      "id": "1583c441-ac12-4cc3-a629-b57d3aad161f",
       "name": "Telegram Trigger",
       "webhookId": "1026be42-cb67-4038-948b-93b450cda22e",
       "credentials": {
@@ -32,10 +32,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        208,
-        -32
+        848,
+        368
       ],
-      "id": "f215360d-f8ee-4ffb-ad7a-871387089784",
+      "id": "36cf92ec-f1df-48dc-8431-439bbb9f5c72",
       "name": "ColetarHoras"
     },
     {
@@ -47,10 +47,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        16,
-        -256
+        656,
+        144
       ],
-      "id": "a62bf3df-2a00-40c7-bff4-c7260b4b5124",
+      "id": "5c5f788f-0feb-484d-a2ea-b313b460c917",
       "name": "Sticky Note"
     },
     {
@@ -62,10 +62,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        16,
-        256
+        656,
+        656
       ],
-      "id": "9d2ce96f-87db-47dc-a261-647864876158",
+      "id": "bb5bb17e-9278-4b9a-bcd9-61a998926ac4",
       "name": "Sticky Note1"
     },
     {
@@ -108,10 +108,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        992,
-        1456
+        1632,
+        1856
       ],
-      "id": "c186667a-6301-418d-8718-ff6fcaa493c1",
+      "id": "4ff202d4-59c9-4948-9545-e4ceb56680b0",
       "name": "Opcoes Salgados",
       "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
@@ -161,10 +161,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        992,
-        1296
+        1632,
+        1696
       ],
-      "id": "18bf18ff-2039-4ddb-b9e2-165d99e85811",
+      "id": "535309f5-ae3d-46ba-8865-83d6cc0f7e56",
       "name": "Opcoes Entrada",
       "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
@@ -214,10 +214,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        992,
-        1616
+        1632,
+        2016
       ],
-      "id": "20c40cb9-2aff-458d-b730-18545c5f86da",
+      "id": "f6d29b3b-7fd6-471e-ab70-b5a7a44fc4c6",
       "name": "Opcoes Pratos",
       "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
@@ -267,10 +267,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1008,
-        1872
+        1648,
+        2272
       ],
-      "id": "aeb5bc33-0e94-4141-bf93-c28dd540a6a2",
+      "id": "4c3e384c-5601-43be-ab1b-224785b3fb2e",
       "name": "Opcoes Promocoes",
       "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
@@ -290,10 +290,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        240,
-        1216
+        880,
+        1616
       ],
-      "id": "c240bd62-2904-4f21-86e1-71572f8ed671",
+      "id": "517d7626-2359-4e63-a9d6-0a0c10b9df9d",
       "name": "Sticky Note2"
     },
     {
@@ -306,10 +306,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        864,
-        1120
+        1504,
+        1520
       ],
-      "id": "607c9b5a-64d0-46bf-9999-c5198d7f7b14",
+      "id": "9587b583-edf7-427d-aba0-ac35579d7111",
       "name": "Sticky Note3"
     },
     {
@@ -321,10 +321,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        944,
-        1760
+        1584,
+        2160
       ],
-      "id": "4f5052ac-46d2-49b3-a02f-c215257cf3da",
+      "id": "d079a3ab-9ade-42f3-ae30-3818784845e2",
       "name": "Sticky Note4"
     },
     {
@@ -391,10 +391,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        640,
-        176
+        1280,
+        576
       ],
-      "id": "d9806340-c1da-4fd5-9738-cef0e45d4e84",
+      "id": "4e81aa3d-3b21-485c-9976-66ad3f23cbde",
       "name": "Menu Categorias Mensagem",
       "webhookId": "39527d29-ffc9-44df-a6b7-feff5417418a",
       "credentials": {
@@ -493,10 +493,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        368,
-        -32
+        1008,
+        368
       ],
-      "id": "60a9cbc6-bd3c-4bf6-a081-65c5e075e36c",
+      "id": "d8145386-e1b3-4dd0-bd39-c04ff95e5b15",
       "name": "Menu Principal Mensagem",
       "webhookId": "c32d41a1-dcf0-495b-b7cb-56b8f1224c93",
       "credentials": {
@@ -508,15 +508,15 @@
     },
     {
       "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.message.chat.id;\n\nif (!bancoDados.usuario) {\n  bancoDados.usuario = {};\n}\n\nbancoDados.usuario[clientId] = {\n  endereco: 'Rua X',\n  numeroPedidos: 0,\n  pedidos: [],\n  pagamento: 'nenhum'\n  //**Para o pagamento usar cartaoOnline; cartaoPresencial; dinheiro; pix.\n};\n\nreturn bancoDados;\n"
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.message.chat.id;\n\nif (!bancoDados.usuario) {\n  bancoDados.usuario = {};\n}\n\nbancoDados.usuario[clientId] = {\n  endereco: 'Rua X',\n  numeroPedidos: 0,\n  pedidos: [],\n  pagamento: 'nenhum'\n  //**O pagamento pode ser 'online' ou 'retirada'\n};\n\nreturn bancoDados;\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        48,
-        -32
+        688,
+        368
       ],
-      "id": "af3db792-1c84-4397-8693-ca55fc579913",
+      "id": "cbf91f56-ad43-4279-86d1-41ab4c621727",
       "name": "Contador Global"
     },
     {
@@ -604,10 +604,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1312,
-        64
+        1952,
+        464
       ],
-      "id": "8df75da5-3fd2-40a1-b049-2ffd08a8b3b6",
+      "id": "b9a98c5b-3c53-4efa-98d0-6fc5356f387b",
       "name": "Formulario Pedido",
       "webhookId": "497b0a6f-b4be-473e-9e52-da3f684a56cc",
       "credentials": {
@@ -624,10 +624,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1520,
-        64
+        2160,
+        464
       ],
-      "id": "bb14f894-ceec-47ed-be1c-1e64b37a2c52",
+      "id": "a09fa771-03aa-4339-a3d0-b3ee3dd48553",
       "name": "Armazenar Globalmente"
     },
     {
@@ -658,10 +658,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
       "position": [
-        -192,
-        64
+        448,
+        464
       ],
-      "id": "9495461c-cacc-43e8-9cc7-969ab933fce0",
+      "id": "c951046d-6368-4250-8560-448ea1acd705",
       "name": "Eh Mensagem"
     },
     {
@@ -851,10 +851,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        224,
-        432
+        864,
+        832
       ],
-      "id": "5e7e6703-a197-44ba-97f9-4f60ae64f0cc",
+      "id": "00787ad1-e419-4f35-8d8e-33e5dcc0716d",
       "name": "Switch Inicial"
     },
     {
@@ -867,10 +867,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        592,
-        -64
+        1232,
+        336
       ],
-      "id": "ddb1235f-4913-4712-b9d9-e75119c4f041",
+      "id": "c90ed03b-7c86-4b9b-bd68-62248de532c6",
       "name": "Sticky Note5"
     },
     {
@@ -882,10 +882,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1344,
-        -64
+        1984,
+        336
       ],
-      "id": "00212b01-2925-4812-b9f0-6b97fb76bc6d",
+      "id": "ff843ac4-3b5d-4331-a9b9-b8982a03ca14",
       "name": "Sticky Note6"
     },
     {
@@ -922,10 +922,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1728,
-        64
+        2368,
+        464
       ],
-      "id": "14f6f95d-1e34-402f-b8b2-93be416af2c2",
+      "id": "ec674fe9-bf52-44a8-a1c6-c02951a3e0b3",
       "name": "Algo Mais",
       "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
       "credentials": {
@@ -945,10 +945,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1184,
-        -224
+        1824,
+        176
       ],
-      "id": "c4491bee-44e9-4b01-9232-fd62d0c106ec",
+      "id": "da3210d9-6ac5-48c6-8d83-03114be85595",
       "name": "Sticky Note7"
     },
     {
@@ -1088,11 +1088,223 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        496,
-        1408
+        1136,
+        1808
       ],
-      "id": "835270d5-edab-43b9-b029-07b05d1efcec",
+      "id": "7d2fdb77-7ccb-4af7-b8e5-5ac9130684df",
       "name": "Switch Cardapio"
+    },
+    {
+      "parameters": {
+        "content": "## CALLBACK PEDIDOS\nVai separar o fluxo conforme a necessidade de Informar Endereço, Pagar Online e Pagar na Retirada.\n**Trabalha com os seguintes callbacks:**\n--naoAlgoMais\n--pagaOnline\n--pagaRetirada\n",
+        "height": 576,
+        "width": 608,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1216,
+        2512
+      ],
+      "id": "07dc8db3-91f7-41e1-b6d1-9af73f1872ae",
+      "name": "Sticky Note8"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "message": "Por favor, informe seu endereço de entrega.",
+        "responseType": "customForm",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Rua",
+              "placeholder": "ex: Rua Princesa Leopoldina",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Número",
+              "fieldType": "number",
+              "placeholder": "ex: 455",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Complemento",
+              "placeholder": "ex: Apto 32"
+            },
+            {
+              "fieldLabel": "CEP",
+              "placeholder": "ex: 03498001",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Seu Nome",
+              "placeholder": "ex: Carlos Adalberto",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "messageButtonLabel": "Informar Endereço",
+          "responseFormTitle": "Endereço",
+          "responseFormDescription": "Diga as informações do endereço de entrega, com rua, número, complemente, CEP e nome do recebedor.",
+          "responseFormButtonLabel": "Enviar",
+          "responseFormCustomCss": ":root {\n\t--font-family: 'Open Sans', sans-serif;\n\t--font-weight-normal: 400;\n\t--font-weight-bold: 600;\n\t--font-size-body: 12px;\n\t--font-size-label: 14px;\n\t--font-size-test-notice: 12px;\n\t--font-size-input: 14px;\n\t--font-size-header: 20px;\n\t--font-size-paragraph: 14px;\n\t--font-size-link: 12px;\n\t--font-size-error: 12px;\n\t--font-size-html-h1: 28px;\n\t--font-size-html-h2: 20px;\n\t--font-size-html-h3: 16px;\n\t--font-size-html-h4: 14px;\n\t--font-size-html-h5: 12px;\n\t--font-size-html-h6: 10px;\n\t--font-size-subheader: 14px;\n\n\t/* Colors */\n\t--color-background: #262626;\n\t--color-test-notice-text: #e6a23d;\n\t--color-test-notice-bg: #fefaf6;\n\t--color-test-notice-border: #f6dcb7;\n\t--color-card-bg: #F5F5F5;\n\t--color-card-border: #dbdfe7;\n\t--color-card-shadow: rgba(99, 77, 255, 0.06);\n\t--color-link: #7e8186;\n\t--color-header: #525356;\n\t--color-label: #555555;\n\t--color-input-border: #dbdfe7;\n\t--color-input-text: #71747A;\n\t--color-focus-border: rgb(90, 76, 194);\n\t--color-submit-btn-bg: #ff6d5a;\n\t--color-submit-btn-text: #ffffff;\n\t--color-error: #ea1f30;\n\t--color-required: #ff6d5a;\n\t--color-clear-button-bg: #7e8186;\n\t--color-html-text: #555;\n\t--color-html-link: #ff6d5a;\n\t--color-header-subtext: #7e8186;\n\n\t/* Border Radii */\n\t--border-radius-card: 8px;\n\t--border-radius-input: 6px;\n\t--border-radius-clear-btn: 50%;\n\t--card-border-radius: 8px;\n\n\t/* Spacing */\n\t--padding-container-top: 24px;\n\t--padding-card: 24px;\n\t--padding-test-notice-vertical: 12px;\n\t--padding-test-notice-horizontal: 24px;\n\t--margin-bottom-card: 16px;\n\t--padding-form-input: 12px;\n\t--card-padding: 24px;\n\t--card-margin-bottom: 16px;\n\n\t/* Dimensions */\n\t--container-width: 448px;\n\t--submit-btn-height: 48px;\n\t--checkbox-size: 18px;\n\n\t/* Others */\n\t--box-shadow-card: 0px 4px 16px 0px var(--color-card-shadow);\n\t--opacity-placeholder: 0.5;\n}",
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1872,
+        2640
+      ],
+      "id": "9a2af491-b319-4864-9b5d-b2d138877d15",
+      "name": "Pedir Endereço",
+      "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nbancoDados.usuario[clientId].endereco = $input.first().json.data;\n\nreturn bancoDados;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2032,
+        2640
+      ],
+      "id": "87a85e30-c33d-4169-a7c4-7c9450b5b0e1",
+      "name": "Salvar Endereço"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "Deseja efetuar o pagamento online ou na retirada do pedido ?",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Online",
+                    "additionalFields": {
+                      "callback_data": "pagaOnline"
+                    }
+                  },
+                  {
+                    "text": "Na retirada",
+                    "additionalFields": {
+                      "callback_data": "pagaRetirada"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2208,
+        2640
+      ],
+      "id": "055d1dd6-938f-46f7-9758-463912c7700a",
+      "name": "Deseja Pagar",
+      "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $getWorkflowStaticData('global');\n\nfor (const key of Object.keys(data)) {\n  delete data[key];\n}\n\nreturn [{ json: {} }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        80,
+        128
+      ],
+      "id": "e78a8d64-4584-410b-89d9-1a27b454e04b",
+      "name": "LIMPAR"
+    },
+    {
+      "parameters": {
+        "content": "## SALVAR ENDEREÇO\nPedi para que o usuário preencha um formulário contendo dados para a entrega e salva com um Json. Depois pergunta se o pagamento será Online ou na Retirada.",
+        "height": 288,
+        "width": 592,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1824,
+        2512
+      ],
+      "id": "ec515d2c-75d8-4510-8d46-f2cdfb824537",
+      "name": "Sticky Note9"
+    },
+    {
+      "parameters": {
+        "content": "## Isso está servindo para testes\né uma forma de limpar os dados salvos localmente",
+        "height": 256,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "d7f87d7d-fe8c-49c7-8ff4-8426e142a220",
+      "name": "Sticky Note10"
+    },
+    {
+      "parameters": {
+        "content": "# PARA TESTAR DE UM PUBLISH, POIS A FORMA COMO OS DADOS DO USUÁRIO ESTÃO SENDO SALVAS É PERDIDA ENTRE AS EXECUÇÕES DO WORKFLOW EM TESTE!!!\nALÉM DISSO, EVITE RUN NODE, POIS TBM AFETA A FORMA DE SALVAMENTO E PORTANTO VOCÊ VAI EXPERENCIAR ERROS DEVIDO AO FUNCIONAMENTO DO N8N EM AMBIENTES DE TESTE",
+        "height": 272,
+        "width": 928,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1328,
+        976
+      ],
+      "id": "3643dd49-5d18-4c09-9a9e-edcf1360029f",
+      "name": "Sticky Note11"
+    },
+    {
+      "parameters": {
+        "content": "## Forma Pagamento Retirada\nVai salvar o tipo de pagamento, se será Online ou na Retirada do pedido",
+        "height": 400,
+        "width": 592,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1824,
+        2800
+      ],
+      "id": "9b9ed065-62e8-463d-a67b-e5f9f3e8a576",
+      "name": "Sticky Note12"
     },
     {
       "parameters": {
@@ -1171,199 +1383,131 @@
               },
               "renameOutput": true,
               "outputKey": "Online"
-            },
-            {
-              "conditions": {
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 3
-                },
-                "conditions": [
-                  {
-                    "id": "77459de9-844e-4761-b970-c6c7358a5f66",
-                    "leftValue": "={{ $('Telegram Trigger').item.json.callback_query.data }}",
-                    "rightValue": "cartaoPresencial",
-                    "operator": {
-                      "type": "string",
-                      "operation": "equals",
-                      "name": "filter.operator.equals"
-                    }
-                  }
-                ],
-                "combinator": "and"
-              },
-              "renameOutput": true,
-              "outputKey": "Cartao Fisico"
-            },
-            {
-              "conditions": {
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict",
-                  "version": 3
-                },
-                "conditions": [
-                  {
-                    "id": "60f8c213-6455-4a6d-ab22-9f1b2d9fc243",
-                    "leftValue": "={{ $('Telegram Trigger').item.json.callback_query.data }}",
-                    "rightValue": "dinheiro",
-                    "operator": {
-                      "type": "string",
-                      "operation": "equals",
-                      "name": "filter.operator.equals"
-                    }
-                  }
-                ],
-                "combinator": "and"
-              },
-              "renameOutput": true,
-              "outputKey": "Dinheiro"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 3.4,
-      "position": [
-        736,
-        2336
-      ],
-      "id": "802b0619-c55a-40ba-b8d5-57fd48332046",
-      "name": "Switch Pagamento"
-    },
-    {
-      "parameters": {
-        "content": "## CALLBACK PEDIDOS\nVai separar o fluxo conforme a necessidade de Informar Endereço, Pagar Online, Confirmar Pedido com PagOnline, Perguntar a forma de pagamento física com PagRetirada\n**Trabalha com os seguintes callbacks:**\n--naoAlgoMais\n--pagaOnline\n--pagaRetirada\n--cartaoPresencial\n--dinheiro",
-        "height": 576,
-        "width": 608,
-        "color": 4
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        576,
-        2112
-      ],
-      "id": "03940eb8-b98a-4155-8fe2-ca273d95dea0",
-      "name": "Sticky Note8"
-    },
-    {
-      "parameters": {
-        "operation": "sendAndWait",
-        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
-        "message": "Por favor, informe seu endereço de entrega.",
-        "responseType": "customForm",
-        "formFields": {
-          "values": [
-            {
-              "fieldLabel": "Rua",
-              "placeholder": "ex: Rua Princesa Leopoldina",
-              "requiredField": true
-            },
-            {
-              "fieldLabel": "Número",
-              "fieldType": "number",
-              "placeholder": "ex: 455",
-              "requiredField": true
-            },
-            {
-              "fieldLabel": "Complemento",
-              "placeholder": "ex: Apto 32"
-            },
-            {
-              "fieldLabel": "CEP",
-              "placeholder": "ex: 03498001",
-              "requiredField": true
-            },
-            {
-              "fieldLabel": "Seu Nome",
-              "placeholder": "ex: Carlos Adalberto",
-              "requiredField": true
             }
           ]
         },
         "options": {
-          "messageButtonLabel": "Informar Endereço",
-          "responseFormTitle": "Endereço",
-          "responseFormDescription": "Diga as informações do endereço de entrega, com rua, número, complemente, CEP e nome do recebedor.",
-          "responseFormButtonLabel": "Enviar",
-          "responseFormCustomCss": ":root {\n\t--font-family: 'Open Sans', sans-serif;\n\t--font-weight-normal: 400;\n\t--font-weight-bold: 600;\n\t--font-size-body: 12px;\n\t--font-size-label: 14px;\n\t--font-size-test-notice: 12px;\n\t--font-size-input: 14px;\n\t--font-size-header: 20px;\n\t--font-size-paragraph: 14px;\n\t--font-size-link: 12px;\n\t--font-size-error: 12px;\n\t--font-size-html-h1: 28px;\n\t--font-size-html-h2: 20px;\n\t--font-size-html-h3: 16px;\n\t--font-size-html-h4: 14px;\n\t--font-size-html-h5: 12px;\n\t--font-size-html-h6: 10px;\n\t--font-size-subheader: 14px;\n\n\t/* Colors */\n\t--color-background: #262626;\n\t--color-test-notice-text: #e6a23d;\n\t--color-test-notice-bg: #fefaf6;\n\t--color-test-notice-border: #f6dcb7;\n\t--color-card-bg: #F5F5F5;\n\t--color-card-border: #dbdfe7;\n\t--color-card-shadow: rgba(99, 77, 255, 0.06);\n\t--color-link: #7e8186;\n\t--color-header: #525356;\n\t--color-label: #555555;\n\t--color-input-border: #dbdfe7;\n\t--color-input-text: #71747A;\n\t--color-focus-border: rgb(90, 76, 194);\n\t--color-submit-btn-bg: #ff6d5a;\n\t--color-submit-btn-text: #ffffff;\n\t--color-error: #ea1f30;\n\t--color-required: #ff6d5a;\n\t--color-clear-button-bg: #7e8186;\n\t--color-html-text: #555;\n\t--color-html-link: #ff6d5a;\n\t--color-header-subtext: #7e8186;\n\n\t/* Border Radii */\n\t--border-radius-card: 8px;\n\t--border-radius-input: 6px;\n\t--border-radius-clear-btn: 50%;\n\t--card-border-radius: 8px;\n\n\t/* Spacing */\n\t--padding-container-top: 24px;\n\t--padding-card: 24px;\n\t--padding-test-notice-vertical: 12px;\n\t--padding-test-notice-horizontal: 24px;\n\t--margin-bottom-card: 16px;\n\t--padding-form-input: 12px;\n\t--card-padding: 24px;\n\t--card-margin-bottom: 16px;\n\n\t/* Dimensions */\n\t--container-width: 448px;\n\t--submit-btn-height: 48px;\n\t--checkbox-size: 18px;\n\n\t/* Others */\n\t--box-shadow-card: 0px 4px 16px 0px var(--color-card-shadow);\n\t--opacity-placeholder: 0.5;\n}",
-          "appendAttribution": false
+          "fallbackOutput": "extra"
         }
       },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
       "position": [
-        1232,
-        2240
+        1376,
+        2736
       ],
-      "id": "89acc45e-68c8-4353-995c-04ac273cebca",
-      "name": "Pedir Endereço",
-      "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
+      "id": "a0befca4-21c2-4c76-a59e-9d71bdc37c2d",
+      "name": "Switch Pagamento"
     },
     {
       "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nbancoDados.usuario[clientId].endereco = $input.first().json.data;\n\nreturn bancoDados;"
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nbancoDados.usuario[userId].pagamento = 'online';\n\nreturn bancoDados;"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1392,
-        2240
+        2032,
+        3056
       ],
-      "id": "7fa66a1f-4ac3-47dd-a361-109a09d727d0",
-      "name": "Salvar Endereço"
+      "id": "c23a3cd4-0b86-4dc6-a157-ae85dc617b37",
+      "name": "Salvar Pag Retirada On"
     },
     {
       "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
-        "text": "Deseja efetuar o pagamento online ou na retirada do pedido ?",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nbancoDados.usuario[userId].pagamento = 'retirada';\n\nreturn bancoDados;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2000,
+        2896
+      ],
+      "id": "eefedabf-8579-48c4-92ec-d47c45c100db",
+      "name": "Salvar Pag Retirada Re"
+    },
+    {
+      "parameters": {
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\n// Tabela de precos (R$)\nconst precos = {\n  'Homus': 18.00,\n  'Quibe Cru': 22.00,\n  'Tabule': 16.00,\n  'Kafta': 45.00,\n  'Charuto': 42.00,\n  'Cordeiro': 65.00\n};\nconst precoEsfiha = 8.00;\nconst precoQuibeAssado = 10.00;\n\nlet total = 0;\nconst pedidos = bancoDados.usuario[userId]?.pedidos || [];\n\nfor (const pedido of pedidos) {\n  // Entradas (checkboxes devolvem array ou string separada por virgula)\n  const entradas = pedido['Entrada'] ? \n    (Array.isArray(pedido['Entrada']) ? pedido['Entrada'] : pedido['Entrada'].split(',').map(s => s.trim())) \n    : [];\n  for (const e of entradas) {\n    total += precos[e] || 0;\n  }\n  // Salgados\n  total += (Number(pedido['Gostaria de quantas Esfihas?']) || 0) * precoEsfiha;\n  total += (Number(pedido['Gostaria de quantos Quibes Assados?']) || 0) * precoQuibeAssado;\n  // Pratos\n  const pratos = pedido['Pratos (selecione ao menos 1)'] ?\n    (Array.isArray(pedido['Pratos (selecione ao menos 1)']) ? pedido['Pratos (selecione ao menos 1)'] : pedido['Pratos (selecione ao menos 1)'].split(',').map(s => s.trim()))\n    : [];\n  for (const p of pratos) {\n    total += precos[p] || 0;\n  }\n}\n\n// Salva o total no banco\nbancoDados.usuario[userId].totalPedido = total;\n\nreturn [{ json: { userId, total, totalFormatado: `R$ ${total.toFixed(2)}` } }];\n"
+      },
+      "id": "a2ad1ab3-8986-4602-973c-c8ce25c130ac",
+      "name": "Calcular Total PIX",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2400,
+        3056
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.mercadopago.com/v1/payments",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "Online",
-                    "additionalFields": {
-                      "callback_data": "pagaOnline"
-                    }
-                  },
-                  {
-                    "text": "Na retirada",
-                    "additionalFields": {
-                      "callback_data": "pagaRetirada"
-                    }
-                  }
-                ]
-              }
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "X-Idempotency-Key",
+              "value": "={{ $('Calcular Total PIX').item.json.userId + '-' + Date.now() }}"
             }
           ]
         },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"transaction_amount\": {{ $('Calcular Total PIX').item.json.total }},\n  \"description\": \"Pedido Restaurante - Telegram\",\n  \"payment_method_id\": \"pix\",\n  \"payer\": {\n    \"email\": \"cliente@pedido.com\",\n    \"identification\": {\n      \"type\": \"CPF\",\n      \"number\": \"01234567890\"\n    }\n  },\n  \"external_reference\": \"{{ $('Calcular Total PIX').item.json.userId }}\"\n}",
+        "options": {}
+      },
+      "id": "56fdb9ab-9e9e-4a0e-92e0-16fbde208357",
+      "name": "Criar Pagamento PIX MP",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        2624,
+        3056
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "7Dwmt6y505akvjC0",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $('Calcular Total PIX').item.json.userId;\nconst respMP = $input.first().json;\n\nbancoDados.usuario[userId].pixPaymentId = respMP.id;\nbancoDados.usuario[userId].pixStatus = respMP.status;\n\nconst qrCode = respMP?.point_of_interaction?.transaction_data?.qr_code || '';\nconst qrCodeBase64 = respMP?.point_of_interaction?.transaction_data?.qr_code_base64 || '';\nconst ticketUrl = respMP?.point_of_interaction?.transaction_data?.ticket_url || '';\n\nreturn [{\n  json: {\n    userId,\n    paymentId: respMP.id,\n    total: bancoDados.usuario[userId].totalFormatado || bancoDados.usuario[userId].totalPedido,\n    qrCode,\n    qrCodeBase64,\n    ticketUrl\n  }\n}];\n"
+      },
+      "id": "24abd172-54e6-412e-a83f-63608d62f10b",
+      "name": "Salvar Payment ID",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2848,
+        3056
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.chatId }}",
+        "text": "={{ $json.mensagem }}",
         "additionalFields": {
-          "appendAttribution": false
+          "appendAttribution": false,
+          "parse_mode": "HTML"
         }
       },
+      "id": "809cdd3c-28ff-4319-892e-2be8974a5a93",
+      "name": "Enviar Link PIX Telegram",
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1568,
-        2240
+        3248,
+        3056
       ],
-      "id": "0a9bc2bc-d01e-4031-a0dc-b8cb24f3969e",
-      "name": "Deseja Pagar",
-      "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
+      "webhookId": "1e0d9209-4b35-454e-b2a3-1cb828024a8f",
       "credentials": {
         "telegramApi": {
           "id": "XvOSLZ20R4qjCpEW",
@@ -1373,129 +1517,274 @@
     },
     {
       "parameters": {
-        "jsCode": "const data = $getWorkflowStaticData('global');\n\nfor (const key of Object.keys(data)) {\n  delete data[key];\n}\n\nreturn [{ json: {} }];"
+        "httpMethod": "POST",
+        "path": "mercadopago-pix",
+        "options": {}
+      },
+      "id": "75917b50-d6dd-4a07-b0fe-b4fec8612383",
+      "name": "Webhook Confirmação MP",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        3296,
+        2848
+      ],
+      "webhookId": "mercadopago-pix-confirmacao"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "pix-cond-status",
+              "leftValue": "={{ $json.body?.data?.id ? 'has_id' : $json.action }}",
+              "rightValue": "has_id",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "0fb19a58-7828-4a26-92f0-207c423d8343",
+      "name": "Verificar Pagamento Aprovado",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        3520,
+        2848
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ 'https://api.mercadopago.com/v1/payments/' + $json.body.data.id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "d3009dc9-4275-4ecd-a5c8-ab4bbb1c6709",
+      "name": "Consultar Status Pagamento MP",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        3744,
+        2848
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "7Dwmt6y505akvjC0",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "pix-cond-approved",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "approved",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "3412d3c3-874c-4788-8f62-57fbff8256d9",
+      "name": "Se Status Approved",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        3968,
+        2848
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.external_reference }}",
+        "text": "✅ *Pagamento aprovado!*\n\nSeu pedido foi confirmado e já está sendo preparado. Obrigado! 🎉",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "76f678af-1111-48af-9c24-de7341039e7a",
+      "name": "Confirmar Pagamento Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        4192,
+        2848
+      ],
+      "webhookId": "447f02c4-4f69-4ea2-a19c-2e2cd2b9753a",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Pagamento PIX – Mercado Pago\n\n**Fluxo:**\n1. Calcular Total PIX → calcula valor do pedido\n2. Criar Pagamento PIX MP → chama API do Mercado Pago\n3. Salvar Payment ID → guarda dados no static data\n4. Enviar Link PIX Telegram → envia link + copia e cola\n\n**Webhook separado (linha do lado):**\n5. Webhook Confirmação MP → recebe notificação\n6. Verificar / Consultar → valida pagamento\n7. Confirmar Pagamento Telegram → avisa o usuário\n\n⚠️ Crie a credencial **Mercado Pago Token** em:\nSettings → Credentials → HTTP Header Auth\nHeader: `Authorization`, Value: `Bearer SEU_ACCESS_TOKEN`\n\nConfigure o webhook no painel MP:\n`/webhook/mercadopago-pix`",
+        "height": 424,
+        "width": 800,
+        "color": 4
+      },
+      "id": "1b45daef-e43e-4c78-b3f3-9d0f7ad16efc",
+      "name": "Sticky Note PIX",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2416,
+        2672
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const url = $input.first().json.ticketUrl.replace(/&/g, '%26');\nconst total = $input.first().json.total;\n\nreturn [{\n  json: {\n    mensagem: `Pagamento PIX gerado!\\n\\nValor: R$ ${total}\\n\\nLink para pagar:\\n${url}\\n\\nApos o pagamento voce recebera a confirmacao!`,\n    chatId: $input.first().json.userId\n  }\n}];"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -560,
-        -272
+        3056,
+        3056
       ],
-      "id": "565b82dc-b1f4-4d87-9834-858dae3f4454",
-      "name": "LIMPAR"
+      "id": "93bc6568-38a7-4a3c-ba5c-601899281c1f",
+      "name": "Preparar Mensagem Pix"
     },
     {
       "parameters": {
-        "content": "## SALVAR ENDEREÇO\nPedi para que o usuário preencha um formulário contendo dados para a entrega e salva com um Json. Depois pergunta se o pagamento será Online ou na Retirada.",
-        "height": 288,
-        "width": 592,
-        "color": 4
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $input.first().json.external_reference;\n\nif (bancoDados.usuario && bancoDados.usuario[userId]) {\n  bancoDados.usuario[userId].pedidos = [];\n  bancoDados.usuario[userId].numeroPedidos = 0;\n  bancoDados.usuario[userId].totalPedido = 0;\n  bancoDados.usuario[userId].pixPaymentId = null;\n  bancoDados.usuario[userId].pixStatus = null;\n}\n\nreturn [{ json: { ok: true, userId } }];"
       },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
       "position": [
-        1184,
-        2112
+        4400,
+        2848
       ],
-      "id": "2f0c5d9b-d923-4990-8c13-59a6e110a8d1",
-      "name": "Sticky Note9"
+      "id": "27277030-86e7-4061-8490-c536b4cfc40f",
+      "name": "Limpar Pedidos"
     },
     {
       "parameters": {
-        "content": "## Isso está servindo para testes\né uma forma de limpar os dados salvos localmente",
-        "height": 256,
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nif (bancoDados.usuario && bancoDados.usuario[userId]) {\n  bancoDados.usuario[userId].pedidos = [];\n  bancoDados.usuario[userId].numeroPedidos = 0;\n  bancoDados.usuario[userId].totalPedido = 0;\n}\n\nreturn [{ json: { ok: true, userId } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2208,
+        2896
+      ],
+      "id": "405c6184-f996-4fd7-89fc-fc8fb248fc3e",
+      "name": "Limpar Dados Retirada"
+    },
+    {
+      "parameters": {
+        "content": "## AJUSTE\nAdicionar visualização do total do pedido",
+        "height": 112,
+        "width": 176,
         "color": 6
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -640,
-        -400
+        1824,
+        2880
       ],
-      "id": "94da7b09-4858-471d-b94d-f2965a9e2f6b",
-      "name": "Sticky Note10"
+      "id": "672af399-382b-4447-a947-9aabe63823cc",
+      "name": "Sticky Note13"
     },
     {
       "parameters": {
-        "content": "# PARA TESTAR DE UM PUBLISH, POIS A FORMA COMO OS DADOS DO USUÁRIO ESTÃO SENDO SALVAS É PERDIDA ENTRE AS EXECUÇÕES DO WORKFLOW EM TESTE!!!\nALÉM DISSO, EVITE RUN NODE, POIS TBM AFETA A FORMA DE SALVAMENTO E PORTANTO VOCÊ VAI EXPERENCIAR ERROS DEVIDO AO FUNCIONAMENTO DO N8N EM AMBIENTES DE TESTE",
+        "content": "## CONFIRMAÇÃO PAGAMENTO\n",
         "height": 272,
-        "width": 928,
-        "color": 6
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        688,
-        576
-      ],
-      "id": "afeddd00-e12c-45e9-a908-3a2529bbff3a",
-      "name": "Sticky Note11"
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
-        "text": "De qual forma irá pagar ?",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "Cartão/Pix",
-                    "additionalFields": {
-                      "callback_data": "cartaoPresencial"
-                    }
-                  },
-                  {
-                    "text": "Dinheiro",
-                    "additionalFields": {
-                      "callback_data": "dinheiro"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "additionalFields": {
-          "appendAttribution": false
-        }
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        1424,
-        2480
-      ],
-      "id": "94907221-5f7b-4950-89cf-862a9d26172f",
-      "name": "Forma Pagamento Presencial",
-      "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "content": "## Forma Pagamento Retirada\nVai dar a opção do usuário pagar usando dinheiro ou cartão/pix presencialmente",
-        "height": 256,
-        "width": 592,
+        "width": 1392,
         "color": 4
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1184,
-        2400
+        3216,
+        2768
       ],
-      "id": "929f3782-23d9-4b13-85ab-94d55f6d1972",
-      "name": "Sticky Note12"
+      "id": "d42de27b-d83c-44a5-aad7-e990444a4088",
+      "name": "Sticky Note14"
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "Telegram Trigger": [
+      {
+        "json": {
+          "update_id": 737498937,
+          "callback_query": {
+            "id": "1016239499952654973",
+            "from": {
+              "id": 6679062640,
+              "is_bot": false,
+              "first_name": "Luter",
+              "language_code": "pt-br"
+            },
+            "message": {
+              "message_id": 225,
+              "from": {
+                "id": 8679938918,
+                "is_bot": true,
+                "first_name": "Restaurante Maṭʿam",
+                "username": "restaurantejorjao_bot"
+              },
+              "chat": {
+                "id": 6679062640,
+                "first_name": "Luter",
+                "type": "private"
+              },
+              "date": 1778651829,
+              "text": "Deseja efetuar o pagamento online ou na retirada do pedido ?",
+              "reply_markup": {
+                "inline_keyboard": [
+                  [
+                    {
+                      "text": "Online",
+                      "callback_data": "pagaOnline"
+                    },
+                    {
+                      "text": "Na retirada",
+                      "callback_data": "pagaRetirada"
+                    }
+                  ]
+                ]
+              }
+            },
+            "chat_instance": "-6486450329571153113",
+            "data": "pagaOnline"
+          }
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
   "connections": {
     "Telegram Trigger": {
       "main": [
@@ -1517,11 +1806,6 @@
             "index": 0
           }
         ]
-      ]
-    },
-    "Menu Principal Mensagem": {
-      "main": [
-        []
       ]
     },
     "Formulario Pedido": {
@@ -1611,11 +1895,6 @@
         ]
       ]
     },
-    "Algo Mais": {
-      "main": [
-        []
-      ]
-    },
     "Switch Cardapio": {
       "main": [
         [
@@ -1662,27 +1941,6 @@
         ]
       ]
     },
-    "Switch Pagamento": {
-      "main": [
-        [
-          {
-            "node": "Pedir Endereço",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Forma Pagamento Presencial",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [],
-        [],
-        []
-      ]
-    },
     "Pedir Endereço": {
       "main": [
         [
@@ -1716,9 +1974,150 @@
         ]
       ]
     },
-    "Forma Pagamento Presencial": {
+    "Switch Pagamento": {
       "main": [
-        []
+        [
+          {
+            "node": "Pedir Endereço",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Salvar Pag Retirada Re",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Salvar Pag Retirada On",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar Pag Retirada On": {
+      "main": [
+        [
+          {
+            "node": "Calcular Total PIX",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calcular Total PIX": {
+      "main": [
+        [
+          {
+            "node": "Criar Pagamento PIX MP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Criar Pagamento PIX MP": {
+      "main": [
+        [
+          {
+            "node": "Salvar Payment ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar Payment ID": {
+      "main": [
+        [
+          {
+            "node": "Preparar Mensagem Pix",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook Confirmação MP": {
+      "main": [
+        [
+          {
+            "node": "Verificar Pagamento Aprovado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verificar Pagamento Aprovado": {
+      "main": [
+        [
+          {
+            "node": "Consultar Status Pagamento MP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Consultar Status Pagamento MP": {
+      "main": [
+        [
+          {
+            "node": "Se Status Approved",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Se Status Approved": {
+      "main": [
+        [
+          {
+            "node": "Confirmar Pagamento Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preparar Mensagem Pix": {
+      "main": [
+        [
+          {
+            "node": "Enviar Link PIX Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Confirmar Pagamento Telegram": {
+      "main": [
+        [
+          {
+            "node": "Limpar Pedidos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salvar Pag Retirada Re": {
+      "main": [
+        [
+          {
+            "node": "Limpar Dados Retirada",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     }
   },
@@ -1727,11 +2126,11 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "463b95ce-f0a0-4a48-99db-8a89ec9a0b55",
+  "versionId": "657afd7b-ad63-491b-90e9-ba0011d41a90",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"
   },
-  "id": "IZueyy6sP8y5PuE0",
+  "id": "t9GEOhOSGuCCjqR0",
   "tags": []
 }
