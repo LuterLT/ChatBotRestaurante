@@ -229,46 +229,18 @@
     },
     {
       "parameters": {
-        "chatId": "={{ $json.callback_query.message.chat.id }}",
-        "text": "={{\n`É preciso colocar algo`\n}}",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "SIM, desejo realizar um pedido",
-                    "additionalFields": {
-                      "callback_data": "selecionarItens"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "NÃO, não desejo realizar um pedido",
-                    "additionalFields": {
-                      "callback_data": "voltarCardapio"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "<b>🍽️ Promoção Especial Encontrada!</b>  \nTemos ofertas imperdíveis para você aproveitar hoje 😋🔥  \n\nConfira no PDF abaixo todas as promoções, combos e descontos disponíveis no nosso restaurante árabe.  \nAproveite enquanto durar! ✨",
         "additionalFields": {
-          "appendAttribution": false
+          "appendAttribution": false,
+          "parse_mode": "HTML"
         }
       },
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1648,
-        2272
+        1920,
+        2240
       ],
       "id": "4c3e384c-5601-43be-ab1b-224785b3fb2e",
       "name": "Opcoes Promocoes",
@@ -300,7 +272,7 @@
       "parameters": {
         "content": "## OPÇÕES DE COMIDAS\nSe o cliente aceitar fazer um pedido vai voltar pra a primeira parte do fluxo e redirecionar para a parte Pedido.\n**Trabalha com os callbacks:**\n--pedido\n--voltarCardapio",
         "height": 944,
-        "width": 608,
+        "width": 768,
         "color": 3
       },
       "type": "n8n-nodes-base.stickyNote",
@@ -314,15 +286,16 @@
     },
     {
       "parameters": {
-        "content": "## FALTANDO\n**PARTE FALTANDO. NECESSÁRIO FINALIZAR**)",
-        "height": 256,
+        "content": "## FALTANDO\n**PARTE FALTANDO. NECESSÁRIO FINALIZAR**)\n\npegar o arquivo pdf(provavelmente o jeito mais fácil é usando node de download do drive) \n\ntbm falta no caso seja false(Sem promoção ativa)",
+        "height": 320,
+        "width": 512,
         "color": 6
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1584,
-        2160
+        1808,
+        2096
       ],
       "id": "d079a3ab-9ade-42f3-ae30-3818784845e2",
       "name": "Sticky Note4"
@@ -508,7 +481,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.message.chat.id;\n\nif (!bancoDados.usuario) {\n  bancoDados.usuario = {};\n}\n\nbancoDados.usuario[clientId] = {\n  endereco: 'Rua X',\n  numeroPedidos: 0,\n  pedidos: [],\n  pagamento: 'nenhum'\n  //**O pagamento pode ser 'online' ou 'retirada'\n};\n\nreturn bancoDados;\n"
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.message.chat.id;\n\nbancoDados.promocaoAtiva = true;\n\nif (!bancoDados.usuario) {\n  bancoDados.usuario = {};\n}\n\nbancoDados.usuario[clientId] = {\n  endereco: 'Rua X',\n  numeroPedidos: 0,\n  pedidos: [],\n  pagamento: 'nenhum'\n  //**O pagamento pode ser 'online' ou 'retirada'\n};\n\nreturn bancoDados;\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1419,7 +1392,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2000,
+        1856,
         2896
       ],
       "id": "eefedabf-8579-48c4-92ec-d47c45c100db",
@@ -1434,7 +1407,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2400,
+        2352,
         3056
       ]
     },
@@ -1656,7 +1629,7 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        2416,
+        2464,
         2672
       ]
     },
@@ -1680,8 +1653,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        4400,
-        2848
+        -112,
+        1584
       ],
       "id": "27277030-86e7-4061-8490-c536b4cfc40f",
       "name": "Limpar Pedidos"
@@ -1693,27 +1666,11 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2208,
-        2896
+        -112,
+        1408
       ],
       "id": "405c6184-f996-4fd7-89fc-fc8fb248fc3e",
       "name": "Limpar Dados Retirada"
-    },
-    {
-      "parameters": {
-        "content": "## AJUSTE\nAdicionar visualização do total do pedido",
-        "height": 112,
-        "width": 176,
-        "color": 6
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        1824,
-        2880
-      ],
-      "id": "672af399-382b-4447-a947-9aabe63823cc",
-      "name": "Sticky Note13"
     },
     {
       "parameters": {
@@ -2143,15 +2100,139 @@
       ],
       "id": "3618551f-42a2-40e4-b9aa-572ebb0081e7",
       "name": "Sticky Note19"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "=<b>✅ Pedido Concluído!</b>  \n<b>🧾 Itens do pedido:</b> \n{{ $json.itens.join('\\n') }}  \n<b>💵 Total: {{ $json.totalFormatado }}</b> \n\n🏪 Seu pedido será preparado para retirada. Aguarde a confirmação da loja!",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2144,
+        2896
+      ],
+      "id": "41c72489-2d7e-4bef-a8d0-23db329960ac",
+      "name": "Amostra Pedido",
+      "webhookId": "2a978636-35b2-4313-87f6-9004db8c33e5",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nconst precos = {\n  'Homus': 18.00,\n  'Quibe Cru': 22.00,\n  'Tabule': 16.00,\n  'Kafta': 45.00,\n  'Charuto': 42.00,\n  'Cordeiro': 65.00\n};\nconst precoEsfiha = 8.00;\nconst precoQuibeAssado = 10.00;\n\nlet total = 0;\nconst pedidos = bancoDados.usuario[userId]?.pedidos || [];\nconst linhasItens = [];\n\nfor (const pedido of pedidos) {\n  const entradas = pedido['Entrada']\n    ? (Array.isArray(pedido['Entrada']) ? pedido['Entrada'] : pedido['Entrada'].split(',').map(s => s.trim()))\n    : [];\n  for (const e of entradas) {\n    const preco = precos[e] || 0;\n    total += preco;\n    if (preco > 0) linhasItens.push(`${e}: R$ ${preco.toFixed(2)}`);\n  }\n\n  const qtdEsfiha = Number(pedido['Gostaria de quantas Esfihas?']) || 0;\n  if (qtdEsfiha > 0) {\n    const v = qtdEsfiha * precoEsfiha;\n    total += v;\n    linhasItens.push(`Esfihas (${qtdEsfiha}x): R$ ${v.toFixed(2)}`);\n  }\n\n  const qtdQuibe = Number(pedido['Gostaria de quantos Quibes Assados?']) || 0;\n  if (qtdQuibe > 0) {\n    const v = qtdQuibe * precoQuibeAssado;\n    total += v;\n    linhasItens.push(`Quibes Assados (${qtdQuibe}x): R$ ${v.toFixed(2)}`);\n  }\n\n  const pratos = pedido['Pratos (selecione ao menos 1)']\n    ? (Array.isArray(pedido['Pratos (selecione ao menos 1)']) ? pedido['Pratos (selecione ao menos 1)'] : pedido['Pratos (selecione ao menos 1)'].split(',').map(s => s.trim()))\n    : [];\n  for (const p of pratos) {\n    const preco = precos[p] || 0;\n    total += preco;\n    if (preco > 0) linhasItens.push(`${p}: R$ ${preco.toFixed(2)}`);\n  }\n}\n\nbancoDados.usuario[userId].totalPedido = total;\n\nreturn [{ json: { userId, total, totalFormatado: `R$ ${total.toFixed(2)}`, itens: linhasItens } }];"
+      },
+      "id": "744f2659-1f3d-4e68-8e67-496408125e61",
+      "name": "Calcular Total",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2000,
+        2896
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Não exclua\nIsso está aqui apenas para caso seja utíl no futuro",
+        "height": 464,
+        "width": 320,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -192,
+        1280
+      ],
+      "id": "455e655e-4a9f-4a6a-a636-7f83c0583f27",
+      "name": "Sticky Note13"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "041eac5d-49a8-4348-a85c-fca6635e4a61",
+              "leftValue": "={{ $json.promocaoAtiva }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1712,
+        2256
+      ],
+      "id": "41625233-2939-47ac-afdc-b795ac3982c0",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nreturn bancoDados"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1552,
+        2256
+      ],
+      "id": "1d197aa6-2c1a-4210-9144-3071de39efda",
+      "name": "Retornar Banco"
+    },
+    {
+      "parameters": {
+        "operation": "sendDocument",
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2128,
+        2240
+      ],
+      "id": "5c97af43-56dc-490d-8037-86da94aac6cf",
+      "name": "Send a document",
+      "webhookId": "28d7abf8-3218-4bb5-8978-fca26a7edaaf",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
     }
   ],
   "pinData": {
     "Telegram Trigger": [
       {
         "json": {
-          "update_id": 737498937,
+          "update_id": 737499040,
           "callback_query": {
-            "id": "1016239499952654973",
+            "id": "1016239497941436372",
             "from": {
               "id": 6679062640,
               "is_bot": false,
@@ -2159,7 +2240,7 @@
               "language_code": "pt-br"
             },
             "message": {
-              "message_id": 225,
+              "message_id": 347,
               "from": {
                 "id": 8679938918,
                 "is_bot": true,
@@ -2171,25 +2252,41 @@
                 "first_name": "Luter",
                 "type": "private"
               },
-              "date": 1778651829,
-              "text": "Deseja efetuar o pagamento online ou na retirada do pedido ?",
+              "date": 1778738545,
+              "text": "Qual das Opções Gostaria de Conhecer Melhor?",
               "reply_markup": {
                 "inline_keyboard": [
                   [
                     {
-                      "text": "Online",
-                      "callback_data": "pagaOnline"
+                      "text": "Entrada",
+                      "callback_data": "cardapioEntrada"
                     },
                     {
-                      "text": "Na retirada",
-                      "callback_data": "pagaRetirada"
+                      "text": "Salgados",
+                      "callback_data": "cardapioSalgados"
+                    }
+                  ],
+                  [
+                    {
+                      "text": "Pratos",
+                      "callback_data": "cardapioPratos"
+                    },
+                    {
+                      "text": "Promoções Especiais",
+                      "callback_data": "cardapioPromocoes"
+                    }
+                  ],
+                  [
+                    {
+                      "text": "← Voltar",
+                      "callback_data": "voltarInicio"
                     }
                   ]
                 ]
               }
             },
             "chat_instance": "-6486450329571153113",
-            "data": "pagaOnline"
+            "data": "cardapioPromocoes"
           }
         },
         "pairedItem": {
@@ -2339,7 +2436,7 @@
         ],
         [
           {
-            "node": "Opcoes Promocoes",
+            "node": "Retornar Banco",
             "type": "main",
             "index": 0
           }
@@ -2526,20 +2623,14 @@
     },
     "Confirmar Pagamento Telegram": {
       "main": [
-        [
-          {
-            "node": "Limpar Pedidos",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     },
     "Salvar Pag Retirada Re": {
       "main": [
         [
           {
-            "node": "Limpar Dados Retirada",
+            "node": "Calcular Total",
             "type": "main",
             "index": 0
           }
@@ -2570,6 +2661,55 @@
           }
         ]
       ]
+    },
+    "Amostra Pedido": {
+      "main": [
+        []
+      ]
+    },
+    "Calcular Total": {
+      "main": [
+        [
+          {
+            "node": "Amostra Pedido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Opcoes Promocoes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Retornar Banco": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Opcoes Promocoes": {
+      "main": [
+        [
+          {
+            "node": "Send a document",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
@@ -2577,7 +2717,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "5c2df677-ebb1-4a73-8efd-35e5f1fde88e",
+  "versionId": "08f698d1-2713-4da3-a574-6d53cb02e6f9",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"
