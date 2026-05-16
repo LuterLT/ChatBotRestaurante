@@ -239,8 +239,8 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1920,
-        2240
+        1984,
+        2256
       ],
       "id": "4c3e384c-5601-43be-ab1b-224785b3fb2e",
       "name": "Opcoes Promocoes",
@@ -272,7 +272,7 @@
       "parameters": {
         "content": "## OPÇÕES DE COMIDAS\nSe o cliente aceitar fazer um pedido vai voltar pra a primeira parte do fluxo e redirecionar para a parte Pedido.\n**Trabalha com os callbacks:**\n--pedido\n--voltarCardapio",
         "height": 944,
-        "width": 768,
+        "width": 1280,
         "color": 3
       },
       "type": "n8n-nodes-base.stickyNote",
@@ -283,22 +283,6 @@
       ],
       "id": "9587b583-edf7-427d-aba0-ac35579d7111",
       "name": "Sticky Note3"
-    },
-    {
-      "parameters": {
-        "content": "## FALTANDO\n**PARTE FALTANDO. NECESSÁRIO FINALIZAR**)\n\npegar o arquivo pdf(provavelmente o jeito mais fácil é usando node de download do drive) \n\ntbm falta no caso seja false(Sem promoção ativa)",
-        "height": 320,
-        "width": 512,
-        "color": 6
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        1808,
-        2096
-      ],
-      "id": "d079a3ab-9ade-42f3-ae30-3818784845e2",
-      "name": "Sticky Note4"
     },
     {
       "parameters": {
@@ -825,7 +809,7 @@
       "typeVersion": 3.4,
       "position": [
         864,
-        832
+        816
       ],
       "id": "00787ad1-e419-4f35-8d8e-33e5dcc0716d",
       "name": "Switch Inicial"
@@ -1257,8 +1241,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1872,
-        1056
+        1904,
+        880
       ],
       "id": "3643dd49-5d18-4c09-9a9e-edcf1360029f",
       "name": "Sticky Note11"
@@ -1267,7 +1251,7 @@
       "parameters": {
         "content": "## Forma Pagamento Retirada\nVai salvar o tipo de pagamento, se será Online ou na Retirada do pedido",
         "height": 400,
-        "width": 592,
+        "width": 800,
         "color": 4
       },
       "type": "n8n-nodes-base.stickyNote",
@@ -1407,7 +1391,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2352,
+        2656,
         3056
       ]
     },
@@ -1440,7 +1424,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        2624,
+        2832,
         3056
       ],
       "credentials": {
@@ -1459,7 +1443,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2848,
+        3056,
         3056
       ]
     },
@@ -1477,7 +1461,7 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        3248,
+        3456,
         3056
       ],
       "webhookId": "1e0d9209-4b35-454e-b2a3-1cb828024a8f",
@@ -1620,8 +1604,8 @@
     {
       "parameters": {
         "content": "## Pagamento PIX – Mercado Pago\n\n**Fluxo:**\n1. Calcular Total PIX → calcula valor do pedido\n2. Criar Pagamento PIX MP → chama API do Mercado Pago\n3. Salvar Payment ID → guarda dados no static data\n4. Enviar Link PIX Telegram → envia link + copia e cola\n\n**Webhook separado (linha do lado):**\n5. Webhook Confirmação MP → recebe notificação\n6. Verificar / Consultar → valida pagamento\n7. Confirmar Pagamento Telegram → avisa o usuário\n\n⚠️ Crie a credencial **Mercado Pago Token** em:\nSettings → Credentials → HTTP Header Auth\nHeader: `Authorization`, Value: `Bearer SEU_ACCESS_TOKEN`\n\nConfigure o webhook no painel MP:\n`/webhook/mercadopago-pix`",
-        "height": 424,
-        "width": 800,
+        "height": 648,
+        "width": 1024,
         "color": 4
       },
       "id": "1b45daef-e43e-4c78-b3f3-9d0f7ad16efc",
@@ -1629,8 +1613,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        2464,
-        2672
+        2624,
+        2560
       ]
     },
     {
@@ -1640,7 +1624,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        3056,
+        3264,
         3056
       ],
       "id": "93bc6568-38a7-4a3c-ba5c-601899281c1f",
@@ -2183,8 +2167,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
       "position": [
-        1712,
-        2256
+        1776,
+        2272
       ],
       "id": "41625233-2939-47ac-afdc-b795ac3982c0",
       "name": "If"
@@ -2196,8 +2180,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1552,
-        2256
+        1616,
+        2272
       ],
       "id": "1d197aa6-2c1a-4210-9144-3071de39efda",
       "name": "Retornar Banco"
@@ -2212,12 +2196,177 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        2128,
-        2240
+        2352,
+        2256
       ],
       "id": "5c97af43-56dc-490d-8037-86da94aac6cf",
       "name": "Send a document",
       "webhookId": "28d7abf8-3218-4bb5-8978-fca26a7edaaf",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "<b>Qual ação gostaria de tomar ?</b>",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Acompanhar Pedidos",
+                    "additionalFields": {
+                      "callback_data": "acompanhar"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Voltar ao Início",
+                    "additionalFields": {
+                      "callback_data": "voltarInicio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2448,
+        2944
+      ],
+      "id": "650cc08c-272c-4ad7-a491-b43d69a903fb",
+      "name": "Proxima Acao",
+      "webhookId": "91a95d37-fa55-4a91-9b2a-b908fb813eeb",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Ação Pós Pedido\nVai perguntar se o usuário gostaria de acompanhar a entrega ou voltar ao início.\n**Trabalha com os seguintes callbacks:**\n--acompanhar\n--voltarInicio",
+        "height": 304,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2336,
+        2784
+      ],
+      "id": "1bc8e412-bb5d-4d83-8bfc-c954a95962ce",
+      "name": "Sticky Note20"
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "17Umc5_Ha2wc24za8h_e1iBrqOrpQxjdt",
+          "mode": "list",
+          "cachedResultName": "Matam_Catalogo_Premium.pdf",
+          "cachedResultUrl": "https://drive.google.com/file/d/17Umc5_Ha2wc24za8h_e1iBrqOrpQxjdt/view?usp=drivesdk"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        2192,
+        2256
+      ],
+      "id": "620a01be-d036-4fd1-945b-add9338377f3",
+      "name": "Download file",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "yxRJELfgtgEQLCf3",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# EM ALGUNS CASOS RODAR COMO TESTE UNITÁRIO FUNCIONA (PRINCIAPLEMNTE SE NÃO DEPENDER  DO NOSSO SISTEMA DE SAVLAR DADOS LOCAIS)",
+        "height": 272,
+        "width": 928,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1904,
+        1152
+      ],
+      "id": "4c43f72b-b003-4c63-a45b-6ee8b6f1d176",
+      "name": "Sticky Note21"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "={{\n`🍴 Gostaria de realizar um pedido agora ou deseja conhecer outras opções do nosso cardápio?`\n}}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "SIM, desejo realizar um pedido",
+                    "additionalFields": {
+                      "callback_data": "pedido"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "NÃO, não desejo realizar um pedido",
+                    "additionalFields": {
+                      "callback_data": "voltarCardapio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2560,
+        2256
+      ],
+      "id": "3c4b7fef-7697-4b3d-82b0-da944cbdfd53",
+      "name": "Confirmacao Realizar",
+      "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
         "telegramApi": {
           "id": "XvOSLZ20R4qjCpEW",
@@ -2664,7 +2813,13 @@
     },
     "Amostra Pedido": {
       "main": [
-        []
+        [
+          {
+            "node": "Proxima Acao",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "Calcular Total": {
@@ -2704,7 +2859,29 @@
       "main": [
         [
           {
+            "node": "Download file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download file": {
+      "main": [
+        [
+          {
             "node": "Send a document",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a document": {
+      "main": [
+        [
+          {
+            "node": "Confirmacao Realizar",
             "type": "main",
             "index": 0
           }
@@ -2717,7 +2894,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "08f698d1-2713-4da3-a574-6d53cb02e6f9",
+  "versionId": "b7e799f3-47ad-47a6-87e6-d76ef2e0ee80",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"
