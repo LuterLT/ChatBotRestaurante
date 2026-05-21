@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maṭʿam — Reservar Mesa</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0c09;
+    --surface: #17140f;
+    --border: #2e2820;
+    --gold: #c9a84c;
+    --gold-dim: #8a6e2f;
+    --text: #e8dfc8;
+    --text-dim: #7a6f5e;
+    --red: #9b3a2a;
+    --green: #3a6b45;
+    --radius: 4px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ── Ornamental header ─────────────────────── */
+  header {
+    width: 100%;
+    text-align: center;
+    padding: 48px 24px 32px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 50%; transform: translateX(-50%);
+    width: 80px; height: 2px;
+    background: var(--gold);
+  }
+  .logo-arabic {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    color: var(--text);
+    line-height: 1;
+  }
+  .subtitle {
+    margin-top: 10px;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  /* ── Main layout ───────────────────────────── */
+  main {
+    width: 100%;
+    max-width: 760px;
+    padding: 48px 24px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* ── Section title ─────────────────────────── */
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── Form grid ─────────────────────────────── */
+  .filter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 16px;
+    align-items: end;
+  }
+  @media (max-width: 580px) { .filter-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 360px) { .filter-grid { grid-template-columns: 1fr; } }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  input[type="date"],
+  select {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 10px 12px;
+    outline: none;
+    width: 100%;
+    height: 41px;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.6); cursor: pointer; }
+  input[type="date"]:focus,
+  select:focus { border-color: var(--gold-dim); }
+
+  /* ── Search button ─────────────────────────── */
+  .btn-buscar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: transparent;
+    border: 1px solid var(--gold-dim);
+    border-radius: var(--radius);
+    color: var(--gold);
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding: 0 20px;
+    height: 41px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .btn-buscar:hover { background: rgba(201,168,76,0.07); border-color: var(--gold); }
+
+  /* ── Mesa cards ────────────────────────────── */
+  #mesas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+  }
+
+  .mesa-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .mesa-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--gold);
+    transform: scaleY(0);
+    transition: transform 0.2s;
+  }
+  .mesa-card:hover { border-color: var(--gold-dim); transform: translateY(-2px); }
+  .mesa-card:hover::before { transform: scaleY(1); }
+  .mesa-card.selected { border-color: var(--gold); background: rgba(201,168,76,0.06); }
+  .mesa-card.selected::before { transform: scaleY(1); }
+  .mesa-card.ocupada { opacity: 0.35; cursor: not-allowed; pointer-events: none; }
+
+  .mesa-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--text);
+    line-height: 1;
+  }
+  .mesa-num span {
+    font-size: 13px;
+    color: var(--text-dim);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    margin-left: 4px;
+    letter-spacing: 0.05em;
+  }
+  .mesa-info {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+  .mesa-status {
+    margin-top: 8px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .mesa-status.livre { color: #6ab07a; }
+  .mesa-status.ocupada { color: #a05046; }
+
+  /* ── Confirm panel ─────────────────────────── */
+  #confirm-panel {
+    display: none;
+    background: var(--surface);
+    border: 1px solid var(--gold-dim);
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+  #confirm-panel.visible { display: block; }
+
+  .confirm-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+  .confirm-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .confirm-row:last-of-type { border-bottom: none; }
+  .confirm-row .key { color: var(--text-dim); letter-spacing: 0.1em; font-size: 11px; text-transform: uppercase; }
+  .confirm-row .val { color: var(--text); font-weight: 400; }
+
+  .btn-confirmar {
+    margin-top: 20px;
+    width: 100%;
+    background: var(--gold);
+    border: none;
+    border-radius: var(--radius);
+    color: var(--bg);
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .btn-confirmar:hover { opacity: 0.88; }
+  .btn-confirmar:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  /* ── Feedback states ───────────────────────── */
+  #feedback {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    display: none;
+    border-radius: var(--radius);
+  }
+  #feedback.success { display: block; background: rgba(58,107,69,0.15); border: 1px solid #3a6b45; color: #6ab07a; }
+  #feedback.error   { display: block; background: rgba(155,58,42,0.15); border: 1px solid #9b3a2a; color: #e07060; }
+
+  #loading {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-dim);
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    display: none;
+  }
+  #loading.visible { display: block; }
+
+  #empty {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-dim);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    display: none;
+  }
+  #empty.visible { display: block; }
+
+  /* ornament */
+  .ornament {
+    color: var(--gold-dim);
+    font-size: 18px;
+    letter-spacing: 0.3em;
+    text-align: center;
+    margin: -12px 0;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="logo-arabic">مطعم</span>
+  <h1>Maṭʿam</h1>
+  <p class="subtitle">Reserva de Mesa</p>
+</header>
+
+<main>
+
+  <!-- FILTROS -->
+  <section>
+    <p class="section-label">Selecione sua preferência</p>
+    <div class="filter-grid">
+      <label>
+        Data
+        <input type="date" id="inp-data">
+      </label>
+      <label>
+        Horário
+        <select id="inp-hora">
+          <option value="">-- Horário --</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="19:00">19:00</option>
+          <option value="20:00">20:00</option>
+          <option value="21:00">21:00</option>
+        </select>
+      </label>
+      <label>
+        Pessoas
+        <select id="inp-pessoas">
+          <option value="">-- Qtd --</option>
+          <option value="1">1 pessoa</option>
+          <option value="2">2 pessoas</option>
+          <option value="3">3 pessoas</option>
+          <option value="4">4 pessoas</option>
+          <option value="5">5 pessoas</option>
+          <option value="6">6 pessoas</option>
+        </select>
+      </label>
+      <button class="btn-buscar" onclick="buscarMesas()">
+        &#9670; &nbsp; Ver mesas
+      </button>
+    </div>
+  </section>
+
+  <div class="ornament">· · ·</div>
+
+  <!-- RESULTADOS -->
+  <section>
+    <p class="section-label">Mesas disponíveis</p>
+    <div id="loading">Consultando disponibilidade...</div>
+    <div id="empty">Nenhuma mesa disponível para os critérios selecionados.</div>
+    <div id="mesas-grid"></div>
+  </section>
+
+  <!-- CONFIRMAÇÃO -->
+  <div id="confirm-panel">
+    <p class="section-label">Confirmar reserva</p>
+    <p class="confirm-title">Resumo da reserva</p>
+    <div class="confirm-row"><span class="key">Mesa</span><span class="val" id="c-mesa">—</span></div>
+    <div class="confirm-row"><span class="key">Capacidade</span><span class="val" id="c-cap">—</span></div>
+    <div class="confirm-row"><span class="key">Data</span><span class="val" id="c-data">—</span></div>
+    <div class="confirm-row"><span class="key">Horário</span><span class="val" id="c-hora">—</span></div>
+    <div class="confirm-row"><span class="key">Pessoas</span><span class="val" id="c-pess">—</span></div>
+    <button class="btn-confirmar" id="btn-confirmar" onclick="confirmarReserva()">
+      Confirmar Reserva
+    </button>
+  </div>
+
+  <!-- FEEDBACK -->
+  <div id="feedback"></div>
+
+</main>
+
+<script>
+  // ─── CONFIG ────────────────────────────────────────────────
+  // ⚠️ Substitua pela URL base do seu n8n (com ngrok ou local)
+  const N8N_BASE = 'https://bulge-stylus-cover.ngrok-free.dev';
+
+  const URL_MESAS      = N8N_BASE + '/webhook/reserva-mesas';
+  const URL_RESERVAR   = N8N_BASE + '/webhook/reserva-criar';
+
+  // userId do Telegram: passe via query string ?userId=123456
+  // Ex: reserva.html?userId=6679062640
+  const params   = new URLSearchParams(window.location.search);
+  const TELEGRAM_USER_ID = params.get('userId') || '';
+
+  // ─── STATE ─────────────────────────────────────────────────
+  let mesasSelecionada = null;
+  let todasAsMesas     = [];
+
+  // ─── INIT ──────────────────────────────────────────────────
+  window.addEventListener('DOMContentLoaded', () => {
+    // data mínima = hoje
+    const hoje = new Date().toISOString().split('T')[0];
+    document.getElementById('inp-data').min = hoje;
+    document.getElementById('inp-data').value = hoje;
+  });
+
+  // ─── BUSCAR MESAS ──────────────────────────────────────────
+  async function buscarMesas() {
+    const data    = document.getElementById('inp-data').value;
+    const hora    = document.getElementById('inp-hora').value;
+    const pessoas = document.getElementById('inp-pessoas').value;
+
+    if (!data || !hora || !pessoas) {
+      alert('Preencha data, horário e quantidade de pessoas.');
+      return;
+    }
+
+    setLoading(true);
+    resetResultados();
+
+    try {
+      const res = await fetch(URL_MESAS + `?data=${data}&hora=${hora}&pessoas=${pessoas}`, {
+        headers: { 'ngrok-skip-browser-warning': '1' }
+      });
+      const json = await res.json();
+      todasAsMesas = json.mesas || [];
+      renderMesas(todasAsMesas, parseInt(pessoas));
+    } catch (e) {
+      mostrarFeedback('Erro ao conectar com o servidor. Verifique a URL do n8n.', 'error');
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  // ─── RENDERIZAR CARDS ──────────────────────────────────────
+  function renderMesas(mesas, pessoasFiltro) {
+    const grid = document.getElementById('mesas-grid');
+    const empty = document.getElementById('empty');
+    grid.innerHTML = '';
+
+    // filtra por capacidade mínima
+    const visiveis = mesas.filter(m => m.capacidade >= pessoasFiltro);
+
+    if (visiveis.length === 0) {
+      empty.classList.add('visible');
+      return;
+    }
+
+    visiveis.forEach(mesa => {
+      const card = document.createElement('div');
+      const livre = !mesa.ocupada;
+      card.className = 'mesa-card' + (livre ? '' : ' ocupada');
+      card.dataset.id = mesa.id;
+      card.innerHTML = `
+        <div class="mesa-num">${mesa.id}<span>mesa</span></div>
+        <div class="mesa-info">Capacidade: ${mesa.capacidade} pessoas</div>
+        <div class="mesa-info" style="margin-top:4px">${mesa.tipo || ''}</div>
+        <div class="mesa-status ${livre ? 'livre' : 'ocupada'}">
+          ${livre ? '● Disponível' : '● Ocupada'}
+        </div>`;
+      if (livre) card.addEventListener('click', () => selecionarMesa(card, mesa));
+      grid.appendChild(card);
+    });
+  }
+
+  // ─── SELECIONAR MESA ───────────────────────────────────────
+  function selecionarMesa(card, mesa) {
+    document.querySelectorAll('.mesa-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    mesasSelecionada = mesa;
+
+    const data    = document.getElementById('inp-data').value;
+    const hora    = document.getElementById('inp-hora').value;
+    const pessoas = document.getElementById('inp-pessoas').value;
+
+    document.getElementById('c-mesa').textContent  = `Mesa ${mesa.id}`;
+    document.getElementById('c-cap').textContent   = `${mesa.capacidade} pessoas`;
+    document.getElementById('c-data').textContent  = formatarData(data);
+    document.getElementById('c-hora').textContent  = hora;
+    document.getElementById('c-pess').textContent  = `${pessoas} pessoa(s)`;
+
+    document.getElementById('confirm-panel').classList.add('visible');
+    document.getElementById('confirm-panel').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // ─── CONFIRMAR RESERVA ─────────────────────────────────────
+  async function confirmarReserva() {
+    if (!mesasSelecionada) return;
+
+    const btn     = document.getElementById('btn-confirmar');
+    const data    = document.getElementById('inp-data').value;
+    const hora    = document.getElementById('inp-hora').value;
+    const pessoas = document.getElementById('inp-pessoas').value;
+
+    btn.disabled = true;
+    btn.textContent = 'Processando...';
+
+    const payload = {
+      mesaId:   mesasSelecionada.id,
+      data,
+      hora,
+      pessoas:  parseInt(pessoas),
+      userId:   TELEGRAM_USER_ID
+    };
+
+    try {
+      const res  = await fetch(URL_RESERVAR, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'ngrok-skip-browser-warning': '1'
+        },
+        body: JSON.stringify(payload)
+      });
+      const json = await res.json();
+
+      if (json.sucesso) {
+        document.getElementById('confirm-panel').style.display = 'none';
+        document.getElementById('mesas-grid').innerHTML = '';
+        mostrarFeedback(
+          `✓ Reserva confirmada! Mesa ${mesasSelecionada.id} reservada para ${formatarData(data)} às ${hora}. ${TELEGRAM_USER_ID ? 'Você receberá a confirmação no Telegram.' : ''}`,
+          'success'
+        );
+      } else {
+        mostrarFeedback(json.mensagem || 'Não foi possível realizar a reserva.', 'error');
+        btn.disabled = false;
+        btn.textContent = 'Confirmar Reserva';
+      }
+    } catch (e) {
+      mostrarFeedback('Erro ao comunicar com o servidor.', 'error');
+      btn.disabled = false;
+      btn.textContent = 'Confirmar Reserva';
+    }
+  }
+
+  // ─── HELPERS ───────────────────────────────────────────────
+  function setLoading(on) {
+    document.getElementById('loading').classList.toggle('visible', on);
+  }
+  function resetResultados() {
+    document.getElementById('mesas-grid').innerHTML = '';
+    document.getElementById('empty').classList.remove('visible');
+    document.getElementById('feedback').className = '';
+    document.getElementById('confirm-panel').classList.remove('visible');
+    mesasSelecionada = null;
+  }
+  function mostrarFeedback(msg, tipo) {
+    const el = document.getElementById('feedback');
+    el.textContent = msg;
+    el.className = tipo;
+    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  function formatarData(iso) {
+    const [y,m,d] = iso.split('-');
+    return `${d}/${m}/${y}`;
+  }
+</script>
+</body>
+</html>

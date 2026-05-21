@@ -12,10 +12,10 @@
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.3,
       "position": [
-        256,
-        464
+        640,
+        448
       ],
-      "id": "1583c441-ac12-4cc3-a629-b57d3aad161f",
+      "id": "25830f0b-e63d-48a7-a528-777232120c1c",
       "name": "Telegram Trigger",
       "webhookId": "1026be42-cb67-4038-948b-93b450cda22e",
       "credentials": {
@@ -32,10 +32,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        848,
-        368
+        1232,
+        352
       ],
-      "id": "36cf92ec-f1df-48dc-8431-439bbb9f5c72",
+      "id": "398479df-ef77-479e-bcfe-16414d772c9a",
       "name": "ColetarHoras"
     },
     {
@@ -47,10 +47,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        656,
-        144
+        1040,
+        128
       ],
-      "id": "5c5f788f-0feb-484d-a2ea-b313b460c917",
+      "id": "3c066c6b-f851-484e-8dd9-173942e80bda",
       "name": "Sticky Note"
     },
     {
@@ -62,10 +62,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        656,
-        656
+        1040,
+        640
       ],
-      "id": "bb5bb17e-9278-4b9a-bcd9-61a998926ac4",
+      "id": "5857f71a-9560-4cb2-a4d6-415c9ff93abc",
       "name": "Sticky Note1"
     },
     {
@@ -108,10 +108,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1632,
-        1856
+        2016,
+        1840
       ],
-      "id": "4ff202d4-59c9-4948-9545-e4ceb56680b0",
+      "id": "52631781-3803-4a7a-8fd4-02d38bc5d921",
       "name": "Opcoes Salgados",
       "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
@@ -161,10 +161,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1632,
-        1696
+        2016,
+        1680
       ],
-      "id": "535309f5-ae3d-46ba-8865-83d6cc0f7e56",
+      "id": "73576a64-ee7b-4d20-9823-590dd93d7581",
       "name": "Opcoes Entrada",
       "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
@@ -214,10 +214,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1632,
-        2016
+        2016,
+        2000
       ],
-      "id": "f6d29b3b-7fd6-471e-ab70-b5a7a44fc4c6",
+      "id": "58e13a50-f827-4b07-a96d-750c945cab27",
       "name": "Opcoes Pratos",
       "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
@@ -239,10 +239,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1984,
-        2256
+        2368,
+        2240
       ],
-      "id": "4c3e384c-5601-43be-ab1b-224785b3fb2e",
+      "id": "1e918b88-050f-43c3-91a7-4eb79a00c7b7",
       "name": "Opcoes Promocoes",
       "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
@@ -262,10 +262,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        880,
-        1616
+        1264,
+        1600
       ],
-      "id": "517d7626-2359-4e63-a9d6-0a0c10b9df9d",
+      "id": "9e529284-138c-4cbd-8f9e-b1e3ccc001b4",
       "name": "Sticky Note2"
     },
     {
@@ -278,10 +278,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1504,
-        1520
+        1888,
+        1504
       ],
-      "id": "9587b583-edf7-427d-aba0-ac35579d7111",
+      "id": "a7752d3a-ba46-4e37-8096-e8f61525e720",
       "name": "Sticky Note3"
     },
     {
@@ -348,10 +348,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1280,
-        576
+        1664,
+        560
       ],
-      "id": "4e81aa3d-3b21-485c-9976-66ad3f23cbde",
+      "id": "6dfbfa53-59d6-45e7-8725-e3e3a2e4b2b8",
       "name": "Menu Categorias Mensagem",
       "webhookId": "39527d29-ffc9-44df-a6b7-feff5417418a",
       "credentials": {
@@ -450,10 +450,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1008,
-        368
+        1392,
+        352
       ],
-      "id": "d8145386-e1b3-4dd0-bd39-c04ff95e5b15",
+      "id": "547c0a52-efd1-4131-b227-6305e1fc6eaf",
       "name": "Menu Principal Mensagem",
       "webhookId": "c32d41a1-dcf0-495b-b7cb-56b8f1224c93",
       "credentials": {
@@ -470,10 +470,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        688,
-        368
+        1072,
+        352
       ],
-      "id": "cbf91f56-ad43-4279-86d1-41ab4c621727",
+      "id": "e8a4e656-b034-49d8-9302-ef25c5252398",
       "name": "Contador Global"
     },
     {
@@ -561,10 +561,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1952,
-        464
+        2336,
+        448
       ],
-      "id": "b9a98c5b-3c53-4efa-98d0-6fc5356f387b",
+      "id": "4f0faee4-c086-41a0-99f9-cd7f4d8dd814",
       "name": "Formulario Pedido",
       "webhookId": "497b0a6f-b4be-473e-9e52-da3f684a56cc",
       "credentials": {
@@ -581,10 +581,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2160,
-        464
+        2544,
+        448
       ],
-      "id": "a09fa771-03aa-4339-a3d0-b3ee3dd48553",
+      "id": "de96ed20-9519-4b1e-ae6d-d049582c6609",
       "name": "Armazenar Globalmente"
     },
     {
@@ -615,10 +615,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
       "position": [
-        448,
-        464
+        832,
+        448
       ],
-      "id": "c951046d-6368-4250-8560-448ea1acd705",
+      "id": "07b5c61e-9a87-449a-b98c-b488c0a0c353",
       "name": "Eh Mensagem"
     },
     {
@@ -808,10 +808,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        864,
-        816
+        1248,
+        800
       ],
-      "id": "00787ad1-e419-4f35-8d8e-33e5dcc0716d",
+      "id": "6ae5581b-5326-419c-8039-f9b22a5dd8e1",
       "name": "Switch Inicial"
     },
     {
@@ -824,10 +824,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1232,
-        336
+        1616,
+        320
       ],
-      "id": "c90ed03b-7c86-4b9b-bd68-62248de532c6",
+      "id": "5f850e83-cbfc-4b7c-9452-207b9b02dc7b",
       "name": "Sticky Note5"
     },
     {
@@ -839,10 +839,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1984,
-        336
+        2368,
+        320
       ],
-      "id": "ff843ac4-3b5d-4331-a9b9-b8982a03ca14",
+      "id": "e6153674-6bb6-4e59-8ca4-6726f0224c74",
       "name": "Sticky Note6"
     },
     {
@@ -879,10 +879,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        2368,
-        464
+        2752,
+        448
       ],
-      "id": "ec674fe9-bf52-44a8-a1c6-c02951a3e0b3",
+      "id": "2ef9408a-80fe-40a1-a45f-6bc71cee3b0e",
       "name": "Algo Mais",
       "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
       "credentials": {
@@ -902,10 +902,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1824,
-        176
+        2208,
+        160
       ],
-      "id": "da3210d9-6ac5-48c6-8d83-03114be85595",
+      "id": "6dfa2f2e-8af8-4cf0-849f-7f9b65923bff",
       "name": "Sticky Note7"
     },
     {
@@ -1045,10 +1045,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        1136,
-        1808
+        1520,
+        1792
       ],
-      "id": "7d2fdb77-7ccb-4af7-b8e5-5ac9130684df",
+      "id": "4a6bbd1d-fd44-4312-9305-1afcbb4e86cc",
       "name": "Switch Cardapio"
     },
     {
@@ -1061,10 +1061,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1216,
-        2512
+        1600,
+        2496
       ],
-      "id": "07dc8db3-91f7-41e1-b6d1-9af73f1872ae",
+      "id": "16356c4a-0753-4f81-8f42-19e66a15cd94",
       "name": "Sticky Note8"
     },
     {
@@ -1114,10 +1114,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1872,
-        2640
+        2256,
+        2624
       ],
-      "id": "9a2af491-b319-4864-9b5d-b2d138877d15",
+      "id": "3470fef3-e57c-4654-adf4-bf89d25ba010",
       "name": "Pedir Endereço",
       "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
       "credentials": {
@@ -1134,10 +1134,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2032,
-        2640
+        2416,
+        2624
       ],
-      "id": "87a85e30-c33d-4169-a7c4-7c9450b5b0e1",
+      "id": "27940639-ee72-42cf-9e84-e18af7e71ac5",
       "name": "Salvar Endereço"
     },
     {
@@ -1174,10 +1174,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        2208,
-        2640
+        2592,
+        2624
       ],
-      "id": "055d1dd6-938f-46f7-9758-463912c7700a",
+      "id": "3e2705cc-c9f7-487d-9135-7830eae24a87",
       "name": "Deseja Pagar",
       "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
       "credentials": {
@@ -1194,10 +1194,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        80,
-        128
+        464,
+        112
       ],
-      "id": "e78a8d64-4584-410b-89d9-1a27b454e04b",
+      "id": "edb60429-956b-49ad-bc37-1e814651a9fa",
       "name": "LIMPAR"
     },
     {
@@ -1210,10 +1210,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1824,
-        2512
+        2208,
+        2496
       ],
-      "id": "ec515d2c-75d8-4510-8d46-f2cdfb824537",
+      "id": "d5838eaa-df6f-4e06-8fe6-9c90969535cf",
       "name": "Sticky Note9"
     },
     {
@@ -1225,10 +1225,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        0,
-        0
+        384,
+        -16
       ],
-      "id": "d7f87d7d-fe8c-49c7-8ff4-8426e142a220",
+      "id": "bb18a496-64ef-4899-be1c-7fe9ead65941",
       "name": "Sticky Note10"
     },
     {
@@ -1241,10 +1241,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1904,
-        880
+        3216,
+        816
       ],
-      "id": "3643dd49-5d18-4c09-9a9e-edcf1360029f",
+      "id": "3246bd6b-c528-4f60-8732-2b8a78a805a5",
       "name": "Sticky Note11"
     },
     {
@@ -1257,10 +1257,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1824,
-        2800
+        2208,
+        2784
       ],
-      "id": "9b9ed065-62e8-463d-a67b-e5f9f3e8a576",
+      "id": "84c0d241-69a3-4fd7-aabf-0aaee262a48b",
       "name": "Sticky Note12"
     },
     {
@@ -1350,10 +1350,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        1376,
-        2736
+        1760,
+        2720
       ],
-      "id": "a0befca4-21c2-4c76-a59e-9d71bdc37c2d",
+      "id": "e5a22a74-2fcc-4e8d-bc50-d161679dc188",
       "name": "Switch Pagamento"
     },
     {
@@ -1363,10 +1363,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2032,
-        3056
+        2416,
+        3040
       ],
-      "id": "c23a3cd4-0b86-4dc6-a157-ae85dc617b37",
+      "id": "96f5de74-8547-4234-9815-befe7ccaa0ba",
       "name": "Salvar Pag Retirada On"
     },
     {
@@ -1376,23 +1376,23 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1856,
-        2896
+        2240,
+        2880
       ],
-      "id": "eefedabf-8579-48c4-92ec-d47c45c100db",
+      "id": "39deda23-a4fc-4430-887d-8deda6261408",
       "name": "Salvar Pag Retirada Re"
     },
     {
       "parameters": {
         "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\n// Tabela de precos (R$)\nconst precos = {\n  'Homus': 18.00,\n  'Quibe Cru': 22.00,\n  'Tabule': 16.00,\n  'Kafta': 45.00,\n  'Charuto': 42.00,\n  'Cordeiro': 65.00\n};\nconst precoEsfiha = 8.00;\nconst precoQuibeAssado = 10.00;\n\nlet total = 0;\nconst pedidos = bancoDados.usuario[userId]?.pedidos || [];\n\nfor (const pedido of pedidos) {\n  // Entradas (checkboxes devolvem array ou string separada por virgula)\n  const entradas = pedido['Entrada'] ? \n    (Array.isArray(pedido['Entrada']) ? pedido['Entrada'] : pedido['Entrada'].split(',').map(s => s.trim())) \n    : [];\n  for (const e of entradas) {\n    total += precos[e] || 0;\n  }\n  // Salgados\n  total += (Number(pedido['Gostaria de quantas Esfihas?']) || 0) * precoEsfiha;\n  total += (Number(pedido['Gostaria de quantos Quibes Assados?']) || 0) * precoQuibeAssado;\n  // Pratos\n  const pratos = pedido['Pratos (selecione ao menos 1)'] ?\n    (Array.isArray(pedido['Pratos (selecione ao menos 1)']) ? pedido['Pratos (selecione ao menos 1)'] : pedido['Pratos (selecione ao menos 1)'].split(',').map(s => s.trim()))\n    : [];\n  for (const p of pratos) {\n    total += precos[p] || 0;\n  }\n}\n\n// Salva o total no banco\nbancoDados.usuario[userId].totalPedido = total;\n\nreturn [{ json: { userId, total, totalFormatado: `R$ ${total.toFixed(2)}` } }];\n"
       },
-      "id": "a2ad1ab3-8986-4602-973c-c8ce25c130ac",
+      "id": "4ae90096-b9cf-40eb-a8bb-e00bf685619d",
       "name": "Calcular Total PIX",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2656,
-        3056
+        3040,
+        3040
       ]
     },
     {
@@ -1419,13 +1419,13 @@
         "jsonBody": "={\n  \"transaction_amount\": {{ $('Calcular Total PIX').item.json.total }},\n  \"description\": \"Pedido Restaurante - Telegram\",\n  \"payment_method_id\": \"pix\",\n  \"payer\": {\n    \"email\": \"cliente@pedido.com\",\n    \"identification\": {\n      \"type\": \"CPF\",\n      \"number\": \"01234567890\"\n    }\n  },\n  \"external_reference\": \"{{ $('Calcular Total PIX').item.json.userId }}\"\n}",
         "options": {}
       },
-      "id": "56fdb9ab-9e9e-4a0e-92e0-16fbde208357",
+      "id": "f7d2421c-6973-4a27-b566-57ded0424429",
       "name": "Criar Pagamento PIX MP",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        2832,
-        3056
+        3216,
+        3040
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -1438,13 +1438,13 @@
       "parameters": {
         "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $('Calcular Total PIX').item.json.userId;\nconst respMP = $input.first().json;\n\nbancoDados.usuario[userId].pixPaymentId = respMP.id;\nbancoDados.usuario[userId].pixStatus = respMP.status;\n\nconst qrCode = respMP?.point_of_interaction?.transaction_data?.qr_code || '';\nconst qrCodeBase64 = respMP?.point_of_interaction?.transaction_data?.qr_code_base64 || '';\nconst ticketUrl = respMP?.point_of_interaction?.transaction_data?.ticket_url || '';\n\nreturn [{\n  json: {\n    userId,\n    paymentId: respMP.id,\n    total: bancoDados.usuario[userId].totalFormatado || bancoDados.usuario[userId].totalPedido,\n    qrCode,\n    qrCodeBase64,\n    ticketUrl\n  }\n}];\n"
       },
-      "id": "24abd172-54e6-412e-a83f-63608d62f10b",
+      "id": "67835d14-8317-41b1-a451-f1645bbedd60",
       "name": "Salvar Payment ID",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        3056,
-        3056
+        3440,
+        3040
       ]
     },
     {
@@ -1456,13 +1456,13 @@
           "parse_mode": "HTML"
         }
       },
-      "id": "809cdd3c-28ff-4319-892e-2be8974a5a93",
+      "id": "91fcda28-e89d-4670-83c4-ca613f9d576b",
       "name": "Enviar Link PIX Telegram",
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        3456,
-        3056
+        3840,
+        3040
       ],
       "webhookId": "1e0d9209-4b35-454e-b2a3-1cb828024a8f",
       "credentials": {
@@ -1478,13 +1478,13 @@
         "path": "mercadopago-pix",
         "options": {}
       },
-      "id": "75917b50-d6dd-4a07-b0fe-b4fec8612383",
+      "id": "aaea493f-7f17-4745-8a6d-1f7473eecdaf",
       "name": "Webhook Confirmação MP",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
       "position": [
-        3296,
-        2848
+        3680,
+        2832
       ],
       "webhookId": "mercadopago-pix-confirmacao"
     },
@@ -1512,13 +1512,13 @@
         },
         "options": {}
       },
-      "id": "0fb19a58-7828-4a26-92f0-207c423d8343",
+      "id": "d5f93d1d-f1a6-484d-84d6-ab42059ad333",
       "name": "Verificar Pagamento Aprovado",
       "type": "n8n-nodes-base.if",
       "typeVersion": 2,
       "position": [
-        3520,
-        2848
+        3904,
+        2832
       ]
     },
     {
@@ -1528,13 +1528,13 @@
         "genericAuthType": "httpHeaderAuth",
         "options": {}
       },
-      "id": "d3009dc9-4275-4ecd-a5c8-ab4bbb1c6709",
+      "id": "74835240-1c82-41bc-b1af-0684c6572c34",
       "name": "Consultar Status Pagamento MP",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        3744,
-        2848
+        4128,
+        2832
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -1567,13 +1567,13 @@
         },
         "options": {}
       },
-      "id": "3412d3c3-874c-4788-8f62-57fbff8256d9",
+      "id": "380f5081-1825-420a-bc31-16ca9074d447",
       "name": "Se Status Approved",
       "type": "n8n-nodes-base.if",
       "typeVersion": 2,
       "position": [
-        3968,
-        2848
+        4352,
+        2832
       ]
     },
     {
@@ -1585,13 +1585,13 @@
           "parse_mode": "Markdown"
         }
       },
-      "id": "76f678af-1111-48af-9c24-de7341039e7a",
+      "id": "fd539e76-c8ad-49cd-80b6-01891792d544",
       "name": "Confirmar Pagamento Telegram",
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        4192,
-        2848
+        4576,
+        2832
       ],
       "webhookId": "447f02c4-4f69-4ea2-a19c-2e2cd2b9753a",
       "credentials": {
@@ -1608,13 +1608,13 @@
         "width": 1024,
         "color": 4
       },
-      "id": "1b45daef-e43e-4c78-b3f3-9d0f7ad16efc",
+      "id": "783deefa-ee1c-43cc-b93d-2bbb25eb5a11",
       "name": "Sticky Note PIX",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        2624,
-        2560
+        3008,
+        2544
       ]
     },
     {
@@ -1624,10 +1624,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        3264,
-        3056
+        3648,
+        3040
       ],
-      "id": "93bc6568-38a7-4a3c-ba5c-601899281c1f",
+      "id": "c5693a09-c6e5-420a-ae47-50aeced72d0d",
       "name": "Preparar Mensagem Pix"
     },
     {
@@ -1637,10 +1637,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -112,
-        1584
+        272,
+        1568
       ],
-      "id": "27277030-86e7-4061-8490-c536b4cfc40f",
+      "id": "0e452687-5e2b-4f8d-b7de-008bb73f57a0",
       "name": "Limpar Pedidos"
     },
     {
@@ -1650,10 +1650,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -112,
-        1408
+        272,
+        1392
       ],
-      "id": "405c6184-f996-4fd7-89fc-fc8fb248fc3e",
+      "id": "2069413a-49ae-4b36-a53a-73d71c015acc",
       "name": "Limpar Dados Retirada"
     },
     {
@@ -1666,10 +1666,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        3216,
-        2768
+        3600,
+        2752
       ],
-      "id": "d42de27b-d83c-44a5-aad7-e990444a4088",
+      "id": "306587fe-5a6f-4854-9579-5ec32a1fd13a",
       "name": "Sticky Note14"
     },
     {
@@ -1721,7 +1721,7 @@
                   {
                     "text": "← Voltar",
                     "additionalFields": {
-                      "callback_data": "voltarInicio"
+                      "callback_data": "voltaInicio"
                     }
                   }
                 ]
@@ -1737,10 +1737,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1568,
-        928
+        1952,
+        912
       ],
-      "id": "663d5a5c-fc70-4112-bdb4-44f445384dc8",
+      "id": "940999cb-2f80-4cf7-bf7a-2de18bc13d73",
       "name": "Opcoes Sobre Unidade",
       "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
       "credentials": {
@@ -1760,11 +1760,606 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1408,
-        784
+        1792,
+        768
       ],
-      "id": "42af8f19-25e0-45b0-b1f2-db3a2878879e",
+      "id": "ca77cb2d-52ac-48b2-bec6-5b03f6f6316b",
       "name": "Sticky Note15"
+    },
+    {
+      "parameters": {
+        "content": "## MENU SOBRE UNIDADE\nVai separar o fluxo entre as opções de conhecer mais sobre a unidade, Localização, Horários e Estrutura\n**Trabalha com os seguintes callbacks:**\n--saberLocalizacao\n--saberHorarios\n--saberEstrutura\n",
+        "height": 480,
+        "width": 416,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1776,
+        3184
+      ],
+      "id": "4b3caa61-7036-4f45-99ac-3e97ab7de509",
+      "name": "Sticky Note16"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "<b>📍 Como chegar ao Maṭʿam</b>\n\nEstamos localizados na:\n\n📌 Rua das Esfihas, 123 - Centro\n\n🗺️ <a href=\"https://maps.google.com\">Abrir no Google Maps</a>\n\nSerá um prazer receber você! 🧆✨",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "← Voltar",
+                    "additionalFields": {
+                      "callback_data": "unidade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Início",
+                    "additionalFields": {
+                      "callback_data": "voltarInicio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2400,
+        3328
+      ],
+      "id": "3434f4c9-1045-4818-8e82-1d8aa4f559ee",
+      "name": "Sobre Localizacao",
+      "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## MENU SOBRE LOCALIZAÇÃO\nInforma a localização do estabelecimento e fornece link e botão de voltar e ir ao início\n**Trabalha com os seguintes callbacks:**\n--unidade\n--voltarInicio\n",
+        "height": 272,
+        "width": 416,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2256,
+        3200
+      ],
+      "id": "4441adc4-ece0-414a-8e0c-4a6e708001e0",
+      "name": "Sticky Note17"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "<b>🕒 Horários de Funcionamento — Maṭʿam</b>\n\n📅 Seg a Sáb: 11h às 23h\n📅 Dom: 12h às 18h\n\nEsperamos por você! 🧆✨",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "← Voltar",
+                    "additionalFields": {
+                      "callback_data": "unidade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Início",
+                    "additionalFields": {
+                      "callback_data": "voltarInicio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2848,
+        3408
+      ],
+      "id": "d112ef67-0b55-4c82-abf2-066b90b1a618",
+      "name": "Sobre Horário",
+      "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "<b>✨ Estrutura do Maṭʿam</b>\n\n👧 Espaço Kids\n\n🅿️ Estacionamento Grátis\n\n♿ Acessibilidade\n\nTudo pensado para o seu conforto e da sua família 🧆",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "← Voltar",
+                    "additionalFields": {
+                      "callback_data": "unidade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Início",
+                    "additionalFields": {
+                      "callback_data": "voltarInicio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2432,
+        3616
+      ],
+      "id": "81ad5b9c-a9fc-4360-a4f0-2561697e809f",
+      "name": "Sobre Estrutura",
+      "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## MENU SOBRE HORÁRIO\nInforma sobre os horários do estabelecimento. Tem um botão para voltar e para ir para o início\n**Trabalha com os seguintes callbacks:**\n--unidade\n--voltarInicio\n",
+        "height": 272,
+        "width": 416,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2704,
+        3296
+      ],
+      "id": "2be53aa3-d1c8-4628-93e8-f951087372ff",
+      "name": "Sticky Note18"
+    },
+    {
+      "parameters": {
+        "content": "## MENU SOBRE ESTRUTURA\nInforma sobre a estrutura do estabelecimento. Tem um botão voltar e para ir ao início\n**Trabalha com os seguintes callbacks:**\n--unidade\n--voltarInicio\n",
+        "height": 272,
+        "width": 416,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2256,
+        3488
+      ],
+      "id": "5f9996d9-d777-4644-ab69-2f1283bbce97",
+      "name": "Sticky Note19"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "=<b>✅ Pedido Concluído!</b>  \n<b>🧾 Itens do pedido:</b> \n{{ $json.itens.join('\\n') }}  \n<b>💵 Total: {{ $json.totalFormatado }}</b> \n\n🏪 Seu pedido será preparado para retirada. Aguarde a confirmação da loja!",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2528,
+        2880
+      ],
+      "id": "ec8eb07a-a1c3-4515-a1a0-8858889d06a4",
+      "name": "Amostra Pedido",
+      "webhookId": "2a978636-35b2-4313-87f6-9004db8c33e5",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nconst precos = {\n  'Homus': 18.00,\n  'Quibe Cru': 22.00,\n  'Tabule': 16.00,\n  'Kafta': 45.00,\n  'Charuto': 42.00,\n  'Cordeiro': 65.00\n};\nconst precoEsfiha = 8.00;\nconst precoQuibeAssado = 10.00;\n\nlet total = 0;\nconst pedidos = bancoDados.usuario[userId]?.pedidos || [];\nconst linhasItens = [];\n\nfor (const pedido of pedidos) {\n  const entradas = pedido['Entrada']\n    ? (Array.isArray(pedido['Entrada']) ? pedido['Entrada'] : pedido['Entrada'].split(',').map(s => s.trim()))\n    : [];\n  for (const e of entradas) {\n    const preco = precos[e] || 0;\n    total += preco;\n    if (preco > 0) linhasItens.push(`${e}: R$ ${preco.toFixed(2)}`);\n  }\n\n  const qtdEsfiha = Number(pedido['Gostaria de quantas Esfihas?']) || 0;\n  if (qtdEsfiha > 0) {\n    const v = qtdEsfiha * precoEsfiha;\n    total += v;\n    linhasItens.push(`Esfihas (${qtdEsfiha}x): R$ ${v.toFixed(2)}`);\n  }\n\n  const qtdQuibe = Number(pedido['Gostaria de quantos Quibes Assados?']) || 0;\n  if (qtdQuibe > 0) {\n    const v = qtdQuibe * precoQuibeAssado;\n    total += v;\n    linhasItens.push(`Quibes Assados (${qtdQuibe}x): R$ ${v.toFixed(2)}`);\n  }\n\n  const pratos = pedido['Pratos (selecione ao menos 1)']\n    ? (Array.isArray(pedido['Pratos (selecione ao menos 1)']) ? pedido['Pratos (selecione ao menos 1)'] : pedido['Pratos (selecione ao menos 1)'].split(',').map(s => s.trim()))\n    : [];\n  for (const p of pratos) {\n    const preco = precos[p] || 0;\n    total += preco;\n    if (preco > 0) linhasItens.push(`${p}: R$ ${preco.toFixed(2)}`);\n  }\n}\n\nbancoDados.usuario[userId].totalPedido = total;\n\nreturn [{ json: { userId, total, totalFormatado: `R$ ${total.toFixed(2)}`, itens: linhasItens } }];"
+      },
+      "id": "c2bb5932-6f84-4b4f-a95a-b6a84a03c516",
+      "name": "Calcular Total",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2384,
+        2880
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Não exclua\nIsso está aqui apenas para caso seja utíl no futuro",
+        "height": 464,
+        "width": 320,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        192,
+        1264
+      ],
+      "id": "863e701c-4bc3-4519-ba90-1ac7c487a4ec",
+      "name": "Sticky Note13"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "041eac5d-49a8-4348-a85c-fca6635e4a61",
+              "leftValue": "={{ $json.promocaoAtiva }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        2160,
+        2256
+      ],
+      "id": "d4964003-260f-4f09-9b76-61d246d449aa",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nreturn bancoDados"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2000,
+        2256
+      ],
+      "id": "de1432f3-4192-4a94-a4a1-e9ee5079951a",
+      "name": "Retornar Banco"
+    },
+    {
+      "parameters": {
+        "operation": "sendDocument",
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2736,
+        2240
+      ],
+      "id": "77d3c72c-b19b-4b02-b9b6-2077246873cb",
+      "name": "Send a document",
+      "webhookId": "28d7abf8-3218-4bb5-8978-fca26a7edaaf",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "<b>Qual ação gostaria de tomar ?</b>",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Acompanhar Pedidos",
+                    "additionalFields": {
+                      "callback_data": "acompanhar"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Voltar ao Início",
+                    "additionalFields": {
+                      "callback_data": "voltarInicio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2832,
+        2928
+      ],
+      "id": "4dbdfc14-2d0b-40d6-afa3-367adf9516a1",
+      "name": "Proxima Acao",
+      "webhookId": "91a95d37-fa55-4a91-9b2a-b908fb813eeb",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Ação Pós Pedido\nVai perguntar se o usuário gostaria de acompanhar a entrega ou voltar ao início.\n**Trabalha com os seguintes callbacks:**\n--acompanhar\n--voltarInicio",
+        "height": 304,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2720,
+        2768
+      ],
+      "id": "f318a42d-4e6e-4a4d-b171-992a295f7aec",
+      "name": "Sticky Note20"
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "17Umc5_Ha2wc24za8h_e1iBrqOrpQxjdt",
+          "mode": "list",
+          "cachedResultName": "Matam_Catalogo_Premium.pdf",
+          "cachedResultUrl": "https://drive.google.com/file/d/17Umc5_Ha2wc24za8h_e1iBrqOrpQxjdt/view?usp=drivesdk"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        2576,
+        2240
+      ],
+      "id": "1746be56-0111-4f40-9ad7-41ef0bc5acba",
+      "name": "Download file",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "yxRJELfgtgEQLCf3",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# EM ALGUNS CASOS RODAR COMO TESTE UNITÁRIO FUNCIONA (PRINCIAPLEMNTE SE NÃO DEPENDER  DO NOSSO SISTEMA DE SAVLAR DADOS LOCAIS)",
+        "height": 272,
+        "width": 928,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3184,
+        1152
+      ],
+      "id": "aa92d9f7-2885-4c5d-b65b-210e8b715c5d",
+      "name": "Sticky Note21"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "={{\n`🍴 Gostaria de realizar um pedido agora ou deseja conhecer outras opções do nosso cardápio?`\n}}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "SIM, desejo realizar um pedido",
+                    "additionalFields": {
+                      "callback_data": "pedido"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "NÃO, não desejo realizar um pedido",
+                    "additionalFields": {
+                      "callback_data": "voltarCardapio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2944,
+        2240
+      ],
+      "id": "28c3cdb4-1542-4b4e-89ca-9eab9096777d",
+      "name": "Confirmacao Realizar",
+      "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## CONFIRMAR RESERVAR MESA\nPergunta ao usuário se ele realmente deseja reservar uma mesa.\n**Trabalha com os seguintes callbacks:**\n--reservarMesa\n--voltarInicio",
+        "height": 320,
+        "width": 416,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1792,
+        1088
+      ],
+      "id": "63211006-4a03-4cac-a0bf-3af2b33fac7e",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "<b>Gostaria de reservar uma mesa conosco ?</b>",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Sim",
+                    "additionalFields": {
+                      "callback_data": "reservarMesa"
+                    }
+                  },
+                  {
+                    "text": "Não",
+                    "additionalFields": {
+                      "callback_data": "voltarInicio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1984,
+        1216
+      ],
+      "id": "6cde2011-f355-47f9-9db6-7fe087c17957",
+      "name": "Confirmar Desejo Reservar",
+      "webhookId": "cd1c2f90-ab4e-42a1-a7d9-def411d39b8b",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## MENU RESERVAR MESA\nVai separar o fluxo da reserva de mesa entre ...\n**Trabalha com os seguintes callbacks:**\n--reservarMesa",
+        "height": 320,
+        "width": 416,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1936,
+        3840
+      ],
+      "id": "9024afdf-f2cc-49f8-9e63-f2d57e965c8d",
+      "name": "Sticky Note22"
     },
     {
       "parameters": {
@@ -1853,409 +2448,86 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        1536,
-        3424
+        1920,
+        3408
       ],
-      "id": "a2b3d464-e532-4540-a512-dd246b79265d",
-      "name": "Switch"
+      "id": "3de9c80c-7522-42d7-bca5-364eb0561f23",
+      "name": " Switch Unidade"
     },
     {
       "parameters": {
-        "content": "## MENU SOBRE UNIDADE\nVai separar o fluxo entre as opções de conhecer mais sobre a unidade, Localização, Horários e Estrutura\n**Trabalha com os seguintes callbacks:**\n--saberLocalizacao\n--saberHorarios\n--saberEstrutura\n",
-        "height": 480,
-        "width": 416,
-        "color": 2
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        1392,
-        3200
-      ],
-      "id": "2380abc7-42f5-4551-8621-3f671a0e2bb9",
-      "name": "Sticky Note16"
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
-        "text": "<b>📍 Como chegar ao Maṭʿam</b>\n\nEstamos localizados na:\n\n📌 Rua das Esfihas, 123 - Centro\n\n🗺️ <a href=\"https://maps.google.com\">Abrir no Google Maps</a>\n\nSerá um prazer receber você! 🧆✨",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
+        "rules": {
+          "values": [
             {
-              "row": {
-                "buttons": [
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
                   {
-                    "text": "← Voltar",
-                    "additionalFields": {
-                      "callback_data": "unidade"
-                    }
+                    "leftValue": "={{ $('Telegram Trigger').item.json.callback_query.data }}",
+                    "rightValue": "reservarMesa",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "89a73e59-f611-4db0-a3f1-e022a4effc88"
                   }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "Início",
-                    "additionalFields": {
-                      "callback_data": "voltarInicio"
-                    }
-                  }
-                ]
-              }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Reservar"
             }
           ]
         },
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "HTML"
+        "options": {
+          "fallbackOutput": "extra"
         }
       },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
       "position": [
-        2016,
-        3344
+        2112,
+        4000
       ],
-      "id": "e0f0c02e-d977-4e3f-a5b5-66a36d2cfaf4",
-      "name": "Sobre Localizacao",
-      "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
+      "id": "77c39beb-7750-4786-b86d-0bfb587595e2",
+      "name": "Switch Reservar"
     },
     {
       "parameters": {
-        "content": "## MENU SOBRE LOCALIZAÇÃO\nInforma a localização do estabelecimento e fornece link e botão de voltar e ir ao início\n**Trabalha com os seguintes callbacks:**\n--unidade\n--voltarInicio\n",
-        "height": 272,
-        "width": 416,
-        "color": 2
+        "jsCode": "const db = $getWorkflowStaticData('global');\n\n// Inicializa mesas apenas se ainda não existirem\nif (!db.mesas) {\n  db.mesas = [\n    { id: 1, capacidade: 2, tipo: 'Salão principal', reservas: [] },\n    { id: 2, capacidade: 2, tipo: 'Varanda',         reservas: [] },\n    { id: 3, capacidade: 4, tipo: 'Salão principal', reservas: [] },\n    { id: 4, capacidade: 4, tipo: 'Salão principal', reservas: [] },\n    { id: 5, capacidade: 4, tipo: 'Jardim interno',  reservas: [] },\n    { id: 6, capacidade: 6, tipo: 'Salão VIP',       reservas: [] },\n    { id: 7, capacidade: 6, tipo: 'Jardim interno',  reservas: [] },\n    { id: 8, capacidade: 8, tipo: 'Salão VIP',       reservas: [] }\n  ];\n}\n\nconst userId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nreturn [{ json: { ok: true, userId } }];\n"
       },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        1872,
-        3216
-      ],
-      "id": "eb578931-24c9-400b-ab59-64dbcd87c302",
-      "name": "Sticky Note17"
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
-        "text": "<b>🕒 Horários de Funcionamento — Maṭʿam</b>\n\n📅 Seg a Sáb: 11h às 23h\n📅 Dom: 12h às 18h\n\nEsperamos por você! 🧆✨",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "← Voltar",
-                    "additionalFields": {
-                      "callback_data": "unidade"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "Início",
-                    "additionalFields": {
-                      "callback_data": "voltarInicio"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "HTML"
-        }
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        2464,
-        3424
-      ],
-      "id": "d1fae4e1-9962-4ab7-a373-441fde768943",
-      "name": "Sobre Horário",
-      "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
-        "text": "<b>✨ Estrutura do Maṭʿam</b>\n\n👧 Espaço Kids\n\n🅿️ Estacionamento Grátis\n\n♿ Acessibilidade\n\nTudo pensado para o seu conforto e da sua família 🧆",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "← Voltar",
-                    "additionalFields": {
-                      "callback_data": "unidade"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "Início",
-                    "additionalFields": {
-                      "callback_data": "voltarInicio"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "HTML"
-        }
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        2048,
-        3632
-      ],
-      "id": "96c97135-92e1-4589-acb3-3f26ffad0e90",
-      "name": "Sobre Estrutura",
-      "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "content": "## MENU SOBRE HORÁRIO\nInforma sobre os horários do estabelecimento. Tem um botão para voltar e para ir para o início\n**Trabalha com os seguintes callbacks:**\n--unidade\n--voltarInicio\n",
-        "height": 272,
-        "width": 416,
-        "color": 2
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        2320,
-        3312
-      ],
-      "id": "0c05330a-d812-4fde-bd43-2eaaf6d2bc7c",
-      "name": "Sticky Note18"
-    },
-    {
-      "parameters": {
-        "content": "## MENU SOBRE ESTRUTURA\nInforma sobre a estrutura do estabelecimento. Tem um botão voltar e para ir ao início\n**Trabalha com os seguintes callbacks:**\n--unidade\n--voltarInicio\n",
-        "height": 272,
-        "width": 416,
-        "color": 2
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        1872,
-        3504
-      ],
-      "id": "3618551f-42a2-40e4-b9aa-572ebb0081e7",
-      "name": "Sticky Note19"
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
-        "text": "=<b>✅ Pedido Concluído!</b>  \n<b>🧾 Itens do pedido:</b> \n{{ $json.itens.join('\\n') }}  \n<b>💵 Total: {{ $json.totalFormatado }}</b> \n\n🏪 Seu pedido será preparado para retirada. Aguarde a confirmação da loja!",
-        "additionalFields": {
-          "appendAttribution": false,
-          "parse_mode": "HTML"
-        }
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        2144,
-        2896
-      ],
-      "id": "41c72489-2d7e-4bef-a8d0-23db329960ac",
-      "name": "Amostra Pedido",
-      "webhookId": "2a978636-35b2-4313-87f6-9004db8c33e5",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nconst precos = {\n  'Homus': 18.00,\n  'Quibe Cru': 22.00,\n  'Tabule': 16.00,\n  'Kafta': 45.00,\n  'Charuto': 42.00,\n  'Cordeiro': 65.00\n};\nconst precoEsfiha = 8.00;\nconst precoQuibeAssado = 10.00;\n\nlet total = 0;\nconst pedidos = bancoDados.usuario[userId]?.pedidos || [];\nconst linhasItens = [];\n\nfor (const pedido of pedidos) {\n  const entradas = pedido['Entrada']\n    ? (Array.isArray(pedido['Entrada']) ? pedido['Entrada'] : pedido['Entrada'].split(',').map(s => s.trim()))\n    : [];\n  for (const e of entradas) {\n    const preco = precos[e] || 0;\n    total += preco;\n    if (preco > 0) linhasItens.push(`${e}: R$ ${preco.toFixed(2)}`);\n  }\n\n  const qtdEsfiha = Number(pedido['Gostaria de quantas Esfihas?']) || 0;\n  if (qtdEsfiha > 0) {\n    const v = qtdEsfiha * precoEsfiha;\n    total += v;\n    linhasItens.push(`Esfihas (${qtdEsfiha}x): R$ ${v.toFixed(2)}`);\n  }\n\n  const qtdQuibe = Number(pedido['Gostaria de quantos Quibes Assados?']) || 0;\n  if (qtdQuibe > 0) {\n    const v = qtdQuibe * precoQuibeAssado;\n    total += v;\n    linhasItens.push(`Quibes Assados (${qtdQuibe}x): R$ ${v.toFixed(2)}`);\n  }\n\n  const pratos = pedido['Pratos (selecione ao menos 1)']\n    ? (Array.isArray(pedido['Pratos (selecione ao menos 1)']) ? pedido['Pratos (selecione ao menos 1)'] : pedido['Pratos (selecione ao menos 1)'].split(',').map(s => s.trim()))\n    : [];\n  for (const p of pratos) {\n    const preco = precos[p] || 0;\n    total += preco;\n    if (preco > 0) linhasItens.push(`${p}: R$ ${preco.toFixed(2)}`);\n  }\n}\n\nbancoDados.usuario[userId].totalPedido = total;\n\nreturn [{ json: { userId, total, totalFormatado: `R$ ${total.toFixed(2)}`, itens: linhasItens } }];"
-      },
-      "id": "744f2659-1f3d-4e68-8e67-496408125e61",
-      "name": "Calcular Total",
+      "id": "f1b6490a-1673-49e0-b487-c32f37349cbe",
+      "name": "Inicializar Mesas",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2000,
-        2896
+        2448,
+        3984
       ]
     },
     {
       "parameters": {
-        "content": "## Não exclua\nIsso está aqui apenas para caso seja utíl no futuro",
-        "height": 464,
-        "width": 320,
-        "color": 6
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        -192,
-        1280
-      ],
-      "id": "455e655e-4a9f-4a6a-a636-7f83c0583f27",
-      "name": "Sticky Note13"
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 3
-          },
-          "conditions": [
-            {
-              "id": "041eac5d-49a8-4348-a85c-fca6635e4a61",
-              "leftValue": "={{ $json.promocaoAtiva }}",
-              "rightValue": true,
-              "operator": {
-                "type": "boolean",
-                "operation": "true",
-                "singleValue": true
-              }
-            }
-          ],
-          "combinator": "and"
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.3,
-      "position": [
-        1776,
-        2272
-      ],
-      "id": "41625233-2939-47ac-afdc-b795ac3982c0",
-      "name": "If"
-    },
-    {
-      "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nreturn bancoDados"
-      },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        1616,
-        2272
-      ],
-      "id": "1d197aa6-2c1a-4210-9144-3071de39efda",
-      "name": "Retornar Banco"
-    },
-    {
-      "parameters": {
-        "operation": "sendDocument",
-        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
-        "binaryData": true,
-        "additionalFields": {}
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        2352,
-        2256
-      ],
-      "id": "5c97af43-56dc-490d-8037-86da94aac6cf",
-      "name": "Send a document",
-      "webhookId": "28d7abf8-3218-4bb5-8978-fca26a7edaaf",
-      "credentials": {
-        "telegramApi": {
-          "id": "XvOSLZ20R4qjCpEW",
-          "name": "Telegram account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
-        "text": "<b>Qual ação gostaria de tomar ?</b>",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "Acompanhar Pedidos",
-                    "additionalFields": {
-                      "callback_data": "acompanhar"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "Voltar ao Início",
-                    "additionalFields": {
-                      "callback_data": "voltarInicio"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
+        "chatId": "={{ $('Inicializar Mesas').item.json.userId }}",
+        "text": "=<b>🍽️ Reserva de Mesa</b>\n\nAcesse o link abaixo para escolher sua mesa, data e horário:\n\nhttps://reservachatbotfmi.netlify.app?userId={{ $('Inicializar Mesas').item.json.userId }}",
         "additionalFields": {
           "appendAttribution": false,
           "parse_mode": "HTML"
         }
       },
+      "id": "48d9cd1a-ebb4-44ea-ac2a-8bb9b62dd939",
+      "name": "Enviar Link Reserva",
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        2448,
-        2944
+        2672,
+        3984
       ],
-      "id": "650cc08c-272c-4ad7-a491-b43d69a903fb",
-      "name": "Proxima Acao",
-      "webhookId": "91a95d37-fa55-4a91-9b2a-b908fb813eeb",
+      "webhookId": "f39a0485-065a-4786-aa23-6f3fb9dd0121",
       "credentials": {
         "telegramApi": {
           "id": "XvOSLZ20R4qjCpEW",
@@ -2265,114 +2537,177 @@
     },
     {
       "parameters": {
-        "content": "## Ação Pós Pedido\nVai perguntar se o usuário gostaria de acompanhar a entrega ou voltar ao início.\n**Trabalha com os seguintes callbacks:**\n--acompanhar\n--voltarInicio",
-        "height": 304,
-        "color": 4
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        2336,
-        2784
-      ],
-      "id": "1bc8e412-bb5d-4d83-8bfc-c954a95962ce",
-      "name": "Sticky Note20"
-    },
-    {
-      "parameters": {
-        "operation": "download",
-        "fileId": {
-          "__rl": true,
-          "value": "17Umc5_Ha2wc24za8h_e1iBrqOrpQxjdt",
-          "mode": "list",
-          "cachedResultName": "Matam_Catalogo_Premium.pdf",
-          "cachedResultUrl": "https://drive.google.com/file/d/17Umc5_Ha2wc24za8h_e1iBrqOrpQxjdt/view?usp=drivesdk"
-        },
+        "path": "reserva-mesas",
+        "responseMode": "responseNode",
         "options": {}
       },
-      "type": "n8n-nodes-base.googleDrive",
-      "typeVersion": 3,
+      "id": "6d20c1e7-21c3-4700-8080-67d422476ffc",
+      "name": "Webhook Listar Mesas",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
       "position": [
-        2192,
-        2256
+        2896,
+        3904
       ],
-      "id": "620a01be-d036-4fd1-945b-add9338377f3",
-      "name": "Download file",
-      "credentials": {
-        "googleDriveOAuth2Api": {
-          "id": "yxRJELfgtgEQLCf3",
-          "name": "Google Drive account"
-        }
-      }
+      "webhookId": "reserva-mesas"
     },
     {
       "parameters": {
-        "content": "# EM ALGUNS CASOS RODAR COMO TESTE UNITÁRIO FUNCIONA (PRINCIAPLEMNTE SE NÃO DEPENDER  DO NOSSO SISTEMA DE SAVLAR DADOS LOCAIS)",
-        "height": 272,
-        "width": 928,
-        "color": 6
+        "jsCode": "const db = $getWorkflowStaticData('global');\nconst { data, hora, pessoas } = $input.first().json.query;\n\nif (!db.mesas) {\n  db.mesas = [\n    { id: 1, capacidade: 2, tipo: 'Salão principal', reservas: [] },\n    { id: 2, capacidade: 2, tipo: 'Varanda',         reservas: [] },\n    { id: 3, capacidade: 4, tipo: 'Salão principal', reservas: [] },\n    { id: 4, capacidade: 4, tipo: 'Salão principal', reservas: [] },\n    { id: 5, capacidade: 4, tipo: 'Jardim interno',  reservas: [] },\n    { id: 6, capacidade: 6, tipo: 'Salão VIP',       reservas: [] },\n    { id: 7, capacidade: 6, tipo: 'Jardim interno',  reservas: [] },\n    { id: 8, capacidade: 8, tipo: 'Salão VIP',       reservas: [] }\n  ];\n}\n\nconst mesas = db.mesas.map(mesa => {\n  const ocupada = mesa.reservas.some(r => r.data === data && r.hora === hora);\n  return {\n    id: mesa.id,\n    capacidade: mesa.capacidade,\n    tipo: mesa.tipo,\n    ocupada\n  };\n});\n\nreturn [{ json: { mesas } }];\n"
       },
-      "type": "n8n-nodes-base.stickyNote",
+      "id": "e424d278-6092-458b-9a57-abd52e9abace",
+      "name": "Processar Disponibilidade",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3120,
+        3904
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ mesas: $json.mesas }) }}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      },
+      "id": "8071eb0c-4955-4b54-a37d-28ce7d611ac2",
+      "name": "Responder Mesas",
+      "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1,
       "position": [
-        1904,
-        1152
-      ],
-      "id": "4c43f72b-b003-4c63-a45b-6ee8b6f1d176",
-      "name": "Sticky Note21"
+        3344,
+        3904
+      ]
     },
     {
       "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
-        "text": "={{\n`🍴 Gostaria de realizar um pedido agora ou deseja conhecer outras opções do nosso cardápio?`\n}}",
-        "replyMarkup": "inlineKeyboard",
-        "inlineKeyboard": {
-          "rows": [
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "SIM, desejo realizar um pedido",
-                    "additionalFields": {
-                      "callback_data": "pedido"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "row": {
-                "buttons": [
-                  {
-                    "text": "NÃO, não desejo realizar um pedido",
-                    "additionalFields": {
-                      "callback_data": "voltarCardapio"
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "additionalFields": {
-          "appendAttribution": false
+        "httpMethod": "POST",
+        "path": "reserva-criar",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
         }
       },
+      "id": "a1c0390a-ca6f-4a20-9814-e105ccd39138",
+      "name": "Webhook Criar Reserva",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        2896,
+        4064
+      ],
+      "webhookId": "reserva-criar"
+    },
+    {
+      "parameters": {
+        "jsCode": "const db = $getWorkflowStaticData('global');\nconst body = $input.first().json.body;\nconst { mesaId, data, hora, pessoas, userId } = body;\n\n// Encontrar a mesa\nconst mesa = (db.mesas || []).find(m => m.id == mesaId);\n\nif (!mesa) {\n  return [{ json: { sucesso: false, mensagem: 'Mesa não encontrada.' } }];\n}\n\n// Checar conflito\nconst conflito = mesa.reservas.some(r => r.data === data && r.hora === hora);\nif (conflito) {\n  return [{ json: { sucesso: false, mensagem: 'Mesa já reservada neste horário.' } }];\n}\n\n// Registrar\nmesa.reservas.push({ data, hora, pessoas, userId, criadoEm: new Date().toISOString() });\n\nreturn [{ json: { sucesso: true, mesaId, data, hora, pessoas, userId } }];\n"
+      },
+      "id": "efaf7aa4-6268-4c82-a23e-89fffe793f31",
+      "name": "Registrar Reserva",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3152,
+        4064
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      },
+      "id": "22d200a8-c053-4c48-802b-815e9e6b66e3",
+      "name": "Responder Reserva",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        3344,
+        4064
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.userId }}",
+        "text": "={{ $json.sucesso ? '<b>✅ Reserva confirmada!</b>\\n\\n🍽️ Mesa ' + $json.mesaId + '\\n📅 Data: ' + $json.data + '\\n🕐 Horário: ' + $json.hora + '\\n👥 Pessoas: ' + $json.pessoas + '\\n\\nTe esperamos! 🌙' : '' }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "id": "ecae5375-93ea-4e32-9923-c7253e423fe6",
+      "name": "Notificar Reserva Telegram",
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        2560,
-        2256
+        3568,
+        4064
       ],
-      "id": "3c4b7fef-7697-4b3d-82b0-da944cbdfd53",
-      "name": "Confirmacao Realizar",
-      "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
+      "webhookId": "f99c7d6a-4228-4dd6-bc5d-53df13caf21b",
       "credentials": {
         "telegramApi": {
           "id": "XvOSLZ20R4qjCpEW",
           "name": "Telegram account 2"
         }
       }
+    },
+    {
+      "parameters": {
+        "path": "reserva-pagina",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "d75a3aa0-3cd6-4085-9584-0563713162ab",
+      "name": "Webhook Página Reserva",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        2896,
+        4224
+      ],
+      "webhookId": "reserva-pagina"
+    },
+    {
+      "parameters": {
+        "content": "## 🍽️ Sistema de Reserva de Mesas\n\n**Fluxo Telegram:**\nSwitch Reservar → Inicializar Mesas → Enviar Link Reserva\n\n**Webhooks independentes:**\n- GET  `/webhook/reserva-mesas` → lista mesas disponíveis\n- POST `/webhook/reserva-criar` → registra reserva\n- GET  `/webhook/reserva-pagina` → redireciona para o HTML\n",
+        "height": 724,
+        "width": 1132,
+        "color": 7
+      },
+      "id": "d4a75b63-ad51-4d81-8e76-57f0848a486e",
+      "name": "Sticky Note Reservas",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2736,
+        3664
+      ]
     }
   ],
   "pinData": {
@@ -2531,7 +2866,13 @@
             "index": 0
           }
         ],
-        [],
+        [
+          {
+            "node": "Confirmar Desejo Reservar",
+            "type": "main",
+            "index": 0
+          }
+        ],
         [],
         [
           {
@@ -2664,7 +3005,7 @@
         ],
         [
           {
-            "node": "Switch",
+            "node": " Switch Unidade",
             "type": "main",
             "index": 0
           }
@@ -2770,41 +3111,11 @@
         ]
       ]
     },
-    "Confirmar Pagamento Telegram": {
-      "main": [
-        []
-      ]
-    },
     "Salvar Pag Retirada Re": {
       "main": [
         [
           {
             "node": "Calcular Total",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Switch": {
-      "main": [
-        [
-          {
-            "node": "Sobre Localizacao",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Sobre Horário",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Sobre Estrutura",
             "type": "main",
             "index": 0
           }
@@ -2887,6 +3198,115 @@
           }
         ]
       ]
+    },
+    " Switch Unidade": {
+      "main": [
+        [
+          {
+            "node": "Sobre Localizacao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Sobre Horário",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Sobre Estrutura",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch Reservar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch Reservar": {
+      "main": [
+        [
+          {
+            "node": "Inicializar Mesas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Inicializar Mesas": {
+      "main": [
+        [
+          {
+            "node": "Enviar Link Reserva",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook Listar Mesas": {
+      "main": [
+        [
+          {
+            "node": "Processar Disponibilidade",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Processar Disponibilidade": {
+      "main": [
+        [
+          {
+            "node": "Responder Mesas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook Criar Reserva": {
+      "main": [
+        [
+          {
+            "node": "Registrar Reserva",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Registrar Reserva": {
+      "main": [
+        [
+          {
+            "node": "Responder Reserva",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Responder Reserva": {
+      "main": [
+        [
+          {
+            "node": "Notificar Reserva Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
@@ -2894,11 +3314,11 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "b7e799f3-47ad-47a6-87e6-d76ef2e0ee80",
+  "versionId": "41e987a0-786b-4e29-a8d3-db52a2466846",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"
   },
-  "id": "t9GEOhOSGuCCjqR0",
+  "id": "wtjvidWqBZCslEZH",
   "tags": []
 }
