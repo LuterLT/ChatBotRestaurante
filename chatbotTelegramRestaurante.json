@@ -465,7 +465,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.message.chat.id;\n\nbancoDados.promocaoAtiva = true;\n\nif (!bancoDados.usuario) {\n  bancoDados.usuario = {};\n}\n\nbancoDados.usuario[clientId] = {\n  endereco: 'Rua X',\n  numeroPedidos: 0,\n  pedidos: [],\n  pagamento: 'nenhum'\n  //**O pagamento pode ser 'online' ou 'retirada'\n};\n\nreturn bancoDados;\n"
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.message.chat.id;\n\nbancoDados.promocaoAtiva = true;\n\nif (!bancoDados.usuario) {\n  bancoDados.usuario = {};\n}\n\nbancoDados.usuario[clientId] = {\n  endereco: 'Rua X',\n  numeroPedidos: 0,\n  pedidos: [],\n  pagamento: 'nenhum',\n  nomeCliente: 'nenhum',\n  emailCliente: 'nenhum@email.com'\n  //**O pagamento pode ser 'online' ou 'retirada'\n};\n\nreturn bancoDados;\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -2291,8 +2291,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1792,
-        1088
+        2240,
+        816
       ],
       "id": "63211006-4a03-4cac-a0bf-3af2b33fac7e",
       "name": "Sticky Note4"
@@ -2332,8 +2332,8 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1984,
-        1216
+        2400,
+        960
       ],
       "id": "6cde2011-f355-47f9-9db6-7fe087c17957",
       "name": "Confirmar Desejo Reservar",
@@ -2347,7 +2347,7 @@
     },
     {
       "parameters": {
-        "content": "## MENU RESERVAR MESA\nVai separar o fluxo da reserva de mesa entre ...\n**Trabalha com os seguintes callbacks:**\n--reservarMesa",
+        "content": "## MENU RESERVAR MESA\nVai separar o fluxo da reserva de mesa entre ...\n**Trabalha com os seguintes callbacks:**\n--reservarMesa\n--finalizar",
         "height": 320,
         "width": 416,
         "color": 7
@@ -2481,6 +2481,31 @@
               },
               "renameOutput": true,
               "outputKey": "Reservar"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "0dd70911-9bbc-48ca-a068-4c98ca97d6a2",
+                    "leftValue": "={{ $('Telegram Trigger').item.json.callback_query.data }}",
+                    "rightValue": "finalizar",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Finalizar"
             }
           ]
         },
@@ -2491,8 +2516,8 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        2112,
-        4000
+        2080,
+        3984
       ],
       "id": "77c39beb-7750-4786-b86d-0bfb587595e2",
       "name": "Switch Reservar"
@@ -2654,8 +2679,37 @@
     },
     {
       "parameters": {
-        "chatId": "={{ $json.userId }}",
-        "text": "={{ $json.sucesso ? '<b>✅ Reserva confirmada!</b>\\n\\n🍽️ Mesa ' + $json.mesaId + '\\n📅 Data: ' + $json.data + '\\n🕐 Horário: ' + $json.hora + '\\n👥 Pessoas: ' + $json.pessoas + '\\n\\nTe esperamos! 🌙' : '' }}",
+        "chatId": "={{ $('Responder Reserva').item.json.userId }}",
+        "text": "={{ $('Responder Reserva').item.json.sucesso ? '<b>✅ Reserva confirmada!</b>\\n\\n🍽️ Mesa ' + $('Responder Reserva').item.json.mesaId + '\\n📅 Data: ' + $('Responder Reserva').item.json.data + '\\n🕐 Horário: ' + $('Responder Reserva').item.json.hora + '\\n👥 Pessoas: ' + $('Responder Reserva').item.json.pessoas + '\\n\\nTe esperamos! 🌙' + '\\n\\n\\n<b>Deseja Algo mais ?</b>' : ''}}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Sim, desejo algo mais",
+                    "additionalFields": {
+                      "callback_data": "voltarInicio"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Não, finalizar sessão",
+                    "additionalFields": {
+                      "callback_data": "finalizar"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
         "additionalFields": {
           "appendAttribution": false,
           "parse_mode": "HTML"
@@ -2666,7 +2720,7 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        3568,
+        3952,
         4064
       ],
       "webhookId": "f99c7d6a-4228-4dd6-bc5d-53df13caf21b",
@@ -2695,9 +2749,9 @@
     },
     {
       "parameters": {
-        "content": "## 🍽️ Sistema de Reserva de Mesas\n\n**Fluxo Telegram:**\nSwitch Reservar → Inicializar Mesas → Enviar Link Reserva\n\n**Webhooks independentes:**\n- GET  `/webhook/reserva-mesas` → lista mesas disponíveis\n- POST `/webhook/reserva-criar` → registra reserva\n- GET  `/webhook/reserva-pagina` → redireciona para o HTML\n",
+        "content": "## Sistema de Reserva de Mesas\n\n**Fluxo Telegram:**\nSwitch Reservar → Inicializar Mesas → Enviar Link Reserva\n\n**Webhooks independentes:**\n- GET  `/webhook/reserva-mesas` → lista mesas disponíveis\n- POST `/webhook/reserva-criar` → registra reserva\n- GET  `/webhook/reserva-pagina` → redireciona para o HTML\n\n**Trabalha com os seguintes callbacks:**\n--voltarInicio\n--finalizar",
         "height": 724,
-        "width": 1132,
+        "width": 1660,
         "color": 7
       },
       "id": "d4a75b63-ad51-4d81-8e76-57f0848a486e",
@@ -2708,15 +2762,454 @@
         2736,
         3664
       ]
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "chatId": "={{ $json.userId}}",
+        "message": "Antes de finalizarmos a reserva, por favor nos informe seus dados:\n",
+        "responseType": "customForm",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Nome do Reservante: ",
+              "placeholder": "José Adalberto",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "E-mail do reservante: ",
+              "fieldType": "email",
+              "placeholder": "exemplo@email.com",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "messageButtonLabel": "Informar Dados",
+          "responseFormTitle": "Informações do Cliente",
+          "responseFormDescription": "Preencha os campos com os dados do reservante para que a reserva seja confirmada",
+          "responseFormButtonLabel": "Enviar",
+          "responseFormCustomCss": ":root {\n\t--font-family: 'Open Sans', sans-serif;\n\t--font-weight-normal: 400;\n\t--font-weight-bold: 600;\n\t--font-size-body: 12px;\n\t--font-size-label: 14px;\n\t--font-size-test-notice: 12px;\n\t--font-size-input: 14px;\n\t--font-size-header: 20px;\n\t--font-size-paragraph: 14px;\n\t--font-size-link: 12px;\n\t--font-size-error: 12px;\n\t--font-size-html-h1: 28px;\n\t--font-size-html-h2: 20px;\n\t--font-size-html-h3: 16px;\n\t--font-size-html-h4: 14px;\n\t--font-size-html-h5: 12px;\n\t--font-size-html-h6: 10px;\n\t--font-size-subheader: 14px;\n\n\t/* Colors */\n\t--color-background: #262626;\n\t--color-test-notice-text: #e6a23d;\n\t--color-test-notice-bg: #fefaf6;\n\t--color-test-notice-border: #f6dcb7;\n\t--color-card-bg: #F5F5F5;\n\t--color-card-border: #dbdfe7;\n\t--color-card-shadow: rgba(99, 77, 255, 0.06);\n\t--color-link: #7e8186;\n\t--color-header: #525356;\n\t--color-label: #555555;\n\t--color-input-border: #dbdfe7;\n\t--color-input-text: #71747A;\n\t--color-focus-border: rgb(90, 76, 194);\n\t--color-submit-btn-bg: #ff6d5a;\n\t--color-submit-btn-text: #ffffff;\n\t--color-error: #ea1f30;\n\t--color-required: #ff6d5a;\n\t--color-clear-button-bg: #7e8186;\n\t--color-html-text: #555;\n\t--color-html-link: #ff6d5a;\n\t--color-header-subtext: #7e8186;\n\n\t/* Border Radii */\n\t--border-radius-card: 8px;\n\t--border-radius-input: 6px;\n\t--border-radius-clear-btn: 50%;\n\t--card-border-radius: 8px;\n\n\t/* Spacing */\n\t--padding-container-top: 24px;\n\t--padding-card: 24px;\n\t--padding-test-notice-vertical: 12px;\n\t--padding-test-notice-horizontal: 24px;\n\t--margin-bottom-card: 16px;\n\t--padding-form-input: 12px;\n\t--card-padding: 24px;\n\t--card-margin-bottom: 16px;\n\n\t/* Dimensions */\n\t--container-width: 448px;\n\t--submit-btn-height: 48px;\n\t--checkbox-size: 18px;\n\n\t/* Others */\n\t--box-shadow-card: 0px 4px 16px 0px var(--color-card-shadow);\n\t--opacity-placeholder: 0.5;\n}",
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        3552,
+        4064
+      ],
+      "id": "fd97a2f7-a00c-41c2-9ac8-01cef334783f",
+      "name": "Formulario Dados",
+      "webhookId": "497b0a6f-b4be-473e-9e52-da3f684a56cc",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nconst clientId = $('Responder Reserva').first().json.userId;\n\n\nbancoDados.usuario[clientId].nomeCliente=$input.first().json.data['Nome do Reservante: '];\n\nbancoDados.usuario[clientId].emailCliente=$input.first().json.data['E-mail do reservante: '];\n\nreturn bancoDados;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3760,
+        4064
+      ],
+      "id": "9a055d90-48d7-4aeb-b202-74fd806ae454",
+      "name": "Registrar Reservante"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "={{'<b>Muito Obrigado por pedir conosco</b>'\n+ '\\n\\n Estaremos sempre a disposição, um ótimo dia !'}}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2448,
+        4160
+      ],
+      "id": "af632be5-1d20-43ec-9cdd-063c613e5d53",
+      "name": "Finalizar Sessão",
+      "webhookId": "58db9737-3f81-4458-9ebe-01f79fa1ef1a",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "text": "=<b>Realmente deseja realizar um chamado ?</b>",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Sim",
+                    "additionalFields": {
+                      "callback_data": "chamado"
+                    }
+                  },
+                  {
+                    "text": "Não",
+                    "additionalFields": {
+                      "callback_data": "voltarInicio"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1824,
+        1264
+      ],
+      "id": "70d56656-ef14-47db-9448-07b7084709ae",
+      "name": "Confirmar Desejo Chamado",
+      "webhookId": "cd1c2f90-ab4e-42a1-a7d9-def411d39b8b",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## SUPORTE\nVai confirmar se o cliente deseja contatar o suporte.\n**Trabalha com os seguintes callbacks:**\n--chamado\n--voltarInicio",
+        "height": 288,
+        "width": 480,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1696,
+        1152
+      ],
+      "id": "f96c3e15-ede8-49a1-b885-c1ff76ddf2fd",
+      "name": "Sticky Note23"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Telegram Trigger').item.json.callback_query.data }}",
+                    "rightValue": "chamado",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "6f53ed0c-8d76-49fe-a2fd-bb81242c4b35"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Chamado"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        2240,
+        4528
+      ],
+      "id": "c3f98ccc-8b43-43c4-9092-766e27bb96c7",
+      "name": "Switch Suporte"
+    },
+    {
+      "parameters": {
+        "content": "## MENU DE SUPORTE\nVai separar o fluxo do suporte.",
+        "height": 352,
+        "width": 432,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2080,
+        4368
+      ],
+      "id": "a17d1530-24cb-4cd7-b1c9-10a23ec42f60",
+      "name": "Sticky Note24"
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "message": "Antes de contatarmos o suporte, por favor nos informe sobre o problema no formulário abaixo: ",
+        "responseType": "customForm",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Seu Nome: ",
+              "placeholder": "Maria Antonieta",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Qual o tópico do problema ?",
+              "fieldType": "radio",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Pedido"
+                  },
+                  {
+                    "option": "Acompanhar Pedido"
+                  },
+                  {
+                    "option": "Reserva"
+                  },
+                  {
+                    "option": "Dúvida"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Descreva um pouco sobre o problema: ",
+              "fieldType": "textarea",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Dia do Ocorrido: ",
+              "fieldType": "date",
+              "requiredField": true
+            },
+            {
+              "fieldName": "ChatId",
+              "fieldType": "hiddenField",
+              "fieldValue": "={{ $json.callback_query.message.chat.id }}"
+            }
+          ]
+        },
+        "options": {
+          "messageButtonLabel": "Informe seu Problema",
+          "responseFormTitle": "Formulário de Suporte",
+          "responseFormDescription": "Preencha os campos para podermos te ajudar com mais assertividade.",
+          "responseFormButtonLabel": "Enviar",
+          "responseFormCustomCss": ":root {\n\t--font-family: 'Open Sans', sans-serif;\n\t--font-weight-normal: 400;\n\t--font-weight-bold: 600;\n\t--font-size-body: 12px;\n\t--font-size-label: 14px;\n\t--font-size-test-notice: 12px;\n\t--font-size-input: 14px;\n\t--font-size-header: 20px;\n\t--font-size-paragraph: 14px;\n\t--font-size-link: 12px;\n\t--font-size-error: 12px;\n\t--font-size-html-h1: 28px;\n\t--font-size-html-h2: 20px;\n\t--font-size-html-h3: 16px;\n\t--font-size-html-h4: 14px;\n\t--font-size-html-h5: 12px;\n\t--font-size-html-h6: 10px;\n\t--font-size-subheader: 14px;\n\n\t/* Colors */\n\t--color-background: #262626;\n\t--color-test-notice-text: #e6a23d;\n\t--color-test-notice-bg: #fefaf6;\n\t--color-test-notice-border: #f6dcb7;\n\t--color-card-bg: #F5F5F5;\n\t--color-card-border: #dbdfe7;\n\t--color-card-shadow: rgba(99, 77, 255, 0.06);\n\t--color-link: #7e8186;\n\t--color-header: #525356;\n\t--color-label: #555555;\n\t--color-input-border: #dbdfe7;\n\t--color-input-text: #71747A;\n\t--color-focus-border: rgb(90, 76, 194);\n\t--color-submit-btn-bg: #ff6d5a;\n\t--color-submit-btn-text: #ffffff;\n\t--color-error: #ea1f30;\n\t--color-required: #ff6d5a;\n\t--color-clear-button-bg: #7e8186;\n\t--color-html-text: #555;\n\t--color-html-link: #ff6d5a;\n\t--color-header-subtext: #7e8186;\n\n\t/* Border Radii */\n\t--border-radius-card: 8px;\n\t--border-radius-input: 6px;\n\t--border-radius-clear-btn: 50%;\n\t--card-border-radius: 8px;\n\n\t/* Spacing */\n\t--padding-container-top: 24px;\n\t--padding-card: 24px;\n\t--padding-test-notice-vertical: 12px;\n\t--padding-test-notice-horizontal: 24px;\n\t--margin-bottom-card: 16px;\n\t--padding-form-input: 12px;\n\t--card-padding: 24px;\n\t--card-margin-bottom: 16px;\n\n\t/* Dimensions */\n\t--container-width: 448px;\n\t--submit-btn-height: 48px;\n\t--checkbox-size: 18px;\n\n\t/* Others */\n\t--box-shadow-card: 0px 4px 16px 0px var(--color-card-shadow);\n\t--opacity-placeholder: 0.5;\n}",
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2496,
+        4528
+      ],
+      "id": "2f37c5b1-dac2-47ac-8f17-dee247c6b177",
+      "name": "Formulario Suporte",
+      "webhookId": "497b0a6f-b4be-473e-9e52-da3f684a56cc",
+      "credentials": {
+        "telegramApi": {
+          "id": "XvOSLZ20R4qjCpEW",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1oW0fEzh7xI2hpUQH2F3KFcCwBKzGt2s4w1P1dGjxE_E",
+          "mode": "list",
+          "cachedResultName": "chamadosRestauranteFMI",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oW0fEzh7xI2hpUQH2F3KFcCwBKzGt2s4w1P1dGjxE_E/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Chamados",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1oW0fEzh7xI2hpUQH2F3KFcCwBKzGt2s4w1P1dGjxE_E/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nome": "={{ $json.data['Seu Nome: '] }}",
+            "Problema": "={{ $json.data['Qual o tópico do problema ?'] }}",
+            "Descrição": "={{ $json.data['Descreva um pouco sobre o problema: '] }}",
+            "Data": "={{ $json.data['Dia do Ocorrido: '] }}",
+            "ID Usuário": "={{ $json.data.ChatId }}"
+          },
+          "matchingColumns": [
+            "ID"
+          ],
+          "schema": [
+            {
+              "id": "ID Usuário",
+              "displayName": "ID Usuário",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Nome",
+              "displayName": "Nome",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Problema",
+              "displayName": "Problema",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Descrição",
+              "displayName": "Descrição",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Data",
+              "displayName": "Data",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Resolvido",
+              "displayName": "Resolvido",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        2704,
+        4528
+      ],
+      "id": "0e5dd243-1ced-40ad-bdcd-70ced7db4004",
+      "name": "Append or update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ghx4foA1RQWhHpnM",
+          "name": "Google Sheets account"
+        }
+      }
     }
   ],
   "pinData": {
+    "Webhook Criar Reserva": [
+      {
+        "json": {
+          "headers": {
+            "host": "bulge-stylus-cover.ngrok-free.dev",
+            "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Mobile Safari/537.36",
+            "content-length": "81",
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-CA,en;q=0.9,pt-BR;q=0.8,pt;q=0.7,en-GB;q=0.6,en-US;q=0.5",
+            "content-type": "application/json",
+            "dnt": "1",
+            "ngrok-skip-browser-warning": "1",
+            "origin": "https://reservachatbotfmi.netlify.app",
+            "priority": "u=1, i",
+            "referer": "https://reservachatbotfmi.netlify.app/",
+            "sec-ch-ua": "\"Chromium\";v=\"148\", \"Google Chrome\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
+            "sec-ch-ua-mobile": "?1",
+            "sec-ch-ua-platform": "\"Android\"",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site",
+            "x-forwarded-for": "2804:7f0:d89a:19e3:bd66:22a3:fa99:eba4",
+            "x-forwarded-host": "bulge-stylus-cover.ngrok-free.dev",
+            "x-forwarded-proto": "https"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "mesaId": 4,
+            "data": "2026-05-24",
+            "hora": "19:00",
+            "pessoas": 3,
+            "userId": "6679062640"
+          },
+          "webhookUrl": "https://bulge-stylus-cover.ngrok-free.dev/webhook/reserva-criar",
+          "executionMode": "production"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ],
     "Telegram Trigger": [
       {
         "json": {
-          "update_id": 737499040,
+          "update_id": 737499099,
           "callback_query": {
-            "id": "1016239497941436372",
+            "id": "1016239498002330718",
             "from": {
               "id": 6679062640,
               "is_bot": false,
@@ -2724,7 +3217,7 @@
               "language_code": "pt-br"
             },
             "message": {
-              "message_id": 347,
+              "message_id": 438,
               "from": {
                 "id": 8679938918,
                 "is_bot": true,
@@ -2736,33 +3229,24 @@
                 "first_name": "Luter",
                 "type": "private"
               },
-              "date": 1778738545,
-              "text": "Qual das Opções Gostaria de Conhecer Melhor?",
+              "date": 1779510320,
+              "text": "Realmente deseja realizar um chamado ?",
+              "entities": [
+                {
+                  "offset": 0,
+                  "length": 38,
+                  "type": "bold"
+                }
+              ],
               "reply_markup": {
                 "inline_keyboard": [
                   [
                     {
-                      "text": "Entrada",
-                      "callback_data": "cardapioEntrada"
+                      "text": "Sim",
+                      "callback_data": "chamado"
                     },
                     {
-                      "text": "Salgados",
-                      "callback_data": "cardapioSalgados"
-                    }
-                  ],
-                  [
-                    {
-                      "text": "Pratos",
-                      "callback_data": "cardapioPratos"
-                    },
-                    {
-                      "text": "Promoções Especiais",
-                      "callback_data": "cardapioPromocoes"
-                    }
-                  ],
-                  [
-                    {
-                      "text": "← Voltar",
+                      "text": "Não",
                       "callback_data": "voltarInicio"
                     }
                   ]
@@ -2770,7 +3254,7 @@
               }
             },
             "chat_instance": "-6486450329571153113",
-            "data": "cardapioPromocoes"
+            "data": "chamado"
           }
         },
         "pairedItem": {
@@ -2873,7 +3357,13 @@
             "index": 0
           }
         ],
-        [],
+        [
+          {
+            "node": "Confirmar Desejo Chamado",
+            "type": "main",
+            "index": 0
+          }
+        ],
         [
           {
             "node": "Menu Principal Mensagem",
@@ -3239,6 +3729,20 @@
             "type": "main",
             "index": 0
           }
+        ],
+        [
+          {
+            "node": "Finalizar Sessão",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch Suporte",
+            "type": "main",
+            "index": 0
+          }
         ]
       ]
     },
@@ -3301,7 +3805,51 @@
       "main": [
         [
           {
+            "node": "Formulario Dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formulario Dados": {
+      "main": [
+        [
+          {
+            "node": "Registrar Reservante",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Registrar Reservante": {
+      "main": [
+        [
+          {
             "node": "Notificar Reserva Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch Suporte": {
+      "main": [
+        [
+          {
+            "node": "Formulario Suporte",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formulario Suporte": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet",
             "type": "main",
             "index": 0
           }
@@ -3314,7 +3862,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "41e987a0-786b-4e29-a8d3-db52a2466846",
+  "versionId": "fbadd058-1aff-403c-94ba-d526c3560870",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"
