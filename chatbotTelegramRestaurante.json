@@ -12,10 +12,10 @@
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.3,
       "position": [
-        -4400,
-        -3744
+        -1264,
+        2240
       ],
-      "id": "19b456b3-49de-46bd-863e-f20cd5603ef0",
+      "id": "3070dc49-9d53-4b66-941f-8a248357420a",
       "name": "Telegram Trigger",
       "webhookId": "1026be42-cb67-4038-948b-93b450cda22e",
       "credentials": {
@@ -32,10 +32,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3088,
-        -3872
+        48,
+        2112
       ],
-      "id": "160f4dda-e010-46bd-a521-d629fee9571a",
+      "id": "47196ea7-7e39-43a6-9bd9-84e348086226",
       "name": "ColetarHoras"
     },
     {
@@ -47,10 +47,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -3280,
-        -4096
+        -144,
+        1888
       ],
-      "id": "3ec809a5-3a59-4cd8-b002-5ed08c819ae5",
+      "id": "ab2936e7-d345-4231-8188-a8f69a27abd3",
       "name": "Sticky Note"
     },
     {
@@ -62,10 +62,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -3280,
-        -3584
+        -144,
+        2400
       ],
-      "id": "f0de312d-c11a-4617-be63-3eb75e77b835",
+      "id": "36b6c0f8-0350-4974-8b7b-108e3d2e9370",
       "name": "Sticky Note1"
     },
     {
@@ -108,10 +108,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2288,
-        -2144
+        848,
+        3840
       ],
-      "id": "6d2f42e4-32bb-4930-96e0-b4eaa4af094f",
+      "id": "063c7d68-1e16-4d1d-affa-4e1078a3e410",
       "name": "Opcoes Salgados",
       "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
@@ -161,10 +161,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2288,
-        -2304
+        848,
+        3680
       ],
-      "id": "dcd2d525-9ec5-4933-97f9-f235d89bdf84",
+      "id": "7f7ec2c1-8e5e-4c87-bf5b-c55bfffc245e",
       "name": "Opcoes Entrada",
       "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
@@ -214,10 +214,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2288,
-        -1984
+        848,
+        4000
       ],
-      "id": "537a5e90-e6df-4d2a-b70f-a84f642c36eb",
+      "id": "dd52a5f5-ce68-4a9b-9aa3-0ed0c47b18a4",
       "name": "Opcoes Pratos",
       "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
@@ -239,10 +239,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1936,
-        -1744
+        1200,
+        4240
       ],
-      "id": "e67d1da6-7695-42f0-925a-03cbb4f744d3",
+      "id": "1f684f20-8f75-48b8-ba87-97078f658826",
       "name": "Opcoes Promocoes",
       "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
@@ -262,10 +262,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -3040,
-        -2384
+        96,
+        3600
       ],
-      "id": "b757e8df-166d-44f0-a5be-9544d8ece77f",
+      "id": "770ad68d-c403-43d4-8693-789d050549c3",
       "name": "Sticky Note2"
     },
     {
@@ -278,10 +278,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2416,
-        -2480
+        720,
+        3504
       ],
-      "id": "cc85077f-b660-4f40-b2f0-b8a362dd3172",
+      "id": "c2d3f1a4-28ba-4e79-a63a-1e53231c8ca1",
       "name": "Sticky Note3"
     },
     {
@@ -348,10 +348,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2656,
-        -3664
+        480,
+        2320
       ],
-      "id": "ae6c3b5f-0f18-4c70-92fa-75e30258a46a",
+      "id": "208b508f-9e75-4d9e-bacd-7c99df22162f",
       "name": "Menu Categorias Mensagem",
       "webhookId": "39527d29-ffc9-44df-a6b7-feff5417418a",
       "credentials": {
@@ -450,10 +450,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2928,
-        -3872
+        208,
+        2112
       ],
-      "id": "38e43628-cef7-4a57-ad09-c8e62c3d5801",
+      "id": "63a54261-22ed-4a16-b728-0703f45297f7",
       "name": "Menu Principal Mensagem",
       "webhookId": "c32d41a1-dcf0-495b-b7cb-56b8f1224c93",
       "credentials": {
@@ -465,15 +465,15 @@
     },
     {
       "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.message.chat.id;\n\nbancoDados.atendentes = ['5042111496'];\n\nbancoDados.promocaoAtiva = true;\n\nif (!bancoDados.usuario[clientId]) {\n  bancoDados.usuario = {};\n  bancoDados.usuario[clientId] = {\n  endereco: 'Rua X',\n  numeroPedidos: 0,\n  pedidos: [],\n  pagamento: 'nenhum',\n  nomeCliente: 'nenhum',\n  emailCliente: 'nenhum@email.com'\n  //**O pagamento pode ser 'online' ou 'retirada'\n  };\n}\n\n\n\nreturn bancoDados;\n"
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.message.chat.id;\n\nbancoDados.atendentes = ['5042111496'];\n\nbancoDados.promocaoAtiva = true;\n\nif (!bancoDados.usuario) {\n  bancoDados.usuario = {};\n}\n\nif (!bancoDados.usuario[clientId]) {\n  bancoDados.usuario[clientId] = {\n  endereco: 'Rua X',\n  numeroPedidos: 0,\n  pedidos: [],\n  pagamento: 'nenhum',\n  nomeCliente: 'nenhum',\n  emailCliente: 'nenhum@email.com'\n  //**O pagamento pode ser 'online' ou 'retirada'\n  };\n}\nif (!bancoDados.usuario[clientId].endereco) {\n  bancoDados.usuario[clientId].endereco = 'Rua X';\n}\nif (!bancoDados.usuario[clientId].numeroPedidos) {\n  bancoDados.usuario[clientId].numeroPedidos = 0;\n}\nif (!bancoDados.usuario[clientId].pagamento) {\n  bancoDados.usuario[clientId].pagamento = 'nenhum';\n}\nif (!bancoDados.usuario[clientId].nomeCliente) {\n  bancoDados.usuario[clientId].nomeCliente = 'nenhum';\n}\nif (!bancoDados.usuario[clientId].emailCliente) {\n  bancoDados.usuario[clientId].emailCliente = 'nenhum';\n}\n\nreturn bancoDados;\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3248,
-        -3872
+        -112,
+        2112
       ],
-      "id": "6828b889-0f49-4c6c-8d29-3493b4109d72",
+      "id": "8f22a59d-59ce-4c69-b1fd-9ace2ad987b2",
       "name": "Contador Global"
     },
     {
@@ -561,10 +561,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1984,
-        -3776
+        1152,
+        2208
       ],
-      "id": "aeb3bb1e-ccf8-4251-bdfb-204fd365bcdb",
+      "id": "c5ea3c71-578c-4cbb-887d-f261f3b02cdf",
       "name": "Formulario Pedido",
       "webhookId": "497b0a6f-b4be-473e-9e52-da3f684a56cc",
       "credentials": {
@@ -576,15 +576,15 @@
     },
     {
       "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nconst clientId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nconst numeroPedidos = bancoDados.usuario[clientId].numeroPedidos;\n\nbancoDados.usuario[clientId].pedidos[numeroPedidos]=$input.first().json.data;\n\nbancoDados.usuario[clientId].numeroPedidos++;\n\nreturn bancoDados;"
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\n\nconst clientId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nconst numeroPedidos = bancoDados.usuario[clientId].numeroPedidos;\n\nconst pedidoParaSalvar = { ...$input.first().json.data, _status: 'em preparo' };\n\nbancoDados.usuario[clientId].pedidos[numeroPedidos]=pedidoParaSalvar;\n\nbancoDados.usuario[clientId].numeroPedidos++;\n\nreturn bancoDados;"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1776,
-        -3776
+        1360,
+        2208
       ],
-      "id": "a042b38f-8b88-46f1-b55c-efb2781ef023",
+      "id": "0ba1516e-37e6-4e5a-9f02-978a4f742cd3",
       "name": "Armazenar Globalmente"
     },
     {
@@ -615,10 +615,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
       "position": [
-        -3968,
-        -3728
+        -832,
+        2256
       ],
-      "id": "4ea0c5fd-3cd2-4f0f-bbac-f79550b5cd56",
+      "id": "8a45fe1b-d4fd-4aa9-a40d-6fee435cc956",
       "name": "Eh Mensagem"
     },
     {
@@ -858,10 +858,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        -3072,
-        -3424
+        64,
+        2560
       ],
-      "id": "7485a269-27cd-4bea-be7b-5a846861f158",
+      "id": "1846ebde-a694-4388-abe7-a335d6df6e0c",
       "name": "Switch Inicial"
     },
     {
@@ -874,26 +874,11 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2704,
-        -3904
+        432,
+        2080
       ],
-      "id": "29bd88e2-1e71-4bfc-9c46-145a1da7655c",
+      "id": "39613887-facb-49e6-a76f-94df0f07befd",
       "name": "Sticky Note5"
-    },
-    {
-      "parameters": {
-        "content": "## FALTANDO\nNecessário fazer um node code para verificar os dados do formulário antes de registrar",
-        "height": 288,
-        "color": 6
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        -1952,
-        -3904
-      ],
-      "id": "6310f1db-f4fa-45bd-98fb-780527c8c6d8",
-      "name": "Sticky Note6"
     },
     {
       "parameters": {
@@ -929,10 +914,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1568,
-        -3776
+        1568,
+        2208
       ],
-      "id": "2720bfec-7368-4025-80f1-5c30ba503b40",
+      "id": "70e40771-8dfa-4d5f-ab0b-cccdf914c147",
       "name": "Algo Mais",
       "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
       "credentials": {
@@ -952,10 +937,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2112,
-        -4064
+        1024,
+        1920
       ],
-      "id": "e768c484-ec8a-4f4b-8443-bc1900987f32",
+      "id": "c2ac6843-59de-4f39-91dc-fc318e936937",
       "name": "Sticky Note7"
     },
     {
@@ -1095,10 +1080,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        -2784,
-        -2192
+        352,
+        3792
       ],
-      "id": "71dea296-42db-4a44-a9db-5afe5b3b05c3",
+      "id": "3067d320-c115-4e99-891e-28e2524dca39",
       "name": "Switch Cardapio"
     },
     {
@@ -1111,10 +1096,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2704,
-        -1488
+        432,
+        4496
       ],
-      "id": "b6920365-aadd-44ee-a96d-d58ce03a15af",
+      "id": "ab4d4a28-8de1-4e15-8f27-2e6dde27adc9",
       "name": "Sticky Note8"
     },
     {
@@ -1164,10 +1149,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2048,
-        -1360
+        1088,
+        4624
       ],
-      "id": "c586a950-8f37-44ef-8d39-572fcc170500",
+      "id": "b2e6a5ff-8f51-408c-9c4d-d861a36cefe1",
       "name": "Pedir Endereço",
       "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
       "credentials": {
@@ -1184,10 +1169,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1888,
-        -1360
+        1248,
+        4624
       ],
-      "id": "0b9c784d-19d4-4532-b7c1-a165eea93c45",
+      "id": "5ca267b7-466a-4b08-a5a8-158351f8f40f",
       "name": "Salvar Endereço"
     },
     {
@@ -1224,10 +1209,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1712,
-        -1360
+        1424,
+        4624
       ],
-      "id": "111ffce3-2dc4-454e-8aba-ac30af9fa7e2",
+      "id": "21501704-f8d9-4ec9-bd77-408934595aad",
       "name": "Deseja Pagar",
       "webhookId": "85a34e18-a6b1-4451-a690-ff31073b2112",
       "credentials": {
@@ -1244,10 +1229,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -4416,
-        -4240
+        -1280,
+        1760
       ],
-      "id": "51c8b27f-d505-4d23-8ad7-483ce9bdda9a",
+      "id": "b247f95a-d95d-4510-8ad5-8d3090c2aa1b",
       "name": "LIMPAR"
     },
     {
@@ -1260,10 +1245,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2096,
-        -1488
+        1040,
+        4496
       ],
-      "id": "ca04965f-8eb6-44ec-84aa-f67b5ae4fbaa",
+      "id": "11cbcf65-513b-4c4f-bb6e-36e3b9a86e2f",
       "name": "Sticky Note9"
     },
     {
@@ -1275,10 +1260,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -4480,
-        -4352
+        -1344,
+        1632
       ],
-      "id": "6426a641-cb14-4430-bd23-c5a074183bc0",
+      "id": "289da5b3-4d31-4804-8bd4-12e646da903c",
       "name": "Sticky Note10"
     },
     {
@@ -1291,10 +1276,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1152,
-        -4240
+        1984,
+        1744
       ],
-      "id": "ff366351-27db-423e-b326-54762ac0619e",
+      "id": "9ffbb611-1ab6-458b-96af-d0ae41adba9e",
       "name": "Sticky Note11"
     },
     {
@@ -1307,10 +1292,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2096,
-        -1200
+        1040,
+        4784
       ],
-      "id": "7ceadfe8-4d16-4a60-b1ca-1b6e63089cf9",
+      "id": "d981c138-9917-42da-b96e-ceb928bf7a38",
       "name": "Sticky Note12"
     },
     {
@@ -1400,10 +1385,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        -2544,
-        -1264
+        592,
+        4720
       ],
-      "id": "27141ea0-3198-4b8c-8c98-58cbd55bc738",
+      "id": "0124ef84-0559-4cc0-9dd7-a6e0a9187039",
       "name": "Switch Pagamento"
     },
     {
@@ -1413,10 +1398,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1888,
-        -944
+        1248,
+        5040
       ],
-      "id": "e92b3db0-6187-4334-a040-d828c2c336f0",
+      "id": "89844bcf-0dc7-48ac-9c54-901bf28de1a2",
       "name": "Salvar Pag Retirada On"
     },
     {
@@ -1426,23 +1411,23 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2064,
-        -1104
+        1072,
+        4880
       ],
-      "id": "d98e4cc2-9f8c-41c2-9558-f317e86699d0",
+      "id": "97ba61b6-39de-4a3a-bd07-8981735b2550",
       "name": "Salvar Pag Retirada Re"
     },
     {
       "parameters": {
         "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\n// Tabela de precos (R$)\nconst precos = {\n  'Homus': 18.00,\n  'Quibe Cru': 22.00,\n  'Tabule': 16.00,\n  'Kafta': 45.00,\n  'Charuto': 42.00,\n  'Cordeiro': 65.00\n};\nconst precoEsfiha = 8.00;\nconst precoQuibeAssado = 10.00;\n\nlet total = 0;\nconst pedidos = bancoDados.usuario[userId]?.pedidos || [];\n\nfor (const pedido of pedidos) {\n  // Entradas (checkboxes devolvem array ou string separada por virgula)\n  const entradas = pedido['Entrada'] ? \n    (Array.isArray(pedido['Entrada']) ? pedido['Entrada'] : pedido['Entrada'].split(',').map(s => s.trim())) \n    : [];\n  for (const e of entradas) {\n    total += precos[e] || 0;\n  }\n  // Salgados\n  total += (Number(pedido['Gostaria de quantas Esfihas?']) || 0) * precoEsfiha;\n  total += (Number(pedido['Gostaria de quantos Quibes Assados?']) || 0) * precoQuibeAssado;\n  // Pratos\n  const pratos = pedido['Pratos (selecione ao menos 1)'] ?\n    (Array.isArray(pedido['Pratos (selecione ao menos 1)']) ? pedido['Pratos (selecione ao menos 1)'] : pedido['Pratos (selecione ao menos 1)'].split(',').map(s => s.trim()))\n    : [];\n  for (const p of pratos) {\n    total += precos[p] || 0;\n  }\n}\n\n// Salva o total no banco\nbancoDados.usuario[userId].totalPedido = total;\n\nreturn [{ json: { userId, total, totalFormatado: `R$ ${total.toFixed(2)}` } }];\n"
       },
-      "id": "112e9da9-b4a0-4fa8-b78b-f661a6eceb4e",
+      "id": "39d4cc73-9d34-49a8-ac29-4ffcb91bd677",
       "name": "Calcular Total PIX",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1264,
-        -944
+        1872,
+        5040
       ]
     },
     {
@@ -1469,13 +1454,13 @@
         "jsonBody": "={\n  \"transaction_amount\": {{ $('Calcular Total PIX').item.json.total }},\n  \"description\": \"Pedido Restaurante - Telegram\",\n  \"payment_method_id\": \"pix\",\n  \"payer\": {\n    \"email\": \"cliente@pedido.com\",\n    \"identification\": {\n      \"type\": \"CPF\",\n      \"number\": \"01234567890\"\n    }\n  },\n  \"external_reference\": \"{{ $('Calcular Total PIX').item.json.userId }}\"\n}",
         "options": {}
       },
-      "id": "4e9aa9a2-4fb1-4bd5-9d38-572532c135e1",
+      "id": "9888bd94-1b64-4552-a305-40f6ad002d58",
       "name": "Criar Pagamento PIX MP",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -1088,
-        -944
+        2048,
+        5040
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -1488,13 +1473,13 @@
       "parameters": {
         "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $('Calcular Total PIX').item.json.userId;\nconst respMP = $input.first().json;\n\nbancoDados.usuario[userId].pixPaymentId = respMP.id;\nbancoDados.usuario[userId].pixStatus = respMP.status;\n\nconst qrCode = respMP?.point_of_interaction?.transaction_data?.qr_code || '';\nconst qrCodeBase64 = respMP?.point_of_interaction?.transaction_data?.qr_code_base64 || '';\nconst ticketUrl = respMP?.point_of_interaction?.transaction_data?.ticket_url || '';\n\nreturn [{\n  json: {\n    userId,\n    paymentId: respMP.id,\n    total: bancoDados.usuario[userId].totalFormatado || bancoDados.usuario[userId].totalPedido,\n    qrCode,\n    qrCodeBase64,\n    ticketUrl\n  }\n}];\n"
       },
-      "id": "a94dfaeb-784b-43e5-9642-bda19f278551",
+      "id": "4cf66607-1c7f-4e19-b398-6f7f825b04ba",
       "name": "Salvar Payment ID",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -864,
-        -944
+        2272,
+        5040
       ]
     },
     {
@@ -1506,13 +1491,13 @@
           "parse_mode": "HTML"
         }
       },
-      "id": "9f221e26-6e76-4630-b1fc-d27b1feb4dbb",
+      "id": "7b99a081-7713-46cb-bbd2-a5deeee135f1",
       "name": "Enviar Link PIX Telegram",
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -464,
-        -944
+        2672,
+        5040
       ],
       "webhookId": "1e0d9209-4b35-454e-b2a3-1cb828024a8f",
       "credentials": {
@@ -1528,13 +1513,13 @@
         "path": "mercadopago-pix",
         "options": {}
       },
-      "id": "7a12fce0-9c25-4959-aa64-62ff091fd8b2",
+      "id": "6afa8e30-244e-4162-ba66-eb469683f256",
       "name": "Webhook Confirmação MP",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
       "position": [
-        -624,
-        -1152
+        2512,
+        4832
       ],
       "webhookId": "mercadopago-pix-confirmacao"
     },
@@ -1562,13 +1547,13 @@
         },
         "options": {}
       },
-      "id": "6e086b7f-8edc-4818-8583-823260769c08",
+      "id": "8cd17754-38be-41c7-975d-2a2e1a8e1ee4",
       "name": "Verificar Pagamento Aprovado",
       "type": "n8n-nodes-base.if",
       "typeVersion": 2,
       "position": [
-        -400,
-        -1152
+        2736,
+        4832
       ]
     },
     {
@@ -1578,13 +1563,13 @@
         "genericAuthType": "httpHeaderAuth",
         "options": {}
       },
-      "id": "b9cc050d-8516-4a4b-ab7e-8a9ccb41a9d1",
+      "id": "de3f3926-8b56-483c-a63f-82053103f4e7",
       "name": "Consultar Status Pagamento MP",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -176,
-        -1152
+        2960,
+        4832
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -1617,13 +1602,13 @@
         },
         "options": {}
       },
-      "id": "792002ef-dc8a-4aa5-aa68-8c090e4fe251",
+      "id": "0407d69e-30a5-4faa-a66c-9de992f7c7b9",
       "name": "Se Status Approved",
       "type": "n8n-nodes-base.if",
       "typeVersion": 2,
       "position": [
-        64,
-        -1152
+        3200,
+        4832
       ]
     },
     {
@@ -1635,13 +1620,13 @@
           "parse_mode": "Markdown"
         }
       },
-      "id": "ea47ceab-58b3-41f4-9ee0-82feb53c645b",
+      "id": "35bc03bd-fbbe-4eeb-8dc4-1d75a3a9957a",
       "name": "Confirmar Pagamento Telegram",
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        288,
-        -1152
+        3424,
+        4832
       ],
       "webhookId": "447f02c4-4f69-4ea2-a19c-2e2cd2b9753a",
       "credentials": {
@@ -1658,13 +1643,13 @@
         "width": 1024,
         "color": 4
       },
-      "id": "508e8ae3-0349-4c28-8747-23fdcf80b79e",
+      "id": "274c8eba-1434-4d67-8610-a91c826448d4",
       "name": "Sticky Note PIX",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1296,
-        -1440
+        1840,
+        4544
       ]
     },
     {
@@ -1674,10 +1659,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -656,
-        -944
+        2480,
+        5040
       ],
-      "id": "e2271614-a3bc-4a8e-adb7-55991783f5a2",
+      "id": "4ab531e0-9848-43e8-baeb-899846a8b9e2",
       "name": "Preparar Mensagem Pix"
     },
     {
@@ -1690,10 +1675,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -704,
-        -1232
+        2432,
+        4752
       ],
-      "id": "626aaf53-25ca-41a8-b77b-cb33368905b2",
+      "id": "04913153-4d2f-4bdf-83e7-3f459963cf85",
       "name": "Sticky Note14"
     },
     {
@@ -1761,10 +1746,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2384,
-        -3328
+        752,
+        2656
       ],
-      "id": "e35876c3-de3d-44e8-90ca-7b8c5ee8156a",
+      "id": "117b3621-9abb-4ee8-af02-35c70535f4b0",
       "name": "Opcoes Sobre Unidade",
       "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
       "credentials": {
@@ -1784,10 +1769,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2528,
-        -3456
+        608,
+        2528
       ],
-      "id": "87e3a99f-6fc0-4c63-9a13-826a2b53c637",
+      "id": "534d88a5-5cab-4b21-b162-ba8f6b1391eb",
       "name": "Sticky Note15"
     },
     {
@@ -1800,10 +1785,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2528,
-        -800
+        608,
+        5184
       ],
-      "id": "8ec8744c-3cb1-434d-b951-d9f59bf1ee7e",
+      "id": "1d413d13-d23f-4833-b9c3-d33e26b1b726",
       "name": "Sticky Note16"
     },
     {
@@ -1847,10 +1832,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1904,
-        -656
+        1232,
+        5328
       ],
-      "id": "7b49a80c-556b-4bac-96be-6b42b645e8f0",
+      "id": "1b538f34-a114-4b54-bbb7-49965087ee1d",
       "name": "Sobre Localizacao",
       "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
       "credentials": {
@@ -1870,10 +1855,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2048,
-        -784
+        1088,
+        5200
       ],
-      "id": "64632af5-6adf-42ec-9fc7-2de0f5c24bb0",
+      "id": "6ff0a411-036b-4235-9c95-bea19dca4de0",
       "name": "Sticky Note17"
     },
     {
@@ -1917,10 +1902,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1456,
-        -576
+        1680,
+        5408
       ],
-      "id": "7500ee3b-f2c1-499c-ae92-75fb4e9268e2",
+      "id": "51461637-b110-41a0-b3db-8657e054a779",
       "name": "Sobre Horário",
       "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
       "credentials": {
@@ -1971,10 +1956,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1872,
-        -368
+        1264,
+        5616
       ],
-      "id": "14580570-a239-4875-bd07-7e0e080a35f2",
+      "id": "abbe5c23-b065-48a0-9b68-5cee02ca41eb",
       "name": "Sobre Estrutura",
       "webhookId": "a4d85382-903d-4778-9460-abcad88713bf",
       "credentials": {
@@ -1994,10 +1979,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1600,
-        -688
+        1536,
+        5296
       ],
-      "id": "70e914e5-51a9-4e48-9eea-1d544d6bcf0c",
+      "id": "104e6f7c-d486-4981-b303-3c96d729e602",
       "name": "Sticky Note18"
     },
     {
@@ -2010,10 +1995,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2048,
-        -496
+        1088,
+        5488
       ],
-      "id": "96d590e8-8a65-410b-9d0f-95c1ff4b004f",
+      "id": "67ed9421-b02d-4fc2-af3c-e14e97b50185",
       "name": "Sticky Note19"
     },
     {
@@ -2028,10 +2013,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1776,
-        -1104
+        1360,
+        4880
       ],
-      "id": "a4b61b2f-8515-477e-90b5-a4198a340ab6",
+      "id": "1409e7f4-7a32-4ed6-b438-354064b2bf31",
       "name": "Amostra Pedido",
       "webhookId": "2a978636-35b2-4313-87f6-9004db8c33e5",
       "credentials": {
@@ -2045,13 +2030,13 @@
       "parameters": {
         "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst userId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nconst precos = {\n  'Homus': 18.00,\n  'Quibe Cru': 22.00,\n  'Tabule': 16.00,\n  'Kafta': 45.00,\n  'Charuto': 42.00,\n  'Cordeiro': 65.00\n};\nconst precoEsfiha = 8.00;\nconst precoQuibeAssado = 10.00;\n\nlet total = 0;\nconst pedidos = bancoDados.usuario[userId]?.pedidos || [];\nconst linhasItens = [];\n\nfor (const pedido of pedidos) {\n  const entradas = pedido['Entrada']\n    ? (Array.isArray(pedido['Entrada']) ? pedido['Entrada'] : pedido['Entrada'].split(',').map(s => s.trim()))\n    : [];\n  for (const e of entradas) {\n    const preco = precos[e] || 0;\n    total += preco;\n    if (preco > 0) linhasItens.push(`${e}: R$ ${preco.toFixed(2)}`);\n  }\n\n  const qtdEsfiha = Number(pedido['Gostaria de quantas Esfihas?']) || 0;\n  if (qtdEsfiha > 0) {\n    const v = qtdEsfiha * precoEsfiha;\n    total += v;\n    linhasItens.push(`Esfihas (${qtdEsfiha}x): R$ ${v.toFixed(2)}`);\n  }\n\n  const qtdQuibe = Number(pedido['Gostaria de quantos Quibes Assados?']) || 0;\n  if (qtdQuibe > 0) {\n    const v = qtdQuibe * precoQuibeAssado;\n    total += v;\n    linhasItens.push(`Quibes Assados (${qtdQuibe}x): R$ ${v.toFixed(2)}`);\n  }\n\n  const pratos = pedido['Pratos (selecione ao menos 1)']\n    ? (Array.isArray(pedido['Pratos (selecione ao menos 1)']) ? pedido['Pratos (selecione ao menos 1)'] : pedido['Pratos (selecione ao menos 1)'].split(',').map(s => s.trim()))\n    : [];\n  for (const p of pratos) {\n    const preco = precos[p] || 0;\n    total += preco;\n    if (preco > 0) linhasItens.push(`${p}: R$ ${preco.toFixed(2)}`);\n  }\n}\n\nbancoDados.usuario[userId].totalPedido = total;\n\nreturn [{ json: { userId, total, totalFormatado: `R$ ${total.toFixed(2)}`, itens: linhasItens } }];"
       },
-      "id": "31ad4f6a-48e0-40d6-adc4-06021fe5bc49",
+      "id": "af338d02-5b96-435f-bb73-3f59b41e79be",
       "name": "Calcular Total",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1920,
-        -1104
+        1216,
+        4880
       ]
     },
     {
@@ -2082,10 +2067,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
       "position": [
-        -2144,
-        -1728
+        992,
+        4256
       ],
-      "id": "3e742cbf-19b8-4162-8360-888b9b3cee17",
+      "id": "e280f94c-eb5e-484e-8d6c-a1fe31ba8336",
       "name": "If"
     },
     {
@@ -2095,10 +2080,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2304,
-        -1728
+        832,
+        4256
       ],
-      "id": "918d9020-c99f-4c55-b8fe-01e16394debc",
+      "id": "156ef169-f483-4e32-826f-028a81d74995",
       "name": "Retornar Banco"
     },
     {
@@ -2111,10 +2096,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1568,
-        -1744
+        1568,
+        4240
       ],
-      "id": "897436f1-db57-4413-83fc-43c609a1ee99",
+      "id": "7f5f226a-b25d-453d-8147-e22e29a23fe8",
       "name": "Send a document",
       "webhookId": "28d7abf8-3218-4bb5-8978-fca26a7edaaf",
       "credentials": {
@@ -2165,10 +2150,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1472,
-        -1056
+        1664,
+        4928
       ],
-      "id": "7a67a196-4828-4af5-bfae-0c5fddb291d4",
+      "id": "36c7624d-46c7-46bc-8331-056b83e6ef47",
       "name": "Proxima Acao",
       "webhookId": "91a95d37-fa55-4a91-9b2a-b908fb813eeb",
       "credentials": {
@@ -2187,10 +2172,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1584,
-        -1216
+        1552,
+        4768
       ],
-      "id": "4b44bf14-961b-4c6d-9928-78308b1b1bd9",
+      "id": "7221a913-e6ee-4278-8db9-fca8dfebd429",
       "name": "Sticky Note20"
     },
     {
@@ -2208,10 +2193,10 @@
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3,
       "position": [
-        -1728,
-        -1744
+        1408,
+        4240
       ],
-      "id": "62462685-602f-4c46-9beb-a54744d0c837",
+      "id": "9ae78d27-6e68-443c-af8b-48a2580ba73a",
       "name": "Download file",
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -2230,10 +2215,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1136,
-        -3952
+        2000,
+        2032
       ],
-      "id": "af67a08d-97a5-4756-8631-34a1fb26e771",
+      "id": "4083dc7c-59f8-40fb-8659-6cd92b407848",
       "name": "Sticky Note21"
     },
     {
@@ -2276,10 +2261,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1360,
-        -1744
+        1776,
+        4240
       ],
-      "id": "8ad2a444-26f7-48b7-9f73-5c0415b42acc",
+      "id": "cc36ba89-f3d2-4ed2-91f3-a29feb9faeba",
       "name": "Confirmacao Realizar",
       "webhookId": "faabc4f8-61fe-4e9e-8657-90c5705cd682",
       "credentials": {
@@ -2299,10 +2284,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2080,
-        -3408
+        1056,
+        2576
       ],
-      "id": "464bb4ea-476c-4c91-b191-bd675bc7d80c",
+      "id": "1b8b2913-e887-4582-870c-eb1514910ee5",
       "name": "Sticky Note4"
     },
     {
@@ -2340,10 +2325,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1920,
-        -3264
+        1216,
+        2720
       ],
-      "id": "dd7019f7-d0b3-4717-b0a8-54982a347a1c",
+      "id": "e09f8f9b-6828-455f-82c0-ef5533567076",
       "name": "Confirmar Desejo Reservar",
       "webhookId": "cd1c2f90-ab4e-42a1-a7d9-def411d39b8b",
       "credentials": {
@@ -2363,10 +2348,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2368,
-        -144
+        768,
+        5840
       ],
-      "id": "3e2bd0d6-f343-4afe-a629-940890d7253d",
+      "id": "57273508-0034-41d8-bde6-a5799283daf6",
       "name": "Sticky Note22"
     },
     {
@@ -2456,10 +2441,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        -2384,
-        -576
+        752,
+        5408
       ],
-      "id": "02c96743-add6-46df-a560-d862e80619de",
+      "id": "0c088c40-5e4a-42a1-b167-27dd7769a164",
       "name": " Switch Unidade"
     },
     {
@@ -2524,23 +2509,23 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        -2224,
-        0
+        912,
+        5984
       ],
-      "id": "7585011a-707f-4ab6-9537-d8697ca3df65",
+      "id": "df23bb75-224a-4c14-9612-232b8a54f0a9",
       "name": "Switch Reservar"
     },
     {
       "parameters": {
         "jsCode": "const db = $getWorkflowStaticData('global');\n\n// Inicializa mesas apenas se ainda não existirem\nif (!db.mesas) {\n  db.mesas = [\n    { id: 1, capacidade: 2, tipo: 'Salão principal', reservas: [] },\n    { id: 2, capacidade: 2, tipo: 'Varanda',         reservas: [] },\n    { id: 3, capacidade: 4, tipo: 'Salão principal', reservas: [] },\n    { id: 4, capacidade: 4, tipo: 'Salão principal', reservas: [] },\n    { id: 5, capacidade: 4, tipo: 'Jardim interno',  reservas: [] },\n    { id: 6, capacidade: 6, tipo: 'Salão VIP',       reservas: [] },\n    { id: 7, capacidade: 6, tipo: 'Jardim interno',  reservas: [] },\n    { id: 8, capacidade: 8, tipo: 'Salão VIP',       reservas: [] }\n  ];\n}\n\nconst userId = $('Telegram Trigger').first().json.callback_query.message.chat.id;\n\nreturn [{ json: { ok: true, userId } }];\n"
       },
-      "id": "21a87378-d8f7-4f13-a4a6-8a9e2d6640a7",
+      "id": "f587460a-ae70-4dab-bd51-ca2e809cefbe",
       "name": "Inicializar Mesas",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1856,
-        0
+        1280,
+        5984
       ]
     },
     {
@@ -2552,13 +2537,13 @@
           "parse_mode": "HTML"
         }
       },
-      "id": "b44295b2-324f-4445-b7b0-f42b333905a7",
+      "id": "e1fdac96-1560-4cd3-9797-b43508da9f39",
       "name": "Enviar Link Reserva",
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1632,
-        0
+        1504,
+        5984
       ],
       "webhookId": "f39a0485-065a-4786-aa23-6f3fb9dd0121",
       "credentials": {
@@ -2574,13 +2559,13 @@
         "responseMode": "responseNode",
         "options": {}
       },
-      "id": "d64345fb-aed7-4920-ba0b-24c96d15a167",
+      "id": "f2e1c478-884a-4874-9645-b686679fc546",
       "name": "Webhook Listar Mesas",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
       "position": [
-        -1408,
-        -80
+        1728,
+        5904
       ],
       "webhookId": "reserva-mesas"
     },
@@ -2588,13 +2573,13 @@
       "parameters": {
         "jsCode": "const db = $getWorkflowStaticData('global');\nconst { data, hora, pessoas } = $input.first().json.query;\n\nif (!db.mesas) {\n  db.mesas = [\n    { id: 1, capacidade: 2, tipo: 'Salão principal', reservas: [] },\n    { id: 2, capacidade: 2, tipo: 'Varanda',         reservas: [] },\n    { id: 3, capacidade: 4, tipo: 'Salão principal', reservas: [] },\n    { id: 4, capacidade: 4, tipo: 'Salão principal', reservas: [] },\n    { id: 5, capacidade: 4, tipo: 'Jardim interno',  reservas: [] },\n    { id: 6, capacidade: 6, tipo: 'Salão VIP',       reservas: [] },\n    { id: 7, capacidade: 6, tipo: 'Jardim interno',  reservas: [] },\n    { id: 8, capacidade: 8, tipo: 'Salão VIP',       reservas: [] }\n  ];\n}\n\nconst mesas = db.mesas.map(mesa => {\n  const ocupada = mesa.reservas.some(r => r.data === data && r.hora === hora);\n  return {\n    id: mesa.id,\n    capacidade: mesa.capacidade,\n    tipo: mesa.tipo,\n    ocupada\n  };\n});\n\nreturn [{ json: { mesas } }];\n"
       },
-      "id": "1ee577de-cb07-497d-852e-977f8ff5f2c9",
+      "id": "e71dff54-7cfe-4d07-ad48-ff4703b65855",
       "name": "Processar Disponibilidade",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1184,
-        -80
+        1952,
+        5904
       ]
     },
     {
@@ -2616,13 +2601,13 @@
           }
         }
       },
-      "id": "ed7954ae-f298-4ccf-8189-31168bfd45d9",
+      "id": "6ddb6999-de42-409d-886f-c4559ad0ae19",
       "name": "Responder Mesas",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1,
       "position": [
-        -960,
-        -80
+        2176,
+        5904
       ]
     },
     {
@@ -2634,13 +2619,13 @@
           "allowedOrigins": "*"
         }
       },
-      "id": "e5cf355f-93b4-4d3b-a81c-aa360fb415c7",
+      "id": "da3880e0-e17a-46b8-bdd9-44e9e74552c6",
       "name": "Webhook Criar Reserva",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
       "position": [
-        -1408,
-        80
+        1728,
+        6064
       ],
       "webhookId": "reserva-criar"
     },
@@ -2648,13 +2633,13 @@
       "parameters": {
         "jsCode": "const db = $getWorkflowStaticData('global');\nconst body = $input.first().json.body;\nconst { mesaId, data, hora, pessoas, userId } = body;\n\n// Encontrar a mesa\nconst mesa = (db.mesas || []).find(m => m.id == mesaId);\n\nif (!mesa) {\n  return [{ json: { sucesso: false, mensagem: 'Mesa não encontrada.' } }];\n}\n\n// Checar conflito\nconst conflito = mesa.reservas.some(r => r.data === data && r.hora === hora);\nif (conflito) {\n  return [{ json: { sucesso: false, mensagem: 'Mesa já reservada neste horário.' } }];\n}\n\n// Registrar\nmesa.reservas.push({ data, hora, pessoas, userId, criadoEm: new Date().toISOString() });\n\nreturn [{ json: { sucesso: true, mesaId, data, hora, pessoas, userId } }];\n"
       },
-      "id": "732faef0-7671-472d-8391-bee244cbd3e7",
+      "id": "61232309-58b5-4a16-a6b9-ef9381ce9131",
       "name": "Registrar Reserva",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1152,
-        80
+        1984,
+        6064
       ]
     },
     {
@@ -2676,13 +2661,13 @@
           }
         }
       },
-      "id": "862b87dc-2e01-4a54-ba70-be934fbae570",
+      "id": "648a3413-578b-40a6-af6d-e8f39a0e6525",
       "name": "Responder Reserva",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1,
       "position": [
-        -960,
-        80
+        2176,
+        6064
       ]
     },
     {
@@ -2723,13 +2708,13 @@
           "parse_mode": "HTML"
         }
       },
-      "id": "d32fc0a8-08fd-4930-96b0-051bf930a151",
+      "id": "d1c1920a-21cd-4e85-b951-aacc31383441",
       "name": "Notificar Reserva Telegram",
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -352,
-        80
+        2784,
+        6064
       ],
       "webhookId": "f99c7d6a-4228-4dd6-bc5d-53df13caf21b",
       "credentials": {
@@ -2745,13 +2730,13 @@
         "responseMode": "responseNode",
         "options": {}
       },
-      "id": "dd14ed90-97bf-4e50-a343-499f6aeb068b",
+      "id": "ec36007b-6f2c-41cf-af48-6a8c3a11e187",
       "name": "Webhook Página Reserva",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
       "position": [
-        -1408,
-        240
+        1728,
+        6224
       ],
       "webhookId": "reserva-pagina"
     },
@@ -2762,13 +2747,13 @@
         "width": 1660,
         "color": 7
       },
-      "id": "3c77fa1f-69da-434f-84c4-eefc9268ddfe",
+      "id": "ff069743-ed05-44ef-966b-91428d816dbc",
       "name": "Sticky Note Reservas",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1568,
-        -320
+        1568,
+        5664
       ]
     },
     {
@@ -2804,10 +2789,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -752,
-        80
+        2384,
+        6064
       ],
-      "id": "0d5032e8-c473-4470-8d2c-a99e881e0596",
+      "id": "9e87610d-f3ef-437a-b3c3-bb1d0c10bf0b",
       "name": "Formulario Dados",
       "webhookId": "497b0a6f-b4be-473e-9e52-da3f684a56cc",
       "credentials": {
@@ -2824,10 +2809,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -544,
-        80
+        2592,
+        6064
       ],
-      "id": "e1449241-3335-4d29-a10a-5b85fe835c2d",
+      "id": "cd04d4b4-17fe-47d2-b167-20c344973776",
       "name": "Registrar Reservante"
     },
     {
@@ -2842,10 +2827,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1856,
-        176
+        1280,
+        6160
       ],
-      "id": "98fe7b3c-184d-480a-b401-65f5d9054144",
+      "id": "df7d366f-3309-4f29-af83-83a16e59343f",
       "name": "Finalizar Sessão",
       "webhookId": "58db9737-3f81-4458-9ebe-01f79fa1ef1a",
       "credentials": {
@@ -2890,10 +2875,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2736,
-        -2672
+        400,
+        3312
       ],
-      "id": "3c946ca7-5f2c-4012-92d9-6722b80281da",
+      "id": "2064c763-be5b-45bc-bd9c-34cd46e1e4a9",
       "name": "Confirmar Desejo Chamado",
       "webhookId": "cd1c2f90-ab4e-42a1-a7d9-def411d39b8b",
       "credentials": {
@@ -2913,10 +2898,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2912,
-        -2800
+        224,
+        3184
       ],
-      "id": "55e4751a-4221-4290-b96b-4dd38ab4ad64",
+      "id": "05c37596-44db-4724-873e-4499efb00e3e",
       "name": "Sticky Note23"
     },
     {
@@ -2954,10 +2939,10 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        -2064,
-        544
+        1072,
+        6528
       ],
-      "id": "342037ce-ed2d-4d3d-a45d-5141b10f9247",
+      "id": "2426c30e-7090-4c17-80de-75fa4cf4cd57",
       "name": "Switch Suporte"
     },
     {
@@ -2970,10 +2955,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2224,
-        384
+        912,
+        6368
       ],
-      "id": "48a7ab02-1387-4dbf-977c-913b66995dfa",
+      "id": "10ce4e2b-a327-493f-8106-9178fb808b9a",
       "name": "Sticky Note24"
     },
     {
@@ -3039,10 +3024,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1808,
-        544
+        1328,
+        6528
       ],
-      "id": "a9b9b5cf-6ef8-4944-8ad3-0dd96c029565",
+      "id": "ad60469d-95e3-48ba-acbe-362666566c78",
       "name": "Formulario Suporte",
       "webhookId": "497b0a6f-b4be-473e-9e52-da3f684a56cc",
       "credentials": {
@@ -3079,10 +3064,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
       "position": [
-        -4208,
-        -3744
+        -1072,
+        2240
       ],
-      "id": "c4e10d53-8cd3-492e-8eef-57cf010b7f76",
+      "id": "8ab70101-e707-422d-b019-88c9b4db3798",
       "name": "IF Atendente Admin"
     },
     {
@@ -3092,10 +3077,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3600,
-        -4944
+        -464,
+        1040
       ],
-      "id": "5681eaa6-a91b-4a44-b8a9-9bdc6b90e4e8",
+      "id": "c2a86461-7b69-49d3-9614-2c64052d3725",
       "name": "Router Comando Admin"
     },
     {
@@ -3353,23 +3338,23 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        -3376,
-        -5440
+        -240,
+        544
       ],
-      "id": "599cc66d-0d75-4174-a238-5b97bcbc5a1f",
+      "id": "3cec8ba9-b000-485d-b03d-675b8512c52b",
       "name": "Switch Comando Admin"
     },
     {
       "parameters": {
-        "jsCode": "// ─────────────────────────────────────────────────────────────\n// /pedido <userId> [entrada:Homus,QuibeCru,Tabule]\n//         [esfihas:<n>] [quibes:<n>]\n//         prato:Kafta,Charuto,Cordeiro\n//         [talheres:sim|nao] [obs:<texto livre>]\n//\n// CARDÁPIO:\n//   Entradas (opcional, máx 3):  Homus | QuibeCru | Tabule\n//   Salgados (obrigatório preencher, pode ser 0):\n//     esfihas:<n>   → número de Esfihas (R$8 cada)\n//     quibes:<n>    → número de Quibes Assados (R$10 cada)\n//   Pratos (obrigatório, ao menos 1): Kafta | Charuto | Cordeiro\n//   talheres: sim | nao (padrão: nao)\n//\n// Exemplos:\n//   /pedido 123456789 prato:Kafta,Charuto\n//   /pedido 123456789 entrada:Homus,Tabule esfihas:2 quibes:1 prato:Kafta obs:sem pimenta\n// ─────────────────────────────────────────────────────────────\nconst db = $getWorkflowStaticData('global');\nconst args = $json.args;\nconst senderId = $json.senderId;\n\nconst AJUDA = `📋 *Uso do /pedido:*\n\n/pedido <telegramId> [entrada:...] [esfihas:n] [quibes:n] prato:... [talheres:sim|nao] [obs:...]\n\n*Entradas* (opcional — escolha até 3):\n  Homus | QuibeCru | Tabule\n  Exemplo: entrada:Homus,Tabule\n\n*Salgados* (preencha mesmo que seja 0):\n  esfihas:<n>   ex: esfihas:2\n  quibes:<n>    ex: quibes:0\n\n*Pratos* (obrigatório, ao menos 1):\n  Kafta | Charuto | Cordeiro\n  Exemplo: prato:Kafta,Charuto\n\n*Talheres* (opcional):\n  talheres:sim | talheres:nao  (padrão: nao)\n\n*Observação* (opcional):\n  obs:sem pimenta\n\n🔎 *Exemplos completos:*\n/pedido 123456789 prato:Kafta\n/pedido 123456789 entrada:Homus esfihas:2 quibes:0 prato:Kafta,Cordeiro talheres:sim obs:sem sal`;\n\nif (args.length < 1) {\n  return [{ json: { sucesso: false, senderId, msg: `❌ Informe o Telegram ID do usuário.\\n\\n${AJUDA}` } }];\n}\n\nconst targetUserId = String(args[0]);\nconst resto = args.slice(1).join(' ');\n\n// ── parser de tokens chave:valor ──────────────────────────────\nconst tokenize = (str) => {\n  const result = {};\n  const regex = /(\\w+):([^\\s]+(?:\\s+[^\\w:]+)*)/g;\n  let m;\n  while ((m = regex.exec(str)) !== null) {\n    result[m[1].toLowerCase()] = m[2].trim();\n  }\n  return result;\n};\nconst tokens = tokenize(resto);\n\n// ── Entradas ──────────────────────────────────────────────────\nconst entradasValidas = ['homus', 'quibecru', 'tabule'];\nconst entradasLabel   = { homus: 'Homus', quibecru: 'Quibe Cru', tabule: 'Tabule' };\nconst entradasVazias  = ['nda', 'nada'];\nlet entradas = [];\nif (tokens.entrada) {\n  const entradasVazias = ['nda', 'nada'];\n  const candidatas = tokens.entrada.split(',').map(s => s.trim().toLowerCase());\n  if (candidatas.every(e => entradasVazias.includes(e))) {\n    entradas = [];\n  } else {\n    const invalidas = candidatas.filter(e => !entradasValidas.includes(e) && !entradasVazias.includes(e));\n    if (invalidas.length > 0) {\n      return [{ json: { sucesso: false, senderId,\n        msg: `❌ Entrada inválida: ${invalidas.join(', ')}\\nOpções: Homus | QuibeCru | Tabule | nada` } }];\n    }\n    entradas = candidatas.filter(e => !entradasVazias.includes(e)).map(e => entradasLabel[e]);\n  }\n}\n\n// ── Salgados ──────────────────────────────────────────────────\nconst qtdEsfihas   = tokens.esfihas  !== undefined ? parseInt(tokens.esfihas)  : undefined;\nconst qtdQuibes    = tokens.quibes   !== undefined ? parseInt(tokens.quibes)   : undefined;\n\nif (qtdEsfihas !== undefined && isNaN(qtdEsfihas)) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ esfihas deve ser um número. Ex: esfihas:2' } }];\n}\nif (qtdQuibes !== undefined && isNaN(qtdQuibes)) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ quibes deve ser um número. Ex: quibes:0' } }];\n}\n\n// ── Pratos (obrigatório ao menos 1) ──────────────────────────\nconst pratosValidos = ['kafta', 'charuto', 'cordeiro'];\nconst pratosLabel   = { kafta: 'Kafta', charuto: 'Charuto', cordeiro: 'Cordeiro' };\n\nif (!tokens.prato) {\n  return [{ json: { sucesso: false, senderId,\n    msg: `❌ Pratos são obrigatórios.\\n\\nUse prato:Kafta, prato:Kafta,Charuto etc.\\n\\n${AJUDA}` } }];\n}\nconst pratosCandidatos = tokens.prato.split(',').map(s => s.trim().toLowerCase());\nconst pratosInvalidos  = pratosCandidatos.filter(p => !pratosValidos.includes(p));\nif (pratosInvalidos.length > 0) {\n  return [{ json: { sucesso: false, senderId,\n    msg: `❌ Prato inválido: ${pratosInvalidos.join(', ')}\\nOpções: Kafta | Charuto | Cordeiro` } }];\n}\nconst pratos = pratosCandidatos.map(p => pratosLabel[p]);\n\n// ── Talheres ──────────────────────────────────────────────────\nconst talheresRaw = (tokens.talheres || 'nao').toLowerCase();\nconst talheres    = talheresRaw === 'sim' ? 'Sim' : 'Não';\n\n// ── Observação ────────────────────────────────────────────────\nconst obs = tokens.obs || '';\n\n// ── Persistir no storage ──────────────────────────────────────\nif (!db.usuario) db.usuario = {};\nif (!db.usuario[targetUserId]) {\n  db.usuario[targetUserId] = {\n    endereco: '', numeroPedidos: 0, pedidos: [],\n    pagamento: 'nenhum', nomeCliente: 'nenhum', emailCliente: ''\n  };\n}\n\nconst pedidoAdmin = {\n  'Entrada': entradas,\n  'Gostaria de quantas Esfihas?':     qtdEsfihas  !== undefined ? qtdEsfihas  : 0,\n  'Gostaria de quantos Quibes Assados?': qtdQuibes !== undefined ? qtdQuibes  : 0,\n  'Pratos (selecione ao menos 1)':    pratos,\n  'Gostaria de Talheres de Plástico ?': talheres,\n  observacoes:       obs,\n  criadoPorAtendente: senderId,\n  status:            'preparando',\n  criadoEm:          new Date().toISOString()\n};\n\nconst num = db.usuario[targetUserId].numeroPedidos;\ndb.usuario[targetUserId].pedidos[num] = pedidoAdmin;\ndb.usuario[targetUserId].numeroPedidos++;\n\n// ── Resumo para o atendente ───────────────────────────────────\nlet resumo = `✅ <b>Pedido #${num} criado!</b>\\n\\n`;\nresumo += `👤 Usuário: <code>${targetUserId}</code>\\n`;\nif (entradas.length > 0) resumo += `🥗 Entradas: ${entradas.join(', ')}\\n`;\nif ((qtdEsfihas ?? 0) > 0) resumo += `🥙 Esfihas: ${qtdEsfihas}x\\n`;\nif ((qtdQuibes  ?? 0) > 0) resumo += `🍖 Quibes Assados: ${qtdQuibes}x\\n`;\nresumo += `🍽️ Pratos: ${pratos.join(', ')}\\n`;\nresumo += `🥄 Talheres: ${talheres}\\n`;\nif (obs) resumo += `📝 Obs: ${obs}\\n`;\nresumo += `📊 Status: preparando`;\n\nreturn [{ json: { sucesso: true, senderId, msg: resumo } }];"
+        "jsCode": "// ─────────────────────────────────────────────────────────────\n// /pedido <userId> [entrada:Homus,QuibeCru,Tabule]\n//         [esfihas:<n>] [quibes:<n>]\n//         prato:Kafta,Charuto,Cordeiro\n//         [talheres:sim|nao] [obs:<texto livre>]\n//\n// CARDÁPIO:\n//   Entradas (opcional, máx 3):  Homus | QuibeCru | Tabule\n//   Salgados (obrigatório preencher, pode ser 0):\n//     esfihas:<n>   → número de Esfihas (R$8 cada)\n//     quibes:<n>    → número de Quibes Assados (R$10 cada)\n//   Pratos (obrigatório, ao menos 1): Kafta | Charuto | Cordeiro\n//   talheres: sim | nao (padrão: nao)\n//\n// Exemplos:\n//   /pedido 123456789 prato:Kafta,Charuto\n//   /pedido 123456789 entrada:Homus,Tabule esfihas:2 quibes:1 prato:Kafta obs:sem pimenta\n// ─────────────────────────────────────────────────────────────\nconst db = $getWorkflowStaticData('global');\nconst args = $json.args;\nconst senderId = $json.senderId;\n\nconst AJUDA = `📋 *Uso do /pedido:*\n\n/pedido <telegramId> [entrada:...] [esfihas:n] [quibes:n] prato:... [talheres:sim|nao] [obs:...]\n\n*Entradas* (opcional — escolha até 3):\n  Homus | QuibeCru | Tabule\n  Exemplo: entrada:Homus,Tabule\n\n*Salgados* (preencha mesmo que seja 0):\n  esfihas:<n>   ex: esfihas:2\n  quibes:<n>    ex: quibes:0\n\n*Pratos* (obrigatório, ao menos 1):\n  Kafta | Charuto | Cordeiro\n  Exemplo: prato:Kafta,Charuto\n\n*Talheres* (opcional):\n  talheres:sim | talheres:nao  (padrão: nao)\n\n*Observação* (opcional):\n  obs:sem pimenta\n\n🔎 *Exemplos completos:*\n/pedido 123456789 prato:Kafta\n/pedido 123456789 entrada:Homus esfihas:2 quibes:0 prato:Kafta,Cordeiro talheres:sim obs:sem sal`;\n\nif (args.length < 1) {\n  return [{ json: { sucesso: false, senderId, msg: `❌ Informe o Telegram ID do usuário.\\n\\n${AJUDA}` } }];\n}\n\nconst targetUserId = String(args[0]);\nconst resto = args.slice(1).join(' ');\n\n// ── parser de tokens chave:valor ──────────────────────────────\nconst tokenize = (str) => {\n  const result = {};\n  const regex = /(\\w+):([^\\s]+(?:\\s+[^\\w:]+)*)/g;\n  let m;\n  while ((m = regex.exec(str)) !== null) {\n    result[m[1].toLowerCase()] = m[2].trim();\n  }\n  return result;\n};\nconst tokens = tokenize(resto);\n\n// ── Entradas ──────────────────────────────────────────────────\nconst entradasValidas = ['homus', 'quibecru', 'tabule'];\nconst entradasLabel   = { homus: 'Homus', quibecru: 'Quibe Cru', tabule: 'Tabule' };\nconst entradasVazias  = ['nda', 'nada'];\nlet entradas = [];\nif (tokens.entrada) {\n  const entradasVazias = ['nda', 'nada'];\n  const candidatas = tokens.entrada.split(',').map(s => s.trim().toLowerCase());\n  if (candidatas.every(e => entradasVazias.includes(e))) {\n    entradas = [];\n  } else {\n    const invalidas = candidatas.filter(e => !entradasValidas.includes(e) && !entradasVazias.includes(e));\n    if (invalidas.length > 0) {\n      return [{ json: { sucesso: false, senderId,\n        msg: `❌ Entrada inválida: ${invalidas.join(', ')}\\nOpções: Homus | QuibeCru | Tabule | nada` } }];\n    }\n    entradas = candidatas.filter(e => !entradasVazias.includes(e)).map(e => entradasLabel[e]);\n  }\n}\n\n// ── Salgados ──────────────────────────────────────────────────\nconst qtdEsfihas   = tokens.esfihas  !== undefined ? parseInt(tokens.esfihas)  : undefined;\nconst qtdQuibes    = tokens.quibes   !== undefined ? parseInt(tokens.quibes)   : undefined;\n\nif (qtdEsfihas !== undefined && isNaN(qtdEsfihas)) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ esfihas deve ser um número. Ex: esfihas:2' } }];\n}\nif (qtdQuibes !== undefined && isNaN(qtdQuibes)) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ quibes deve ser um número. Ex: quibes:0' } }];\n}\n\n// ── Pratos (obrigatório ao menos 1) ──────────────────────────\nconst pratosValidos = ['kafta', 'charuto', 'cordeiro'];\nconst pratosLabel   = { kafta: 'Kafta', charuto: 'Charuto', cordeiro: 'Cordeiro' };\n\nif (!tokens.prato) {\n  return [{ json: { sucesso: false, senderId,\n    msg: `❌ Pratos são obrigatórios.\\n\\nUse prato:Kafta, prato:Kafta,Charuto etc.\\n\\n${AJUDA}` } }];\n}\nconst pratosCandidatos = tokens.prato.split(',').map(s => s.trim().toLowerCase());\nconst pratosInvalidos  = pratosCandidatos.filter(p => !pratosValidos.includes(p));\nif (pratosInvalidos.length > 0) {\n  return [{ json: { sucesso: false, senderId,\n    msg: `❌ Prato inválido: ${pratosInvalidos.join(', ')}\\nOpções: Kafta | Charuto | Cordeiro` } }];\n}\nconst pratos = pratosCandidatos.map(p => pratosLabel[p]);\n\n// ── Talheres ──────────────────────────────────────────────────\nconst talheresRaw = (tokens.talheres || 'nao').toLowerCase();\nconst talheres    = talheresRaw === 'sim' ? 'Sim' : 'Não';\n\n// ── Observação ────────────────────────────────────────────────\nconst obs = tokens.obs || '';\n\n// ── Persistir no storage ──────────────────────────────────────\nif (!db.usuario) db.usuario = {};\nif (!db.usuario[targetUserId]) {\n  db.usuario[targetUserId] = {\n    endereco: '', numeroPedidos: 0, pedidos: [],\n    pagamento: 'nenhum', nomeCliente: 'nenhum', emailCliente: ''\n  };\n}\n\nconst pedidoAdmin = {\n  'Entrada': entradas,\n  'Gostaria de quantas Esfihas?':     qtdEsfihas  !== undefined ? qtdEsfihas  : 0,\n  'Gostaria de quantos Quibes Assados?': qtdQuibes !== undefined ? qtdQuibes  : 0,\n  'Pratos (selecione ao menos 1)':    pratos,\n  'Gostaria de Talheres de Plástico ?': talheres,\n  observacoes:       obs,\n  criadoPorAtendente: senderId,\n  _status: 'em preparo',\n  criadoEm:          new Date().toISOString()\n};\n\nconst num = db.usuario[targetUserId].numeroPedidos;\ndb.usuario[targetUserId].pedidos[num] = pedidoAdmin;\ndb.usuario[targetUserId].numeroPedidos++;\n\n// ── Resumo para o atendente ───────────────────────────────────\nlet resumo = `✅ <b>Pedido #${num} criado!</b>\\n\\n`;\nresumo += `👤 Usuário: <code>${targetUserId}</code>\\n`;\nif (entradas.length > 0) resumo += `🥗 Entradas: ${entradas.join(', ')}\\n`;\nif ((qtdEsfihas ?? 0) > 0) resumo += `🥙 Esfihas: ${qtdEsfihas}x\\n`;\nif ((qtdQuibes  ?? 0) > 0) resumo += `🍖 Quibes Assados: ${qtdQuibes}x\\n`;\nresumo += `🍽️ Pratos: ${pratos.join(', ')}\\n`;\nresumo += `🥄 Talheres: ${talheres}\\n`;\nif (obs) resumo += `📝 Obs: ${obs}\\n`;\nresumo += `📊 Status: preparando`;\n\nreturn [{ json: { sucesso: true, senderId, msg: resumo } }];"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3136,
-        -5984
+        0,
+        0
       ],
-      "id": "b8feb94c-0c32-4320-9011-3ce282e5a8f4",
+      "id": "73dd008c-f8c0-4295-bd24-d61f0149d8a4",
       "name": "Admin Criar Pedido"
     },
     {
@@ -3384,10 +3369,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2896,
-        -5984
+        240,
+        0
       ],
-      "id": "84492fda-0732-48ed-8805-7c2b970a2dcb",
+      "id": "363f1fdd-a790-4759-8111-5bf1edaa56b1",
       "name": "Admin Resp Criar Pedido",
       "webhookId": "adm-wh-01",
       "credentials": {
@@ -3399,15 +3384,15 @@
     },
     {
       "parameters": {
-        "jsCode": "\n// /pedido_consultar <userId>\nconst db = $getWorkflowStaticData('global');\nconst args = $json.args;\nconst senderId = $json.senderId;\n\nif (args.length < 1) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ Uso: /pedido_consultar <telegramId>' } }];\n}\n\nconst targetUserId = String(args[0]);\nconst usuario = db.usuario?.[targetUserId];\n\nif (!usuario) {\n  return [{ json: { sucesso: false, senderId, msg: `❌ Usuário ${targetUserId} não encontrado no sistema.` } }];\n}\n\nconst pedidos = usuario.pedidos || [];\nif (pedidos.length === 0) {\n  return [{ json: { sucesso: true, senderId, msg: `📋 Usuário ${targetUserId} não possui pedidos.` } }];\n}\n\nlet texto = `📋 Pedidos do usuário ${targetUserId}:\\n`;\ntexto += `👤 Nome: ${usuario.nomeCliente || 'N/A'}\\n\\n`;\npedidos.forEach((p, i) => {\n  const itens = p['Pratos (selecione ao menos 1)'];\n  const itensStr = Array.isArray(itens) ? itens.join(', ') : itens;\n  const entrada = Array.isArray(p['Entrada']) ? p['Entrada'].join(', ') : (p['Entrada'] || '');\n  const status = p.status || p.statusPedidoAtendente || 'sem status';\n  const criadoEm = p.criadoEm ? new Date(p.criadoEm).toLocaleString('pt-BR') : 'N/A';\n  texto += `🔢 Pedido #${i}:\\n`;\n  texto += `   Pratos: ${itensStr}\\n`;\n  if (entrada) texto += `   Entradas: ${entrada}\\n`;\n  texto += `   Status: ${status}\\n`;\n  texto += `   Criado: ${criadoEm}\\n`;\n  if (p.observacoes) texto += `   Obs: ${p.observacoes}\\n`;\n  texto += '\\n';\n});\n\nreturn [{ json: { sucesso: true, senderId, msg: texto } }];\n"
+        "jsCode": "\n// /pedido_consultar <userId>\nconst db = $getWorkflowStaticData('global');\nconst args = $json.args;\nconst senderId = $json.senderId;\n\nif (args.length < 1) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ Uso: /pedido_consultar <telegramId>' } }];\n}\n\nconst targetUserId = String(args[0]);\nconst usuario = db.usuario?.[targetUserId];\n\nif (!usuario) {\n  return [{ json: { sucesso: false, senderId, msg: `❌ Usuário ${targetUserId} não encontrado no sistema.` } }];\n}\n\nconst pedidos = usuario.pedidos || [];\nif (pedidos.length === 0) {\n  return [{ json: { sucesso: true, senderId, msg: `📋 Usuário ${targetUserId} não possui pedidos.` } }];\n}\n\nlet texto = `📋 Pedidos do usuário ${targetUserId}:\\n`;\ntexto += `👤 Nome: ${usuario.nomeCliente || 'N/A'}\\n\\n`;\npedidos.forEach((p, i) => {\n  const itens = p['Pratos (selecione ao menos 1)'];\n  const itensStr = Array.isArray(itens) ? itens.join(', ') : itens;\n  const entrada = Array.isArray(p['Entrada']) ? p['Entrada'].join(', ') : (p['Entrada'] || '');\n  const status = p._status || 'sem status';\n  const criadoEm = p.criadoEm ? new Date(p.criadoEm).toLocaleString('pt-BR') : 'N/A';\n  texto += `🔢 Pedido #${i}:\\n`;\n  texto += `   Pratos: ${itensStr}\\n`;\n  if (entrada) texto += `   Entradas: ${entrada}\\n`;\n  texto += `   Status: ${status}\\n`;\n  if (p.observacoes) texto += `   Obs: ${p.observacoes}\\n`;\n  texto += '\\n';\n});\n\nreturn [{ json: { sucesso: true, senderId, msg: texto } }];\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3104,
-        -5792
+        32,
+        192
       ],
-      "id": "a553a515-6ac7-4a56-ba8f-b69e9df60b5a",
+      "id": "9e04262d-efe6-4a6b-a631-eb060ac6a4d9",
       "name": "Admin Consultar Pedido"
     },
     {
@@ -3421,10 +3406,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2896,
-        -5792
+        240,
+        192
       ],
-      "id": "8782e028-d3d7-4553-b3b9-96d244f5db35",
+      "id": "931e032d-9576-4732-b79f-217f1c440dcf",
       "name": "Admin Resp Consultar Pedido",
       "webhookId": "adm-wh-02",
       "credentials": {
@@ -3436,15 +3421,15 @@
     },
     {
       "parameters": {
-        "jsCode": "\n// /pedido_atualizar <userId> <numero_pedido> <status>\n// Status: preparando | em_entrega | entregue\nconst db = $getWorkflowStaticData('global');\nconst args = $json.args;\nconst senderId = $json.senderId;\n\nif (args.length < 3) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ Uso: /pedido_atualizar <telegramId> <numeroPedido> <status>\\n\\nStatus válidos: preparando | em_entrega | entregue\\n\\nExemplo: /pedido_atualizar 123456789 0 em_entrega' } }];\n}\n\nconst targetUserId = String(args[0]);\nconst numPedido = parseInt(args[1]);\nconst novoStatus = args[2].toLowerCase();\nconst statusValidos = ['preparando', 'em_entrega', 'entregue'];\n\nif (!statusValidos.includes(novoStatus)) {\n  return [{ json: { sucesso: false, senderId, msg: `❌ Status inválido: \"${novoStatus}\"\\nStatus válidos: ${statusValidos.join(' | ')}` } }];\n}\n\nconst usuario = db.usuario?.[targetUserId];\nif (!usuario) {\n  return [{ json: { sucesso: false, senderId, msg: `❌ Usuário ${targetUserId} não encontrado.` } }];\n}\n\nconst pedido = usuario.pedidos?.[numPedido];\nif (!pedido) {\n  return [{ json: { sucesso: false, senderId, msg: `❌ Pedido #${numPedido} não encontrado para o usuário ${targetUserId}.` } }];\n}\n\n// Atualiza status SEM apagar o pedido\npedido.status = novoStatus;\npedido.statusPedidoAtendente = novoStatus;\npedido.atualizadoEm = new Date().toISOString();\npedido.atualizadoPor = senderId;\n\nconst emoji = { preparando: '🔥', em_entrega: '🚚', entregue: '✅' }[novoStatus] || '📋';\nreturn [{ json: { sucesso: true, senderId, targetUserId, numPedido, novoStatus, msg: `${emoji} Pedido #${numPedido} do usuário ${targetUserId} atualizado para: <b>${novoStatus}</b>` } }];\n"
+        "jsCode": "\n// /pedido_atualizar <userId> <numero_pedido> <status>\n// Status: preparando | em_entrega | entregue\nconst db = $getWorkflowStaticData('global');\nconst args = $json.args;\nconst senderId = $json.senderId;\n\nif (args.length < 3) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ Uso: /pedido_atualizar <telegramId> <numeroPedido> <status>\\n\\nStatus válidos: em preparo | a caminho | entregue\\n\\nExemplo: /pedido_atualizar 123456789 0 a caminho' } }];\n}\n\nconst targetUserId = String(args[0]);\nconst numPedido = parseInt(args[1]);\nconst novoStatus = args[2].toLowerCase();\nconst statusValidos = ['em_preparo', 'a_caminho', 'entregue'];\n\nif (!statusValidos.includes(novoStatus)) {\n  return [{ json: { sucesso: false, senderId, msg: `❌ Status inválido: \"${novoStatus}\"\\nStatus válidos: ${statusValidos.join(' | ')}` } }];\n}\nconst statusFormatado = novoStatus.replace(/_/g, ' ');\n\nconst usuario = db.usuario?.[targetUserId];\nif (!usuario) {\n  return [{ json: { sucesso: false, senderId, msg: `❌ Usuário ${targetUserId} não encontrado.` } }];\n}\n\nconst pedido = usuario.pedidos?.[numPedido];\nif (!pedido) {\n  return [{ json: { sucesso: false, senderId, msg: `❌ Pedido #${numPedido} não encontrado para o usuário ${targetUserId}.` } }];\n}\n\n// Atualiza status SEM apagar o pedido\npedido._status = statusFormatado;\npedido.atualizadoEm = new Date().toISOString();\npedido.atualizadoPor = senderId;\n\nconst emoji = { 'em preparo': '🔥', 'a caminho': '🚚', 'entregue': '✅' }[statusFormatado] || '📋';\nreturn [{ json: { sucesso: true, senderId, targetUserId, numPedido, novoStatus: statusFormatado, msg: `${emoji} Pedido #${numPedido} do usuário ${targetUserId} atualizado para: <b>${statusFormatado}</b>` } }];\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3088,
-        -5600
+        48,
+        384
       ],
-      "id": "8b8a9556-749f-4a79-945c-e463e1dff142",
+      "id": "9f84ec79-9863-4632-b4d1-3df533d833ac",
       "name": "Admin Atualizar Pedido"
     },
     {
@@ -3459,10 +3444,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2880,
-        -5600
+        256,
+        384
       ],
-      "id": "51ef8a6d-0089-45df-9dd5-8b19be9199d2",
+      "id": "57ef54bf-0fcd-4710-a42b-113fdd4643c9",
       "name": "Admin Resp Atualizar Pedido",
       "webhookId": "adm-wh-03",
       "credentials": {
@@ -3474,15 +3459,15 @@
     },
     {
       "parameters": {
-        "jsCode": "\n// /pedido_cancelar <userId> <numeroPedido>\nconst db = $getWorkflowStaticData('global');\nconst args = $json.args;\nconst senderId = $json.senderId;\n\nif (args.length < 2) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ Uso: /pedido_cancelar <telegramId> <numeroPedido>\\nExemplo: /pedido_cancelar 123456789 0' } }];\n}\n\nconst targetUserId = String(args[0]);\nconst numPedido = parseInt(args[1]);\nconst usuario = db.usuario?.[targetUserId];\n\nif (!usuario?.pedidos?.[numPedido]) {\n  return [{ json: { sucesso: false, senderId, msg: `❌ Pedido #${numPedido} não encontrado para o usuário ${targetUserId}.` } }];\n}\n\nusuario.pedidos[numPedido].status = 'cancelado';\nusuario.pedidos[numPedido].statusPedidoAtendente = 'cancelado';\nusuario.pedidos[numPedido].canceladoEm = new Date().toISOString();\nusuario.pedidos[numPedido].canceladoPor = senderId;\n\nreturn [{ json: { sucesso: true, senderId, msg: `🚫 Pedido #${numPedido} do usuário ${targetUserId} marcado como <b>cancelado</b>.` } }];\n"
+        "jsCode": "\n// /pedido_cancelar <userId> <numeroPedido>\nconst db = $getWorkflowStaticData('global');\nconst args = $json.args;\nconst senderId = $json.senderId;\n\nif (args.length < 2) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ Uso: /pedido_cancelar <telegramId> <numeroPedido>\\nExemplo: /pedido_cancelar 123456789 0' } }];\n}\n\nconst targetUserId = String(args[0]);\nconst numPedido = parseInt(args[1]);\nconst usuario = db.usuario?.[targetUserId];\n\nif (!usuario?.pedidos?.[numPedido]) {\n  return [{ json: { sucesso: false, senderId, msg: `❌ Pedido #${numPedido} não encontrado para o usuário ${targetUserId}.` } }];\n}\n\nusuario.pedidos[numPedido]._status = 'cancelado';\nusuario.pedidos[numPedido].canceladoEm = new Date().toISOString();\nusuario.pedidos[numPedido].canceladoPor = senderId;\n\nreturn [{ json: { sucesso: true, senderId, msg: `🚫 Pedido #${numPedido} do usuário ${targetUserId} marcado como <b>cancelado</b>.` } }];\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3088,
-        -5424
+        48,
+        560
       ],
-      "id": "52fe7886-adac-4223-a1e5-46395b7fd102",
+      "id": "d5813b72-48d6-4cb8-9957-a8aa28eaa06a",
       "name": "Admin Cancelar Pedido"
     },
     {
@@ -3497,10 +3482,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2880,
-        -5424
+        256,
+        560
       ],
-      "id": "29c567bd-2936-49f1-81fe-71cd9697a4f4",
+      "id": "9b498fa1-1977-42fe-89be-1ed604520925",
       "name": "Admin Resp Cancelar Pedido",
       "webhookId": "adm-wh-04",
       "credentials": {
@@ -3517,10 +3502,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3088,
-        -5248
+        48,
+        736
       ],
-      "id": "9a88ba24-937f-4025-9ec9-332edf7d0850",
+      "id": "eb558acd-9fee-405d-ad58-81a0f861c8fa",
       "name": "Admin Consultar Mesa"
     },
     {
@@ -3534,10 +3519,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2880,
-        -5248
+        256,
+        736
       ],
-      "id": "a87221ee-e4d8-4494-8269-82dc03ad6847",
+      "id": "b811ec1d-eaa4-4579-8758-6cb3a4ea85d9",
       "name": "Admin Resp Consultar Mesa",
       "webhookId": "adm-wh-05",
       "credentials": {
@@ -3554,10 +3539,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3088,
-        -5072
+        48,
+        912
       ],
-      "id": "4879110d-702c-4700-b457-a87056808ec6",
+      "id": "8a523efd-f88f-4fd2-aead-0d073a6f55c1",
       "name": "Admin Mesas Disponiveis"
     },
     {
@@ -3571,10 +3556,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2880,
-        -5072
+        256,
+        912
       ],
-      "id": "a028a7fa-abb2-4b54-8a35-ea430e01ee5b",
+      "id": "d3bd5ef8-e1c7-4c59-93d2-438513a865c6",
       "name": "Admin Resp Mesas Disponiveis",
       "webhookId": "adm-wh-06",
       "credentials": {
@@ -3591,10 +3576,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3088,
-        -4912
+        48,
+        1072
       ],
-      "id": "c7f987cc-97b9-43a1-b15d-98d9fbf1ec8e",
+      "id": "47d47500-3e4f-47b2-bd0e-31a81220a5fb",
       "name": "Admin Reservar Mesa"
     },
     {
@@ -3608,10 +3593,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2880,
-        -4912
+        256,
+        1072
       ],
-      "id": "0af7ffdf-1619-4dcb-87b1-8607214138f4",
+      "id": "16556257-3278-4d94-a861-30c20859840f",
       "name": "Admin Resp Reservar Mesa",
       "webhookId": "adm-wh-07",
       "credentials": {
@@ -3628,10 +3613,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3088,
-        -4752
+        48,
+        1232
       ],
-      "id": "12d1b219-9518-4add-beef-10bd0ed7e8ad",
+      "id": "567382b6-7eb6-45f9-b0a4-eed82065dd40",
       "name": "Admin Cancelar Mesa"
     },
     {
@@ -3645,10 +3630,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2880,
-        -4752
+        256,
+        1232
       ],
-      "id": "a595a1e5-5554-4c34-91a8-2c739592fdcc",
+      "id": "0f9267bf-0289-44d3-9fd5-361884d7e7cc",
       "name": "Admin Resp Cancelar Mesa",
       "webhookId": "adm-wh-08",
       "credentials": {
@@ -3670,10 +3655,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -3088,
-        -4256
+        48,
+        1728
       ],
-      "id": "abb48219-8e70-4c36-9425-20290fc657c9",
+      "id": "4ffd67f9-6119-4086-a0f7-e3771dcfe56e",
       "name": "Admin Fallback Comando",
       "webhookId": "adm-wh-09",
       "credentials": {
@@ -3685,15 +3670,15 @@
     },
     {
       "parameters": {
-        "jsCode": "\n// Gera ID único: CHM-YYYYMMDD-HHMMSS-RANDOM4\nconst now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));\nconst pad = n => String(n).padStart(2, '0');\nconst datePart = `${now.getFullYear()}${pad(now.getMonth()+1)}${pad(now.getDate())}`;\nconst timePart = `${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;\nconst rand = Math.random().toString(36).substring(2, 6).toUpperCase();\nconst chamadoId = `CHM-${datePart}-${timePart}-${rand}`;\n\n// Extrair dados do formulário\nconst data = $input.first().json.data;\nconst chatId = $input.first().json.data?.ChatId || $('Telegram Trigger').first().json.callback_query?.message?.chat?.id || '';\n\nconst dataHora = `${now.toLocaleDateString('pt-BR')} ${now.toLocaleTimeString('pt-BR')}`;\n\nreturn [{ json: {\n  chamadoId,\n  nome: data['Seu Nome: '] || '',\n  topico: data['Qual o tópico do problema ?'] || '',\n  descricao: data['Descreva um pouco sobre o problema: '] || '',\n  dataOcorrido: data['Dia do Ocorrido: '] || '',\n  chatId: String(chatId),\n  dataHoraAbertura: dataHora,\n  data\n} }];\n"
+        "jsCode": "\n// Gera ID único: CHM-YYYYMMDD-HHMMSS-RANDOM4\nconst bancoDados = $getWorkflowStaticData('global');\nconst now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));\nconst pad = n => String(n).padStart(2, '0');\nconst username = $('Telegram Trigger').first().json.callback_query?.from?.username || '';\nconst datePart = `${now.getFullYear()}${pad(now.getMonth()+1)}${pad(now.getDate())}`;\nconst timePart = `${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;\nconst rand = Math.random().toString(36).substring(2, 6).toUpperCase();\nconst chamadoId = `CHM-${datePart}-${timePart}-${rand}`;\n\n// Extrair dados do formulário\nconst data = $input.first().json.data;\nconst chatId = $input.first().json.data?.ChatId || $('Telegram Trigger').first().json.callback_query?.message?.chat?.id || '';\n\nconst dataHora = `${now.toLocaleDateString('pt-BR')} ${now.toLocaleTimeString('pt-BR')}`;\n\nbancoDados.usuario[chatId].nomeCliente = $input.first().json.data['Seu Nome: '];\n\nreturn [{ json: {\n  chamadoId,\n  nome: data['Seu Nome: '] || '',\n  topico: data['Qual o tópico do problema ?'] || '',\n  descricao: data['Descreva um pouco sobre o problema: '] || '',\n  dataOcorrido: data['Dia do Ocorrido: '] || '',\n  chatId: String(chatId),\n  username: username,          // <-- adicionar isso\n  dataHoraAbertura: dataHora,\n  data\n} }];\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1584,
-        544
+        1552,
+        6528
       ],
-      "id": "a92e2cba-96ef-457d-a280-7bfca9b98fc6",
+      "id": "9f1f4064-8a6c-41d0-bbed-1fb42336fa33",
       "name": "Gerar ID Chamado"
     },
     {
@@ -3800,10 +3785,10 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        -1360,
-        544
+        1776,
+        6528
       ],
-      "id": "602e06be-dc04-44c1-a36e-ba57e06d6802",
+      "id": "c4077134-a9b5-466a-b676-a78e17a04f5a",
       "name": "Salvar Chamado Sheets",
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -3819,16 +3804,16 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1152,
-        544
+        1984,
+        6528
       ],
-      "id": "0e42220d-78d5-4082-97c9-5977ade9cd6e",
+      "id": "b0c804b5-cc16-40f1-93e7-4f64897252f8",
       "name": "Selecionar Atendente"
     },
     {
       "parameters": {
         "chatId": "={{ $json.atendenteId }}",
-        "text": "={{ \n'🚨 <b>NOVO CHAMADO DE SUPORTE</b> 🚨\\n\\n' +\n'🔑 ID do Chamado: ' + $json.ID + '\\n' +\n'👤 Nome: ' + $json.Nome + '\\n' +\n'📱 Telegram ID: ' + $json['ID Usuário'] + '\\n' +\n'⚠️ Tópico: ' + $json.Problema + '\\n' +\n'📝 Descrição: ' + $json['Descrição'] + '\\n' +\n'📅 Data do ocorrido: ' + $json.Data + '\\n' +\n'\\n\\n👉 Entre em contato diretamente com o usuário pelo Telegram: tg://user?id=' + $json['ID Usuário']\n}}",
+        "text": "={{ \n'🚨 <b>NOVO CHAMADO DE SUPORTE</b> 🚨\\n\\n' +\n'🔑 ID do Chamado: ' + $json.ID + '\\n' +\n'👤 Nome: ' + $json.Nome + '\\n' +\n'📱 Telegram ID: ' + $json['ID Usuário'] + '\\n' +\n'⚠️ Tópico: ' + $json.Problema + '\\n' +\n'📝 Descrição: ' + $json['Descrição'] + '\\n' +\n'📅 Data do ocorrido: ' + $json.Data + '\\n' +\n'\\n\\n👉 Entre em contato: ' + ($('Gerar ID Chamado').item.json.username ? 'https://t.me/' + $('Gerar ID Chamado').item.json.username : '⚠️ Usuário sem username — contate pelo ID: ' + $json['ID Usuário'])\n}}",
         "additionalFields": {
           "appendAttribution": false,
           "parse_mode": "HTML"
@@ -3837,10 +3822,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -944,
-        544
+        2192,
+        6528
       ],
-      "id": "90c5a3ab-5426-4f03-894e-ba005b78f9b1",
+      "id": "3f18e9f9-633b-494a-a2ed-c3f7448c8651",
       "name": "Notificar Atendente Chamado",
       "webhookId": "adm-wh-10",
       "credentials": {
@@ -3862,10 +3847,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -736,
-        544
+        2400,
+        6528
       ],
-      "id": "ba737e26-cf8a-4c08-bb8e-e66443d90bc8",
+      "id": "d770c6f5-555f-49b2-a5f6-c89f03bef6fe",
       "name": "Confirmar Chamado Usuario",
       "webhookId": "adm-wh-11",
       "credentials": {
@@ -3885,15 +3870,15 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -4960,
-        -3920
+        -1824,
+        2064
       ],
-      "id": "e6a0d425-e3bd-48f3-a827-0f95159595b2",
+      "id": "0d8fb50f-8d79-4cf6-b3bd-69d2d0403788",
       "name": "Sticky Admin Gate"
     },
     {
       "parameters": {
-        "content": "## FLUXO ADMINISTRATIVO\n\nAcesso restrito — somente atendentes cadastrados em `db.atendentes[]`.\nO portão **IF Atendente Admin** intercepta antes do fluxo normal do usuário.\n\n---\n\n### 📦 PEDIDOS\n| Comando | Descrição |\n|---|---|\n| `/pedido <userId> [entrada:...] [esfihas:n] [quibes:n] prato:... [talheres:sim\\|nao] [obs:...]` | Cria pedido manualmente |\n| `/pedido_consultar <userId>` | Lista todos os pedidos do usuário |\n| `/pedido_atualizar <userId> <nº> <status>` | Atualiza status do pedido |\n| `/pedido_cancelar <userId> <nº>` | Marca pedido como cancelado |\n\n**Cardápio:**\n- Entradas *(opcional)*: `Homus` · `QuibeCru` · `Tabule`\n- Salgados *(preencher mesmo que 0)*: `esfihas:n` · `quibes:n`\n- Pratos *(obrigatório ≥1)*: `Kafta` · `Charuto` · `Cordeiro`\n\n**Status válidos:** `preparando` · `em_entrega` · `entregue`\n\n---\n\n### 🍽️ MESAS\n| Comando | Descrição |\n|---|---|\n| `/mesa_consultar <userId>` | Reservas do usuário |\n| `/mesa_disponiveis [data] [hora]` | Mesas livres/ocupadas |\n| `/mesa_reservar <userId> <mesaId> <data> <hora> <pessoas>` | Reserva manual |\n| `/mesa_cancelar <userId> <mesaId> <data> <hora>` | Remove reserva |\n\n**Formato:** data `YYYY-MM-DD` · hora `HH:MM`\n\n---\n\n### 📍 ENDEREÇO\n| Comando | Descrição |\n|---|---|\n| `/endereco_preencher <userId> <endereço completo>` | Salva/atualiza endereço |\n| `/endereco_consultar <userId>` | Consulta endereço cadastrado |\n\n---\n\n### 📋 SUPORTE\nFluxo automático após o usuário abrir chamado:\n1. Gera ID único `CHM-YYYYMMDD-HHMMSS-XXXX`\n2. Salva no Google Sheets (coluna ID + DataHoraAbertura)\n3. Notifica o atendente com link `tg://user?id=...`\n4. Confirma ao usuário com o ID do chamado\n\n---\n\n### ⚙️ CONFIGURAÇÃO\nTelegram IDs autorizados ficam em:\n`db.atendentes = ['ID_AQUI']`\nAtualmente configurado em: **Contador Global**",
+        "content": "## FLUXO ADMINISTRATIVO\n\nAcesso restrito — somente atendentes cadastrados em `db.atendentes[]`.\nO portão **IF Atendente Admin** intercepta antes do fluxo normal do usuário.\n\n---\n\n### 📦 PEDIDOS\n| Comando | Descrição |\n|---|---|\n| `/pedido <userId> [entrada:...] [esfihas:n] [quibes:n] prato:... [talheres:sim\\|nao] [obs:...]` | Cria pedido manualmente |\n| `/pedido_consultar <userId>` | Lista todos os pedidos do usuário |\n| `/pedido_atualizar <userId> <nº> <status>` | Atualiza status do pedido |\n| `/pedido_cancelar <userId> <nº>` | Marca pedido como cancelado |\n\n**Cardápio:**\n- Entradas *(opcional)*: `Homus` · `QuibeCru` · `Tabule`\n- Salgados *(preencher mesmo que 0)*: `esfihas:n` · `quibes:n`\n- Pratos *(obrigatório ≥1)*: `Kafta` · `Charuto` · `Cordeiro`\n\n**Status válidos:** `em_preparo` · `a_caminho` · `entregue`\n\n---\n\n### 🍽️ MESAS\n| Comando | Descrição |\n|---|---|\n| `/mesa_consultar <userId>` | Reservas do usuário |\n| `/mesa_disponiveis [data] [hora]` | Mesas livres/ocupadas |\n| `/mesa_reservar <userId> <mesaId> <data> <hora> <pessoas>` | Reserva manual |\n| `/mesa_cancelar <userId> <mesaId> <data> <hora>` | Remove reserva |\n\n**Formato:** data `YYYY-MM-DD` · hora `HH:MM`\n\n---\n\n### 📍 ENDEREÇO\n| Comando | Descrição |\n|---|---|\n| `/endereco_preencher <userId> <endereço completo>` | Salva/atualiza endereço |\n| `/endereco_consultar <userId>` | Consulta endereço cadastrado |\n\n---\n\n### 📋 SUPORTE\nFluxo automático após o usuário abrir chamado:\n1. Gera ID único `CHM-YYYYMMDD-HHMMSS-XXXX`\n2. Salva no Google Sheets (coluna ID + DataHoraAbertura)\n3. Notifica o atendente com link `tg://user?id=...`\n4. Confirma ao usuário com o ID do chamado\n\n---\n\n### ⚙️ CONFIGURAÇÃO\nTelegram IDs autorizados ficam em:\n`db.atendentes = ['ID_AQUI']`\nAtualmente configurado em: **Contador Global**",
         "height": 1100,
         "width": 720,
         "color": 6
@@ -3901,10 +3886,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -4128,
-        -5568
+        -992,
+        416
       ],
-      "id": "44161ca4-02fa-46ee-b1ce-b17ebff175e6",
+      "id": "d8a0b0a6-9b8e-47b1-80ed-0b4996d1541c",
       "name": "FLUXO ADMINISTRATIVO"
     },
     {
@@ -3917,23 +3902,23 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1552,
-        720
+        1584,
+        6704
       ],
-      "id": "b2b93138-c8c5-4d1a-b40f-f5daf2fa0182",
+      "id": "ed68e6bf-1bcf-4487-af8e-cbb36d880c7f",
       "name": "Sticky Suporte Melhorado"
     },
     {
       "parameters": {
-        "jsCode": "// /endereco_preencher <userId> <endereco completo>\n// Exemplo: /endereco_preencher 123456789 Rua das Flores, 42, Apto 3 - Jardim América\nconst db = $getWorkflowStaticData('global');\nconst args = $json.args;\nconst senderId = $json.senderId;\n\nif (args.length < 2) {\n  return [{ json: { sucesso: false, senderId,\n    msg: '❌ Uso: /endereco_preencher <telegramId> <endereço completo>\\n\\nExemplo:\\n/endereco_preencher 123456789 Rua das Flores, 42, Apto 3 - Jardim América' } }];\n}\n\nconst targetUserId = String(args[0]);\nconst novoEndereco = args.slice(1).join(' ').trim();\n\nif (!novoEndereco) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ O endereço não pode estar vazio.' } }];\n}\n\nif (!db.usuario) db.usuario = {};\nif (!db.usuario[targetUserId]) {\n  db.usuario[targetUserId] = {\n    endereco: '', numeroPedidos: 0, pedidos: [],\n    pagamento: 'nenhum', nomeCliente: 'nenhum', emailCliente: ''\n  };\n}\n\nconst enderecoAnterior = db.usuario[targetUserId].endereco || '(vazio)';\ndb.usuario[targetUserId].endereco = novoEndereco;\n\nreturn [{ json: {\n  sucesso: true, senderId, targetUserId,\n  msg: `✅ <b>Endereço atualizado!</b>\\n\\n👤 Usuário: <code>${targetUserId}</code>\\n\\n📍 Anterior: ${enderecoAnterior}\\n📍 Novo: ${novoEndereco}`\n} }];"
+        "jsCode": "// /endereco_preencher <userId> <endereco completo>\n// Exemplo: /endereco_preencher 123456789 Rua das Flores, 42, Apto 3 - Jardim América\nconst db = $getWorkflowStaticData('global');\nconst args = $json.args;\nconst senderId = $json.senderId;\n\nif (args.length < 2) {\n  return [{ json: { sucesso: false, senderId,\n    msg: '❌ Uso: /endereco_preencher <telegramId> <endereço completo>\\n\\nExemplo:\\n/endereco_preencher 123456789 Rua das Flores, 42, Apto 3 - Jardim América' } }];\n}\n\nconst targetUserId = String(args[0]);\nconst novoEndereco = args.slice(1).join(' ').trim();\n\nif (!novoEndereco) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ O endereço não pode estar vazio.' } }];\n}\n\nif (!db.usuario) db.usuario = {};\nif (!db.usuario[targetUserId]) {\n  db.usuario[targetUserId] = {\n    endereco: '', numeroPedidos: 0, pedidos: [],\n    pagamento: 'nenhum', nomeCliente: 'nenhum', emailCliente: ''\n  };\n}\nconst e = db.usuario[targetUserId].endereco;\nconst enderecoAnterior = `${e.Rua}, ${e['Número']}${e.Complemento ? ' - ' + e.Complemento : ''} | CEP: ${e.CEP}`;\ndb.usuario[targetUserId].endereco = novoEndereco;\n\nreturn [{ json: {\n  sucesso: true, senderId, targetUserId,\n  msg: `✅ <b>Endereço atualizado!</b>\\n\\n👤 Usuário: <code>${targetUserId}</code>\\n\\n📍 Anterior: ${enderecoAnterior}\\n📍 Novo: ${novoEndereco}`\n} }];"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3088,
-        -4592
+        48,
+        1392
       ],
-      "id": "079db705-e537-4dd3-8ac2-d057d4e0a7e1",
+      "id": "bb03ae76-5bc4-4118-9677-596e93b72e13",
       "name": "Admin Preencher Endereco"
     },
     {
@@ -3948,10 +3933,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2880,
-        -4592
+        256,
+        1392
       ],
-      "id": "74c4e56c-a9e7-4e29-b7b3-bb1c2eefd8ab",
+      "id": "1de0d886-de44-4035-85a9-c70118e42f15",
       "name": "Admin Resp Preencher Endereco",
       "webhookId": "adm-wh-end-01",
       "credentials": {
@@ -3963,15 +3948,15 @@
     },
     {
       "parameters": {
-        "jsCode": "// /endereco_consultar <userId>\nconst db = $getWorkflowStaticData('global');\nconst args = $json.args;\nconst senderId = $json.senderId;\n\nif (args.length < 1) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ Uso: /endereco_consultar <telegramId>' } }];\n}\n\nconst targetUserId = String(args[0]);\nconst usuario = db.usuario?.[targetUserId];\n\nif (!usuario) {\n  return [{ json: { sucesso: false, senderId,\n    msg: `❌ Usuário <code>${targetUserId}</code> não encontrado no sistema.` } }];\n}\n\nconst endereco = usuario.endereco || '(não preenchido)';\nconst nome     = usuario.nomeCliente || '(não informado)';\nconst emailCliente = usuario.emailCliente;\n\nreturn [{ json: {\n  sucesso: true, senderId,\n  msg: `📍 <b>Endereço do usuário</b>\\n\\n👤 Usuário: <code>${targetUserId}</code>\\n🧑 Nome: ${nome}\\n✉️ Email: ${emailCliente}\\n📍 Endereço: ${endereco}`\n} }];"
+        "jsCode": "// /endereco_consultar <userId>\nconst db = $getWorkflowStaticData('global');\nconst args = $json.args;\nconst senderId = $json.senderId;\n\nif (args.length < 1) {\n  return [{ json: { sucesso: false, senderId, msg: '❌ Uso: /endereco_consultar <telegramId>' } }];\n}\n\nconst targetUserId = String(args[0]);\nconst usuario = db.usuario?.[targetUserId];\n\nif (!usuario) {\n  return [{ json: { sucesso: false, senderId,\n    msg: `❌ Usuário <code>${targetUserId}</code> não encontrado no sistema.` } }];\n}\n\nconst e = usuario.endereco;\nconst endereco = `${e.Rua}, ${e['Número']}${e.Complemento ? ' - ' + e.Complemento : ''} | CEP: ${e.CEP}`;\nconst nome     = usuario.nomeCliente;\nconst emailCliente = usuario.emailCliente;\n\nreturn [{ json: {\n  sucesso: true, senderId,\n  msg: `📍 <b>Endereço do usuário</b>\\n\\n👤 Usuário: <code>${targetUserId}</code>\\n🧑 Nome: ${nome}\\n✉️ Email: ${emailCliente}\\n📍 Endereço: ${endereco}`\n} }];"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3088,
-        -4416
+        48,
+        1568
       ],
-      "id": "086f5ecb-4235-407a-a107-09f8f7469a3a",
+      "id": "6cc7c68c-aa41-43ec-a326-95fcb6fba89c",
       "name": "Admin Consultar Endereco"
     },
     {
@@ -3986,10 +3971,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2880,
-        -4416
+        256,
+        1568
       ],
-      "id": "d6c16e98-f1fb-41ec-975d-7087f7654c08",
+      "id": "c4f45842-850b-4324-868c-a3e3848db6d7",
       "name": "Admin Resp Consultar Endereco",
       "webhookId": "adm-wh-end-02",
       "credentials": {
@@ -4006,10 +3991,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2352,
-        -3040
+        784,
+        2944
       ],
-      "id": "5d8d4322-11b5-49ff-863f-6d4a9fb10911",
+      "id": "2b711e4d-6d32-4ea1-9278-de880d7ae62b",
       "name": "Verificar Pedidos Ativos"
     },
     {
@@ -4040,10 +4025,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
       "position": [
-        -2112,
-        -3040
+        1024,
+        2944
       ],
-      "id": "1e6b2af3-af70-4d97-9fa6-3778d03897cd",
+      "id": "632456a2-22db-467f-b64d-5957bf175433",
       "name": "IF Tem Pedidos Ativos"
     },
     {
@@ -4053,10 +4038,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1808,
-        -3072
+        1328,
+        2912
       ],
-      "id": "cfc1192a-b59c-42b2-b9dd-5b02fea1632b",
+      "id": "b387411d-eff9-4a66-b97f-7c251a5eebd8",
       "name": "Montar Mensagem Pedidos"
     },
     {
@@ -4106,10 +4091,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1568,
-        -3072
+        1568,
+        2912
       ],
-      "id": "ce88defd-c75e-4163-9b8b-d2d254ef01f1",
+      "id": "047bee32-ca9c-4655-a574-54e63f555ec7",
       "name": "Exibir Pedidos Ativos",
       "webhookId": "acomp-tg-wh-01",
       "credentials": {
@@ -4160,10 +4145,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -1808,
-        -2880
+        1328,
+        3104
       ],
-      "id": "43dbabc2-547d-434c-a882-b7ae0347fbea",
+      "id": "cfef30f4-d951-4fb4-8d37-9c9d2f910e83",
       "name": "Sem Pedidos Ativos",
       "webhookId": "acomp-tg-wh-02",
       "credentials": {
@@ -4180,10 +4165,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2304,
-        -2848
+        832,
+        3136
       ],
-      "id": "555cbecd-696a-4d7f-b959-e53ccae94741",
+      "id": "0d4e71b9-f02b-4c03-98ef-3520fd04ddd5",
       "name": "Montar Botoes Selecionar Pedido"
     },
     {
@@ -4198,10 +4183,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2112,
-        -2848
+        1024,
+        3136
       ],
-      "id": "039249a9-f769-4da0-acde-a4ecb007ee29",
+      "id": "49ce7d9b-d0d4-4ae3-9437-a9d3f2dd99c3",
       "name": "Enviar Selecao Pedido",
       "webhookId": "acomp-tg-wh-03",
       "credentials": {
@@ -4218,10 +4203,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2304,
-        -2688
+        832,
+        3296
       ],
-      "id": "7ef99394-bbf4-42f2-a3b1-6fcf46b3d021",
+      "id": "9e699dad-30ce-445a-9feb-b4be09de55bc",
       "name": "Marcar Pedido Entregue"
     },
     {
@@ -4259,10 +4244,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -2096,
-        -2688
+        1040,
+        3296
       ],
-      "id": "efb0f9ff-e5f4-4ef4-8aa7-d99f05af9736",
+      "id": "39646d14-32f2-46f7-baba-6ae01ef899ec",
       "name": "Confirmar Entrega Telegram",
       "webhookId": "acomp-tg-wh-04",
       "credentials": {
@@ -4282,10 +4267,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1616,
-        -2928
+        1520,
+        3056
       ],
-      "id": "3bd63748-57dd-48f6-95de-0df01a4c4171",
+      "id": "c1bef997-5a64-477e-8685-22fc72219126",
       "name": "Sticky Acompanhar Pedido"
     },
     {
@@ -4315,10 +4300,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
       "position": [
-        -3760,
-        -3792
+        -624,
+        2192
       ],
-      "id": "d6cf9ddf-2398-48f1-b994-a81ed786dcdb",
+      "id": "fa60030f-3fd2-4278-8f71-8ae6063d9703",
       "name": "IF Eh Selecao Pedido"
     },
     {
@@ -4328,10 +4313,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -3616,
-        -3984
+        -480,
+        2000
       ],
-      "id": "400f8212-ff97-4604-893e-ee04f127141b",
+      "id": "3b050e7c-6614-4e63-818a-9cf32c42d64f",
       "name": "Processar Selecao Texto"
     },
     {
@@ -4369,10 +4354,10 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        -3456,
-        -4000
+        -320,
+        1984
       ],
-      "id": "ecd034a1-f526-485b-bcf4-fdd426ff8716",
+      "id": "76fadc2e-e5cd-41b3-b949-ced24a2c948f",
       "name": "Resposta Selecao Telegram",
       "webhookId": "sel-tg-wh-01",
       "credentials": {
@@ -4381,102 +4366,9 @@
           "name": "Telegram account 2"
         }
       }
-    },
-    {
-      "parameters": {
-        "content": "## Mudanças A Fazer\n--Corrigir link do atendente para o cliente\n--Parar de pedir endereço se já preenchido\n--Se o pedido for cancelado ou entregue, não aparecer na aba de acompanhar",
-        "height": 240,
-        "width": 592,
-        "color": 6
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        -4032,
-        -3104
-      ],
-      "id": "36cbeb25-509a-4efc-bd90-589248b7e90a",
-      "name": "Sticky Note25"
     }
   ],
   "pinData": {
-    "Telegram Trigger": [
-      {
-        "json": {
-          "update_id": 737499271,
-          "callback_query": {
-            "id": "5179847772464114143",
-            "from": {
-              "id": 1206027290,
-              "is_bot": false,
-              "first_name": "Gui",
-              "language_code": "pt-br"
-            },
-            "message": {
-              "message_id": 704,
-              "from": {
-                "id": 8679938918,
-                "is_bot": true,
-                "first_name": "Restaurante Maṭʿam",
-                "username": "restaurantejorjao_bot"
-              },
-              "chat": {
-                "id": 1206027290,
-                "first_name": "Gui",
-                "type": "private"
-              },
-              "date": 1779749460,
-              "text": "🌙 Boa noite!\n\n🍽️ Bem-vindo ao Restaurante Árabe Maṭʿam!\n\nEscolha uma opção abaixo:",
-              "reply_markup": {
-                "inline_keyboard": [
-                  [
-                    {
-                      "text": "🥙 Categorias Árabes",
-                      "callback_data": "categorias"
-                    }
-                  ],
-                  [
-                    {
-                      "text": "🛒 Fazer Pedido",
-                      "callback_data": "pedido"
-                    }
-                  ],
-                  [
-                    {
-                      "text": "🚚 Acompanhar Entrega",
-                      "callback_data": "acompanhar"
-                    }
-                  ],
-                  [
-                    {
-                      "text": "📍 Sobre a Unidade",
-                      "callback_data": "unidade"
-                    }
-                  ],
-                  [
-                    {
-                      "text": "🍽️ Reservar uma Mesa",
-                      "callback_data": "mesa"
-                    }
-                  ],
-                  [
-                    {
-                      "text": "🆘 Suporte e Ajuda",
-                      "callback_data": "suporte"
-                    }
-                  ]
-                ]
-              }
-            },
-            "chat_instance": "4088852667855346842",
-            "data": "pedido"
-          }
-        },
-        "pairedItem": {
-          "item": 0
-        }
-      }
-    ],
     "Webhook Criar Reserva": [
       {
         "json": {
@@ -4510,6 +4402,46 @@
           },
           "webhookUrl": "https://bulge-stylus-cover.ngrok-free.dev/webhook/reserva-criar",
           "executionMode": "production"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ],
+    "Telegram Trigger": [
+      {
+        "json": {
+          "update_id": 737499384,
+          "message": {
+            "message_id": 880,
+            "from": {
+              "id": 5042111496,
+              "is_bot": false,
+              "first_name": "Marcileide",
+              "last_name": "França",
+              "language_code": "pt-br"
+            },
+            "chat": {
+              "id": 5042111496,
+              "first_name": "Marcileide",
+              "last_name": "França",
+              "type": "private"
+            },
+            "date": 1779775771,
+            "text": "/pedido_consultar 6679062640",
+            "entities": [
+              {
+                "offset": 0,
+                "length": 17,
+                "type": "bot_command"
+              },
+              {
+                "offset": 18,
+                "length": 10,
+                "type": "phone_number"
+              }
+            ]
+          }
         },
         "pairedItem": {
           "item": 0
@@ -4731,11 +4663,6 @@
             "index": 0
           }
         ]
-      ]
-    },
-    "LIMPAR": {
-      "main": [
-        []
       ]
     },
     "Switch Pagamento": {
@@ -5485,10 +5412,10 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "918ad4b9-2b8c-44e3-b6ba-7eca2a276bc7",
+  "versionId": "2a1ae5dc-f7f8-4e5b-85d9-4960e7438dd8",
   "meta": {
     "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"
   },
-  "id": "fkc6DLmCVBTw8OgT",
+  "id": "fMrZDonbQl5sGudG",
   "tags": []
 }
