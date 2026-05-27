@@ -465,7 +465,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.message.chat.id;\n\nbancoDados.atendentes = ['5042111496'];\n\nbancoDados.promocaoAtiva = true;\n\nif (!bancoDados.usuario) {\n  bancoDados.usuario = {};\n}\n\nif (!bancoDados.usuario[clientId]) {\n  bancoDados.usuario[clientId] = {\n  endereco: 'Rua X',\n  numeroPedidos: 0,\n  pedidos: [],\n  pagamento: 'nenhum',\n  nomeCliente: 'nenhum',\n  emailCliente: 'nenhum@email.com'\n  //**O pagamento pode ser 'online' ou 'retirada'\n  };\n}\nif (!bancoDados.usuario[clientId].endereco) {\n  bancoDados.usuario[clientId].endereco = 'Rua X';\n}\nif (!bancoDados.usuario[clientId].numeroPedidos) {\n  bancoDados.usuario[clientId].numeroPedidos = 0;\n}\nif (!bancoDados.usuario[clientId].pagamento) {\n  bancoDados.usuario[clientId].pagamento = 'nenhum';\n}\nif (!bancoDados.usuario[clientId].nomeCliente) {\n  bancoDados.usuario[clientId].nomeCliente = 'nenhum';\n}\nif (!bancoDados.usuario[clientId].emailCliente) {\n  bancoDados.usuario[clientId].emailCliente = 'nenhum';\n}\n\nreturn bancoDados;\n"
+        "jsCode": "const bancoDados = $getWorkflowStaticData('global');\nconst clientId = $('Telegram Trigger').first().json.message.chat.id;\n\nbancoDados.atendentes = ['6679062640'];\n\nbancoDados.promocaoAtiva = true;\n\nif (!bancoDados.usuario) {\n  bancoDados.usuario = {};\n}\n\nif (!bancoDados.usuario[clientId]) {\n  bancoDados.usuario[clientId] = {\n  endereco: 'Rua X',\n  numeroPedidos: 0,\n  pedidos: [],\n  pagamento: 'nenhum',\n  nomeCliente: 'nenhum',\n  emailCliente: 'nenhum@email.com'\n  //**O pagamento pode ser 'online' ou 'retirada'\n  };\n}\nif (!bancoDados.usuario[clientId].endereco) {\n  bancoDados.usuario[clientId].endereco = 'Rua X';\n}\nif (!bancoDados.usuario[clientId].numeroPedidos) {\n  bancoDados.usuario[clientId].numeroPedidos = 0;\n}\nif (!bancoDados.usuario[clientId].pagamento) {\n  bancoDados.usuario[clientId].pagamento = 'nenhum';\n}\nif (!bancoDados.usuario[clientId].nomeCliente) {\n  bancoDados.usuario[clientId].nomeCliente = 'nenhum';\n}\nif (!bancoDados.usuario[clientId].emailCliente) {\n  bancoDados.usuario[clientId].emailCliente = 'nenhum';\n}\n\nreturn bancoDados;\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -3050,14 +3050,14 @@
             {
               "id": "adm-cond-01",
               "leftValue": "={{ $json.message.from.id }}",
-              "rightValue": 5042111496,
+              "rightValue": 6679062640,
               "operator": {
                 "type": "number",
                 "operation": "equals"
               }
             }
           ],
-          "combinator": "and"
+          "combinator": "or"
         },
         "options": {}
       },
@@ -3878,7 +3878,7 @@
     },
     {
       "parameters": {
-        "content": "## FLUXO ADMINISTRATIVO\n\nAcesso restrito — somente atendentes cadastrados em `db.atendentes[]`.\nO portão **IF Atendente Admin** intercepta antes do fluxo normal do usuário.\n\n---\n\n### 📦 PEDIDOS\n| Comando | Descrição |\n|---|---|\n| `/pedido <userId> [entrada:...] [esfihas:n] [quibes:n] prato:... [talheres:sim\\|nao] [obs:...]` | Cria pedido manualmente |\n| `/pedido_consultar <userId>` | Lista todos os pedidos do usuário |\n| `/pedido_atualizar <userId> <nº> <status>` | Atualiza status do pedido |\n| `/pedido_cancelar <userId> <nº>` | Marca pedido como cancelado |\n\n**Cardápio:**\n- Entradas *(opcional)*: `Homus` · `QuibeCru` · `Tabule`\n- Salgados *(preencher mesmo que 0)*: `esfihas:n` · `quibes:n`\n- Pratos *(obrigatório ≥1)*: `Kafta` · `Charuto` · `Cordeiro`\n\n**Status válidos:** `em_preparo` · `a_caminho` · `entregue`\n\n---\n\n### 🍽️ MESAS\n| Comando | Descrição |\n|---|---|\n| `/mesa_consultar <userId>` | Reservas do usuário |\n| `/mesa_disponiveis [data] [hora]` | Mesas livres/ocupadas |\n| `/mesa_reservar <userId> <mesaId> <data> <hora> <pessoas>` | Reserva manual |\n| `/mesa_cancelar <userId> <mesaId> <data> <hora>` | Remove reserva |\n\n**Formato:** data `YYYY-MM-DD` · hora `HH:MM`\n\n---\n\n### 📍 ENDEREÇO\n| Comando | Descrição |\n|---|---|\n| `/endereco_preencher <userId> <endereço completo>` | Salva/atualiza endereço |\n| `/endereco_consultar <userId>` | Consulta endereço cadastrado |\n\n---\n\n### 📋 SUPORTE\nFluxo automático após o usuário abrir chamado:\n1. Gera ID único `CHM-YYYYMMDD-HHMMSS-XXXX`\n2. Salva no Google Sheets (coluna ID + DataHoraAbertura)\n3. Notifica o atendente com link `tg://user?id=...`\n4. Confirma ao usuário com o ID do chamado\n\n---\n\n### ⚙️ CONFIGURAÇÃO\nTelegram IDs autorizados ficam em:\n`db.atendentes = ['ID_AQUI']`\nAtualmente configurado em: **Contador Global**",
+        "content": "## FLUXO ADMINISTRATIVO\n\nAcesso restrito — somente atendentes cadastrados em `db.atendentes[]`.\nO portão **IF Atendente Admin** intercepta antes do fluxo normal do usuário.\n\n---\n\n###  PEDIDOS\n| Comando | Descrição |\n|---|---|\n| `/pedido <userId> [entrada:...] [esfihas:n] [quibes:n] prato:... [talheres:sim\\|nao] [obs:...]` | Cria pedido manualmente |\n| `/pedido_consultar <userId>` | Lista todos os pedidos do usuário |\n| `/pedido_atualizar <userId> <nº> <status>` | Atualiza status do pedido |\n| `/pedido_cancelar <userId> <nº>` | Marca pedido como cancelado |\n\n**Cardápio:**\n- Entradas *(opcional)*: `Homus` · `QuibeCru` · `Tabule`\n- Salgados *(preencher mesmo que 0)*: `esfihas:n` · `quibes:n`\n- Pratos *(obrigatório ≥1)*: `Kafta` · `Charuto` · `Cordeiro`\n\n**Status válidos:** `em_preparo` · `a_caminho` · `entregue`\n\n---\n\n###  MESAS\n| Comando | Descrição |\n|---|---|\n| `/mesa_consultar <userId>` | Reservas do usuário |\n| `/mesa_disponiveis [data] [hora]` | Mesas livres/ocupadas |\n| `/mesa_reservar <userId> <mesaId> <data> <hora> <pessoas>` | Reserva manual |\n| `/mesa_cancelar <userId> <mesaId> <data> <hora>` | Remove reserva |\n\n**Formato:** data `YYYY-MM-DD` · hora `HH:MM`\n\n---\n\n###  ENDEREÇO\n| Comando | Descrição |\n|---|---|\n| `/endereco_preencher <userId> <endereço completo>` | Salva/atualiza endereço |\n| `/endereco_consultar <userId>` | Consulta endereço cadastrado |\n\n---\n\n### 📋 SUPORTE\nFluxo automático após o usuário abrir chamado:\n1. Gera ID único `CHM-YYYYMMDD-HHMMSS-XXXX`\n2. Salva no Google Sheets (coluna ID + DataHoraAbertura)\n3. Notifica o atendente com link `tg://user?id=...`\n4. Confirma ao usuário com o ID do chamado\n\n---\n\n### ⚙️ CONFIGURAÇÃO\nTelegram IDs autorizados ficam em:\n`db.atendentes = ['ID_AQUI']`\nAtualmente configurado em: **Contador Global**",
         "height": 1100,
         "width": 720,
         "color": 6
@@ -4411,36 +4411,56 @@
     "Telegram Trigger": [
       {
         "json": {
-          "update_id": 737499384,
-          "message": {
-            "message_id": 880,
+          "update_id": 737499413,
+          "callback_query": {
+            "id": "9219057704741165741",
             "from": {
-              "id": 5042111496,
+              "id": 6441446435,
               "is_bot": false,
-              "first_name": "Marcileide",
-              "last_name": "França",
-              "language_code": "pt-br"
+              "first_name": "Erick",
+              "username": "flipsidx",
+              "language_code": "en"
             },
-            "chat": {
-              "id": 5042111496,
-              "first_name": "Marcileide",
-              "last_name": "França",
-              "type": "private"
-            },
-            "date": 1779775771,
-            "text": "/pedido_consultar 6679062640",
-            "entities": [
-              {
-                "offset": 0,
-                "length": 17,
-                "type": "bot_command"
+            "message": {
+              "message_id": 924,
+              "from": {
+                "id": 8679938918,
+                "is_bot": true,
+                "first_name": "Restaurante Maṭʿam",
+                "username": "restaurantejorjao_bot"
               },
-              {
-                "offset": 18,
-                "length": 10,
-                "type": "phone_number"
+              "chat": {
+                "id": 6441446435,
+                "first_name": "Erick",
+                "username": "flipsidx",
+                "type": "private"
+              },
+              "date": 1779846027,
+              "text": "Realmente deseja realizar um chamado ?",
+              "entities": [
+                {
+                  "offset": 0,
+                  "length": 38,
+                  "type": "bold"
+                }
+              ],
+              "reply_markup": {
+                "inline_keyboard": [
+                  [
+                    {
+                      "text": "Sim",
+                      "callback_data": "chamado"
+                    },
+                    {
+                      "text": "Não",
+                      "callback_data": "voltarInicio"
+                    }
+                  ]
+                ]
               }
-            ]
+            },
+            "chat_instance": "4992379471886144340",
+            "data": "chamado"
           }
         },
         "pairedItem": {
@@ -5412,7 +5432,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "2a1ae5dc-f7f8-4e5b-85d9-4960e7438dd8",
+  "versionId": "90c0511f-9427-488a-a5f9-84af680aae7c",
   "meta": {
     "instanceId": "8820a1bab815e9b7dedca81d44851aff32376584db9b661da77de9b0b2fc6092"
   },
