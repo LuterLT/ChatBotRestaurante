@@ -6,6 +6,8 @@ services:
     env_file:
       - .env
     environment:
+      - N8N_BLOCK_ENV_ACCESS_IN_NODE=false
+      - WEBHOOK_URL="COLOQUE A URL DA SUA WEBHOOK AQUI"
       - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
     volumes:
       - n8n_data:/home/node/.n8n
